@@ -1,0 +1,4 @@
+repository "rpg@SGD_Work@cloud"
+  path "/"
+    br "/main"
+    co "/main"
