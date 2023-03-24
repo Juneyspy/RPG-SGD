@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.2.1f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/jdlagle/Desktop/rpg
+C:/Users/jdlagle/Documents/GitHub/RPG-SGD
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59881
-Successfully changed project path to: C:/Users/jdlagle/Desktop/rpg
-C:/Users/jdlagle/Desktop/rpg
+59468
+Successfully changed project path to: C:/Users/jdlagle/Documents/GitHub/RPG-SGD
+C:/Users/jdlagle/Documents/GitHub/RPG-SGD
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,15 +47,15 @@ C:/Users/jdlagle/Desktop/rpg
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18812] Host "[IP] 192.168.248.13 [Port] 0 [Flags] 2 [Guid] 1236157058 [EditorId] 1236157058 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-10) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [25632] Host "[IP] 192.168.248.13 [Port] 0 [Flags] 2 [Guid] 4005493788 [EditorId] 4005493788 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-10) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18812] Host "[IP] 192.168.248.13 [Port] 0 [Flags] 2 [Guid] 1236157058 [EditorId] 1236157058 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-10) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [25632] Host "[IP] 192.168.248.13 [Port] 0 [Flags] 2 [Guid] 4005493788 [EditorId] 4005493788 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-10) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 6.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 6.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.1f1 (4fead5835099)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/jdlagle/Desktop/rpg/Assets
+[Subsystems] Discovering subsystems at path C:/Users/jdlagle/Documents/GitHub/RPG-SGD/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56316
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -78,45 +78,45 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.017639 seconds.
-- Loaded All Assemblies, in  0.318 seconds
+Registered in 0.023241 seconds.
+- Loaded All Assemblies, in  0.364 seconds
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for AppleTV target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 2219 ms
+Android Extension - Scanning For ADB Devices 190 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.535 seconds
+- Finished resetting the current domain, in  0.506 seconds
 Domain Reload Profiling:
-	ReloadAssembly (183ms)
-		BeginReloadAssembly (73ms)
+	ReloadAssembly (213ms)
+		BeginReloadAssembly (82ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (71ms)
+			LoadAssemblies (82ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (125ms)
-				TypeCache.Initialize (124ms)
-					TypeCache.ScanAssembly (122ms)
+			SetupTypeCache (139ms)
+				TypeCache.Initialize (138ms)
+					TypeCache.ScanAssembly (137ms)
 				ResolveRequiredComponents (0ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (2481ms)
+			SetupLoadedEditorAssemblies (449ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2327ms)
+				InitializePlatformSupportModulesInManaged (296ms)
 				SetLoadedEditorAssemblies (4ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (100ms)
-				ProcessInitializeOnLoadMethodAttributes (50ms)
+				ProcessInitializeOnLoadAttributes (102ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -124,8 +124,8 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.627 seconds
-Refreshing native plugins compatible for Editor in 2.97 ms, found 1 plugins.
+- Loaded All Assemblies, in  0.676 seconds
+Refreshing native plugins compatible for Editor in 3.20 ms, found 1 plugins.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -135,44 +135,44 @@ Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.453 seconds
+- Finished resetting the current domain, in  0.483 seconds
 Domain Reload Profiling:
-	ReloadAssembly (202ms)
-		BeginReloadAssembly (110ms)
+	ReloadAssembly (216ms)
+		BeginReloadAssembly (122ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		LoadAllAssembliesAndSetupDomain (422ms)
-			LoadAssemblies (74ms)
+			CreateAndSetChildDomain (21ms)
+		LoadAllAssembliesAndSetupDomain (457ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (394ms)
-				TypeCache.Initialize (246ms)
-					TypeCache.ScanAssembly (243ms)
+			SetupTypeCache (420ms)
+				TypeCache.Initialize (251ms)
+					TypeCache.ScanAssembly (247ms)
 				ResolveRequiredComponents (4ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (317ms)
+			SetupLoadedEditorAssemblies (336ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (45ms)
+				InitializePlatformSupportModulesInManaged (44ms)
 				SetLoadedEditorAssemblies (5ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (57ms)
-				ProcessInitializeOnLoadAttributes (175ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 2.63 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 3.03 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2935 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 20 unused Assets / (63.0 KB). Loaded Objects now: 3413.
+Unloading 20 unused Assets / (62.8 KB). Loaded Objects now: 3413.
 Memory consumption went from 464.9 MB to 464.8 MB.
-Total: 2.613900 ms (FindLiveObjects: 0.286300 ms CreateObjectMapping: 0.242300 ms MarkObjects: 2.015800 ms  DeleteObjects: 0.068700 ms)
+Total: 2.649300 ms (FindLiveObjects: 0.274000 ms CreateObjectMapping: 0.265600 ms MarkObjects: 2.038900 ms  DeleteObjects: 0.070200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -187,9 +187,316 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 78509.363408 seconds.
-  path: Assets/Sprites/Characters/Enemies/Hobbit/pngs/Hobbit - death3.png
-  artifactKey: Guid(facb6c0753e512941a7249443522d0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 161003.271574 seconds.
+  path: Assets/Bringer Of Death
+  artifactKey: Guid(8012acb078513dd49ba605a6aed5428b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/Sprites/Characters/Enemies/Hobbit/pngs/Hobbit - death3.png using Guid(facb6c0753e512941a7249443522d0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0f342fe782793d5e8f416474134209') in 0.058365 seconds 
+Start importing Assets/Bringer Of Death using Guid(8012acb078513dd49ba605a6aed5428b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf09c5215fda55f6d48f33d29a640e35') in 0.008556 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.729 seconds
+Refreshing native plugins compatible for Editor in 4.07 ms, found 1 plugins.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.713 seconds
+Domain Reload Profiling:
+	ReloadAssembly (218ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		LoadAllAssembliesAndSetupDomain (507ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (471ms)
+				TypeCache.Initialize (263ms)
+					TypeCache.ScanAssembly (257ms)
+				ResolveRequiredComponents (20ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (317ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (52ms)
+				SetLoadedEditorAssemblies (7ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 3.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2915 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 11 unused Assets / (29.6 KB). Loaded Objects now: 3416.
+Memory consumption went from 461.0 MB to 460.9 MB.
+Total: 2.765800 ms (FindLiveObjects: 0.218700 ms CreateObjectMapping: 0.160600 ms MarkObjects: 2.364800 ms  DeleteObjects: 0.021300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.667 seconds
+Refreshing native plugins compatible for Editor in 3.92 ms, found 1 plugins.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.805 seconds
+Domain Reload Profiling:
+	ReloadAssembly (215ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		LoadAllAssembliesAndSetupDomain (448ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (416ms)
+				TypeCache.Initialize (248ms)
+					TypeCache.ScanAssembly (243ms)
+				ResolveRequiredComponents (7ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (339ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (59ms)
+				SetLoadedEditorAssemblies (6ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (165ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 3.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2916 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 11 unused Assets / (37.1 KB). Loaded Objects now: 3419.
+Memory consumption went from 461.2 MB to 461.2 MB.
+Total: 2.976400 ms (FindLiveObjects: 0.305300 ms CreateObjectMapping: 0.286200 ms MarkObjects: 2.353200 ms  DeleteObjects: 0.031000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1354.948805 seconds.
+  path: Assets/Warrior free set/Sprite Sheet/Warrior_SheetnoEffect.png
+  artifactKey: Guid(3accdbde4e56f5c4e9cfa311b8cef55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Warrior free set/Sprite Sheet/Warrior_SheetnoEffect.png using Guid(3accdbde4e56f5c4e9cfa311b8cef55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc62dceaf1a643785ceebc631cacb7c') in 0.407453 seconds 
+Number of asset objects unloaded after import = 101
+========================================================================
+Received Import Request.
+  Time since last request: 219.499722 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_001_Battler.png
+  artifactKey: Guid(140eb7d463461c34f9d676390e85a881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_001_Battler.png using Guid(140eb7d463461c34f9d676390e85a881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd80ece887c2fad348a223c041238fa88') in 0.014396 seconds 
 Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.377318 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_002.png
+  artifactKey: Guid(9d243519013536e4f8030022e220a2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_002.png using Guid(9d243519013536e4f8030022e220a2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091e6dae400d387b09cf495f8748f93b') in 0.019799 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002625 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_005_Battler.png
+  artifactKey: Guid(b2994c3ea141ee945bf830c9c6e88a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_005_Battler.png using Guid(b2994c3ea141ee945bf830c9c6e88a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baa7c22729ddfd166b23d833a5c34a00') in 0.022192 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_003_Battler.png
+  artifactKey: Guid(11a0ee5f784879649bacdad10e39d678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_003_Battler.png using Guid(11a0ee5f784879649bacdad10e39d678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1fb0ad4fd710718aa1324c292d5a6fb') in 0.017632 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_007_Battler.png
+  artifactKey: Guid(631b5783e7400544ca3e8ed5b060976e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_007_Battler.png using Guid(631b5783e7400544ca3e8ed5b060976e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb0786a25b09c8eec6bf78bfd0f119d1') in 0.016197 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_002_Battler.png
+  artifactKey: Guid(f125a592646c3d74db985e56a0020ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_002_Battler.png using Guid(f125a592646c3d74db985e56a0020ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b2cbfdb8a46507c6721f0025f0dc479') in 0.019582 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_007.png
+  artifactKey: Guid(9a198bba235504f4ba6ce7b0b802c16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/32x32/Character_007.png using Guid(9a198bba235504f4ba6ce7b0b802c16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd6ba2d77ab697ed96ef92e1b562ec8') in 0.014460 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.409639 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_002.png
+  artifactKey: Guid(dc22141a88856d048afa717ae92bbdcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_002.png using Guid(dc22141a88856d048afa717ae92bbdcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6a2a0e70ea693e6628dfe1dd4ed627') in 0.014185 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_007.png
+  artifactKey: Guid(9c580b85401c61348b75546f5c22bc7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_007.png using Guid(9c580b85401c61348b75546f5c22bc7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b411aa644a956d8f00f948abde35f417') in 0.014172 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_005.png
+  artifactKey: Guid(873575310049ab84293c97f93e8ddbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_005.png using Guid(873575310049ab84293c97f93e8ddbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ff6322ed7bbcef768b099d31584ee09') in 0.013705 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_004.png
+  artifactKey: Guid(301601bdbbcd29043b125c83966417cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_004.png using Guid(301601bdbbcd29043b125c83966417cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a39ef6fa910f316a76109e5e31e2133') in 0.015394 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/Character_002_Battler.png
+  artifactKey: Guid(190d2a5c025317047bd6b1a3397be005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/Character_002_Battler.png using Guid(190d2a5c025317047bd6b1a3397be005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7478efaf2302a7f724cacab3027f6b1') in 0.012362 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_006.png
+  artifactKey: Guid(65e3a0cbfdf76be4eaf8af4b01c40bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_006.png using Guid(65e3a0cbfdf76be4eaf8af4b01c40bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd28d3c8775021892ab39f1a7093af0') in 0.011843 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_003.png
+  artifactKey: Guid(7ebfcf4e72b7f874da826523e278ba19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/RPG Maker MV,MZ/$Character_003.png using Guid(7ebfcf4e72b7f874da826523e278ba19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bda42786e1b72ae4d4faf3709e4c8d8') in 0.012608 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.874669 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_001_Battler.png
+  artifactKey: Guid(ad6e137fc58a74045be1d3fce91d099b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_001_Battler.png using Guid(ad6e137fc58a74045be1d3fce91d099b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae42e7f777c60ee51c0f65ad96c32d91') in 0.010779 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_006_Battler.png
+  artifactKey: Guid(f8e43317463fe0543890598cb0d351bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_006_Battler.png using Guid(f8e43317463fe0543890598cb0d351bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b29072347899a4c39ae0ce7c874862e') in 0.013408 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_004_Battler.png
+  artifactKey: Guid(6472944a8b1bfca4dbb6947d818e5309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_004_Battler.png using Guid(6472944a8b1bfca4dbb6947d818e5309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dafeca0a695b9bd758c5d2abbedf96f') in 0.014258 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_006.png
+  artifactKey: Guid(a99886da80fb60342bd657ec288eb083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_006.png using Guid(a99886da80fb60342bd657ec288eb083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1c5ebab8942030e1987cdeaf65d5c94') in 0.015526 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_007.png
+  artifactKey: Guid(0de11704c0f97bd43a0c6d2f799b07dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_007.png using Guid(0de11704c0f97bd43a0c6d2f799b07dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0167f9602a513267d2a659c5fe457293') in 0.014594 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_005_Battler.png
+  artifactKey: Guid(01fc98000394c1f44aff0f9798a89dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_005_Battler.png using Guid(01fc98000394c1f44aff0f9798a89dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ce324bc5c4ae6da29ffcadfdf4e6469') in 0.014685 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_004.png
+  artifactKey: Guid(40b0448b834d64449889d98049610bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Characters/Friendly/MC - Fantasy Dreamland - Sprites/16x16/Character_004.png using Guid(40b0448b834d64449889d98049610bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd172d9513ced8cb0ab91b3b0d718c54b') in 0.013867 seconds 
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
