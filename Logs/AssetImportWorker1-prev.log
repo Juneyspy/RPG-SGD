@@ -15,7 +15,7 @@ C:/Users/ijstoops/Documents/GitHub/RPG-SGD
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59988
+57276
 Successfully changed project path to: C:/Users/ijstoops/Documents/GitHub/RPG-SGD
 C:/Users/ijstoops/Documents/GitHub/RPG-SGD
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/ijstoops/Documents/GitHub/RPG-SGD
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [25320] Host "[IP] 192.168.248.12 [Port] 0 [Flags] 2 [Guid] 1673227099 [EditorId] 1673227099 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-18) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2060] Host "[IP] 192.168.248.12 [Port] 0 [Flags] 2 [Guid] 1848558578 [EditorId] 1848558578 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-18) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [25320] Host "[IP] 192.168.248.12 [Port] 0 [Flags] 2 [Guid] 1673227099 [EditorId] 1673227099 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-18) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2060] Host "[IP] 192.168.248.12 [Port] 0 [Flags] 2 [Guid] 1848558578 [EditorId] 1848558578 [Version] 1048832 [Id] WindowsEditor(7,VMA1870-18) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 4.62 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 4.68 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.1f1 (4fead5835099)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56116
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -78,8 +78,8 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.1f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.019015 seconds.
-- Loaded All Assemblies, in  0.331 seconds
+Registered in 0.024385 seconds.
+- Loaded All Assemblies, in  0.359 seconds
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -90,40 +90,253 @@ Native extension for AppleTV target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 2236 ms
+Android Extension - Scanning For ADB Devices 168 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.512 seconds
+- Finished resetting the current domain, in  0.493 seconds
 Domain Reload Profiling:
-	ReloadAssembly (198ms)
-		BeginReloadAssembly (77ms)
+	ReloadAssembly (210ms)
+		BeginReloadAssembly (75ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (76ms)
+			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (123ms)
-				TypeCache.Initialize (123ms)
-					TypeCache.ScanAssembly (121ms)
+			SetupTypeCache (137ms)
+				TypeCache.Initialize (136ms)
+					TypeCache.ScanAssembly (135ms)
 				ResolveRequiredComponents (0ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (2462ms)
+			SetupLoadedEditorAssemblies (435ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2336ms)
+				InitializePlatformSupportModulesInManaged (270ms)
 				SetLoadedEditorAssemblies (4ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (85ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
+				ProcessInitializeOnLoadAttributes (97ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 ========================================================================
 Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ijstoops\Documents\GitHub\RPG-SGD\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ijstoops\Documents\GitHub\RPG-SGD\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.710 seconds
+Refreshing native plugins compatible for Editor in 1.93 ms, found 1 plugins.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.472 seconds
+Domain Reload Profiling:
+	ReloadAssembly (236ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		LoadAllAssembliesAndSetupDomain (470ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (434ms)
+				TypeCache.Initialize (255ms)
+					TypeCache.ScanAssembly (251ms)
+				ResolveRequiredComponents (4ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (329ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (45ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (181ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2935 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (62.8 KB). Loaded Objects now: 3413.
+Memory consumption went from 464.9 MB to 464.8 MB.
+Total: 4.251100 ms (FindLiveObjects: 0.379700 ms CreateObjectMapping: 0.742600 ms MarkObjects: 2.976900 ms  DeleteObjects: 0.150800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 76266.401890 seconds.
+  path: Assets/TextMesh Pro/Fonts/Kingthings_Calligraphica_Italic.ttf
+  artifactKey: Guid(4b6d1b7e92b3799478a993ca37e64928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/Kingthings_Calligraphica_Italic.ttf using Guid(4b6d1b7e92b3799478a993ca37e64928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f321db0ecf63843f90dd1e7a450c8ae') in 0.118689 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TextMesh Pro/Fonts/DancingScript-Regular SDF.asset
+  artifactKey: Guid(998969a307f9b104bba2afb04583b80e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/DancingScript-Regular SDF.asset using Guid(998969a307f9b104bba2afb04583b80e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ca48a9362daec50c23d37d7b59212fd') in 0.037774 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TextMesh Pro/Fonts/Kingthings_Calligraphica_Italic SDF.asset
+  artifactKey: Guid(3e2e5ca9e8c4c6945b7b55b4392db2d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/Kingthings_Calligraphica_Italic SDF.asset using Guid(3e2e5ca9e8c4c6945b7b55b4392db2d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422c108879ef6d660374c74320e034cc') in 0.020668 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro
+  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9676dd18abb4b27822c7a939c7cbcbcc') in 0.007713 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Fonts/mukta/Mukta-Medium.ttf
+  artifactKey: Guid(423221a39c1d2c242838b71afbc8fed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/mukta/Mukta-Medium.ttf using Guid(423221a39c1d2c242838b71afbc8fed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd636b6ef7f14c7ce6bf9e219905203') in 0.016361 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextMesh Pro/Fonts/mukta/Mukta-Light.ttf
+  artifactKey: Guid(2a301b640af015c4aa41171ab9b74421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/mukta/Mukta-Light.ttf using Guid(2a301b640af015c4aa41171ab9b74421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64baf0b1d66cb6a0181ba1bfbca8605f') in 0.016947 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Fonts/mukta/Mukta-Medium SDF.asset
+  artifactKey: Guid(c18eb01b31f25c048874b342ca6ab9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/mukta/Mukta-Medium SDF.asset using Guid(c18eb01b31f25c048874b342ca6ab9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf74509eeee5fb5a2f2a11616284602') in 0.023792 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8357f24eca9bc98b0df8a5ed5d2cfb') in 0.015643 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Fonts/mukta/Mukta-SemiBold SDF.asset
+  artifactKey: Guid(e8cded1675ad5e14985ab7b6a465d9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/mukta/Mukta-SemiBold SDF.asset using Guid(e8cded1675ad5e14985ab7b6a465d9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d1d0520d6a33bec1a7bc1c963abb10a') in 0.023298 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TextMesh Pro/Fonts/DancingScript-Regular.ttf
+  artifactKey: Guid(1568766542da8944a8ac152512c308d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/DancingScript-Regular.ttf using Guid(1568766542da8944a8ac152512c308d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a3960065d8477ea12521483f58e609') in 0.021444 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TextMesh Pro/Fonts/mukta/Mukta-ExtraBold SDF.asset
+  artifactKey: Guid(970169a37ff727e46b711db6302a1573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/mukta/Mukta-ExtraBold SDF.asset using Guid(970169a37ff727e46b711db6302a1573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e10790a1ca5aa0bb477a842ab7a7cd6') in 0.024528 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TextMesh Pro/Fonts/mukta/Mukta-ExtraLight.ttf
+  artifactKey: Guid(a2c07346e6078d94fb3d38bf0d5b10ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/mukta/Mukta-ExtraLight.ttf using Guid(a2c07346e6078d94fb3d38bf0d5b10ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '551a3d99f829f21734ab23a549855f3f') in 0.017952 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 56.877984 seconds.
+  path: Assets/TextMesh Pro/Fonts/lora/Lora-BoldItalic SDF.asset
+  artifactKey: Guid(7dea8984de4133a4d9167cbf8c48f68c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/lora/Lora-BoldItalic SDF.asset using Guid(7dea8984de4133a4d9167cbf8c48f68c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebbe07ed86c9de8c50c24095680b7f01') in 0.030293 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/TextMesh Pro/Fonts/lora/Lora-Regular SDF.asset
+  artifactKey: Guid(e3dc6b6ee4654fd49abd5a0506f3c1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/lora/Lora-Regular SDF.asset using Guid(e3dc6b6ee4654fd49abd5a0506f3c1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4bcf80ac678d638c0ad30af55357215') in 0.031153 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Fonts/lora/Lora-Italic-VariableFont_wght SDF.asset
+  artifactKey: Guid(c01322ecd69e1444fbc385a4d60cd2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/lora/Lora-Italic-VariableFont_wght SDF.asset using Guid(c01322ecd69e1444fbc385a4d60cd2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdaf8b91b8e15b25ee2980ebbaa070a') in 0.026834 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TextMesh Pro/Fonts/lora/Lora-Medium SDF.asset
+  artifactKey: Guid(060eed514a0f50d4daba8a81f7cfc702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/lora/Lora-Medium SDF.asset using Guid(060eed514a0f50d4daba8a81f7cfc702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b691f88c5f9342b9765794dfc0a10125') in 0.035358 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TextMesh Pro/Fonts/lora/Lora-SemiBold SDF.asset
+  artifactKey: Guid(1a849ee4362cd9a45a8528d1948708e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/lora/Lora-SemiBold SDF.asset using Guid(1a849ee4362cd9a45a8528d1948708e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22a1ba5b038ec6f7838081281f26a018') in 0.026154 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/TextMesh Pro/Fonts/lora/Lora-SemiBold.ttf
+  artifactKey: Guid(4e28c02143f89544bbd2b460d4e3b24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/TextMesh Pro/Fonts/lora/Lora-SemiBold.ttf using Guid(4e28c02143f89544bbd2b460d4e3b24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c596533aaeb65e34485f4a19c37485d7') in 0.022260 seconds 
+Number of asset objects unloaded after import = 4
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

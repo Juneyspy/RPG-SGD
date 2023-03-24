@@ -1,0 +1,5 @@
+1. the actual tilemap file (in your forst art folder) also needed a tilemap collider
+2. I had to make a new tilemap (after the tilemap had been modified) for the colliders to work
+3. the new tilemap also needs a tilemap collider
+4. translucent sprites don't get colliders, so use an opaque tile for your walls
+5. the colliders do stil work if you set the albedo to transparent, so you don't have to worry about sort order on this tilemap
