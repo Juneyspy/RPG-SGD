@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SceneChange : MonoBehaviour
 {
@@ -17,7 +18,12 @@ public class SceneChange : MonoBehaviour
     public GameObject Load;
     public GameObject NewGame;
     public GameObject Help;
+    public GameObject Controls;
+    public GameObject HowToPlay;
+    public GameObject Credits;
 
+    public TextMeshProUGUI textchange;
+    public TextMeshProUGUI header;
 
     //private Sprite newGameSprite;
 
@@ -30,7 +36,7 @@ public class SceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void start()
     {
@@ -73,4 +79,82 @@ public class SceneChange : MonoBehaviour
         Help.SetActive(true);
         startscreen.SetActive(false);
     }
+
+    public void Backtohome()
+    {
+        Load.SetActive(false);
+        Help.SetActive(false);
+        NewGame.SetActive(false);
+        notice.SetActive(false);
+        OverText1.SetActive(true);
+        OverText2.SetActive(true);
+        OverText3.SetActive(true);
+        OverText4.SetActive(true);
+        startscreen.SetActive(true);
+    }
+
+    public void ControlScreen()
+    {
+        Help.SetActive(false);
+        Controls.SetActive(true);
+    }
+
+    public void HowToPlayScreen()
+    {
+        Help.SetActive(false);
+        HowToPlay.SetActive(true);
+    }
+
+    public void CreditScreen()
+    {
+        Credits.SetActive(true);
+        Help.SetActive(false);
+    }
+
+    public void BackToHelp()
+    {
+        Help.SetActive(true);
+        Credits.SetActive(false);
+        HowToPlay.SetActive(false);
+        Controls.SetActive(false);
+    }
+
+    public void HandleInputData(int val)
+    {
+        if (val == 0){
+            textchange.text = "kys";
+            header.text = "get good";
+        }
+
+        if (val == 1)
+        {
+            textchange.text = "kys";
+            header.text = "gameplay";
+        }
+
+        if (val == 2)
+        {
+            textchange.text = "kys";
+            header.text = "crime system";
+        }
+
+        if (val == 3)
+        {
+            textchange.text = "kys";
+            header.text = "NPC";
+        }
+
+        if (val == 4)
+        {
+            textchange.text = "kys";
+            header.text = "Conditions";
+        }
+
+        if (val == 5)
+        {
+            textchange.text = "kys";
+            header.text = "Support items";
+        }
+    }
+
 }
