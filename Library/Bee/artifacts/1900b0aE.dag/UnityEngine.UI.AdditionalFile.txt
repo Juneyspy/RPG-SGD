@@ -1,5 +1,0 @@
-<<<<<<< Updated upstream
-C:\Users\Lydia\Documents\GitHub\RPG-SGD
-=======
-C:\Users\hsjohnson\Documents\GitHub\RPG-SGD
->>>>>>> Stashed changes
