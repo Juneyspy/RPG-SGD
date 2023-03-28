@@ -6,21 +6,22 @@ using UnityEngine.UI;
 
 public class revealtext : MonoBehaviour
 {
-
+    public bool clicked = false;
     public TMP_Text text;
+    public Coroutine startedCoroutine;
 
     void Start()
     {
-        StartCoroutine(RevealText());
+        startedCoroutine = StartCoroutine(RevealText());
     }
 
-    IEnumerator RevealText()
+    public IEnumerator RevealText()
     {
         var originalString = text.text;
         text.text = "";
 
         var numCharsRevealed = 0;
-        while (numCharsRevealed < originalString.Length)
+        while (numCharsRevealed < originalString.Length && !clicked)
         {
             while (originalString[numCharsRevealed] == ' ')
                 ++numCharsRevealed;
