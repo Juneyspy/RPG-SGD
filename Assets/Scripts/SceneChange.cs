@@ -41,6 +41,8 @@ public class SceneChange : MonoBehaviour
 
     public Animator herobrine;
     public Animator Hand;
+    public GameObject handPic;
+    public GameObject herobrinepic;
 
     //private Sprite newGameSprite;
 
@@ -73,6 +75,20 @@ public class SceneChange : MonoBehaviour
     public void herobrinespawn()
     {
         herobrine.SetBool("enlarge", true);
+        Invoke("handspawn", 2.0f);
+        Invoke("Herobrinedespawn", 2.3f);
+    }
+
+    public void handspawn()
+    {
+        handPic.SetActive(true);
+        Hand.SetBool("growing", true);
+    }
+
+    public void Herobrinedespawn()
+    {
+        handPic.SetActive(false);
+        herobrinepic.SetActive(false);
     }
 
     void SetInactive()
