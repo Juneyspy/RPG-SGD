@@ -185,7 +185,7 @@ public class SceneChange : MonoBehaviour
         if (gamelist.value == 0){
             val = 0;
             gamelist.value = 0;
-            textchange.text = "Welcome, in this area you will learn the basics of the game and its systems. If you want to learn about the games' different systems and functions, then click on the dropdown to the left of this screen.  ";
+            textchange.text = "Welcome, in this area you will learn the basics of the game and its systems. If you want to learn about the games' different systems and functions, then click on the dropdown to the left of this screen. ";
             header.text = "Welcome";
             sc = StartCoroutine(textchange.GetComponent<revealtext>().RevealText());
             textchange.GetComponent<revealtext>().startedCoroutine = sc;
@@ -195,7 +195,7 @@ public class SceneChange : MonoBehaviour
         {
             val = 1;
             gamelist.value = 1;
-            textchange.text = "This game's gameplay is quite simple, you have multiple options that you can choose from while in combat, such as: defend, run, item, and attack. If you choose to attack, it will lead to another menu asking what move you want to use. Outside of fighting, you can move around the world and talk to other characters to continue your journey.";
+            textchange.text = "The gameplay here is quite simple, you have multiple options that you can choose from while in combat, such as: defend, run, item, and attack. If you choose to attack, it will lead to another menu asking what move you want to use. If you choose the item option, it will bring up a menu to select which item to use. Outside of fighting, you can move around the world and talk to other characters to continue your journey. ";
             header.text = "Gameplay";
             sc = StartCoroutine(textchange.GetComponent<revealtext>().RevealText());
             textchange.GetComponent<revealtext>().startedCoroutine = sc;
@@ -205,7 +205,7 @@ public class SceneChange : MonoBehaviour
         {
             val = 2;
             gamelist.value = 2;
-            textchange.text = "The crime system is a feature that watches and counts your crimes. This includes actions like: killing the innocent, stealing, arson, etc. The more you commit, the more active the military will become, and after you reach a certain threshold and enter a town, you get arrested immediately and must find a way out of prison. ";
+            textchange.text = "The crime system is a feature that watches and counts your crimes. This includes actions such as: killing the innocent, stealing, arson, etc. The more crimes you commit, the more active the military will become, and after you reach a certain threshold and enter a town, you get arrested immediately and must find a way out of prison. ";
             header.text = "Crime system";
             sc = StartCoroutine(textchange.GetComponent<revealtext>().RevealText());
             textchange.GetComponent<revealtext>().startedCoroutine = sc;
@@ -215,7 +215,7 @@ public class SceneChange : MonoBehaviour
         {
             val = 3;
             gamelist.value = 3;
-            textchange.text = "The NPCs in this game are simple but will adapt to what you do. At each area you go to you can find NPCs that inform you or give you hints about what to do next. They adapt when you commit more crimes / get arrested, the NPCs will have different lines condemning you and merchants will raise their prices sharply from before. ";
+            textchange.text = "The NPCs in this game are simple but will adapt to what you do. At each area you go to you can find NPCs that inform you or give you hints about what to do next. They adapt when you commit more crimes / get arrested. For example, the NPCs will have different lines condemning you and merchants will raise their prices sharply from before. ";
             header.text = "NPC";
             sc = StartCoroutine(textchange.GetComponent<revealtext>().RevealText());
             textchange.GetComponent<revealtext>().startedCoroutine = sc;
@@ -225,7 +225,7 @@ public class SceneChange : MonoBehaviour
         {
             val = 4;
             gamelist.value = 4;
-            textchange.text = "Fights in this game can become more complicated with conditions. By applying different effects to your weapon, it can deal different types of damage or status effects. for example: a fire imbued sword will do fire damage and ice will slow your enemy.";
+            textchange.text = "Fights in this game can become more complicated with conditions. By applying different effects to your weapon, it can deal different types of damage or status effects. for example: a fire imbued sword will do fire damage and ice will slow your enemy. ";
             header.text = "Conditions";
             sc = StartCoroutine(textchange.GetComponent<revealtext>().RevealText());
             textchange.GetComponent<revealtext>().startedCoroutine = sc;
@@ -235,7 +235,7 @@ public class SceneChange : MonoBehaviour
         {
             val = 5;
             gamelist.value = 5;
-            textchange.text = "To combat condtions against the player you have the chance to select item in the fight and find the appropiate item to support yourself. An example of a few itmes is potions, fire burn, cure sleep, etc.";
+            textchange.text = "To combat conditions against the player you have the chance to select an item in the fight and find the appropriate item to support yourself. An example of a few items are potions, fire heal, cure sleep, etc. ";
             header.text = "Support items";
             sc = StartCoroutine(textchange.GetComponent<revealtext>().RevealText());
             textchange.GetComponent<revealtext>().startedCoroutine = sc;
@@ -250,7 +250,7 @@ public class SceneChange : MonoBehaviour
         if (gamelist.value == 0)
         {
             gamelist.value = 0;
-            finaltext.text = "Welcome, In this area you will learn the basics of the game and its systems. If you want to learn about the games different systems and functions, then click on the dropdown to the left of this screen. ";
+            finaltext.text = "Welcome, in this area you will learn the basics of the game and its systems. If you want to learn about the games' different systems and functions, then click on the dropdown to the left of this screen. ";
             header.text = "Welcome";
 
         }
@@ -258,35 +258,35 @@ public class SceneChange : MonoBehaviour
         if (gamelist.value == 1)
         {
             gamelist.value = 1;
-            finaltext.text = "This game's gameplay is quite simple, you have multiple options that you can choose from while in combat, such as: defend, run, item, and attack. If you choose to attack, it will lead to another menu asking what move you want to use. Outside of fighting, you can move around the world and talk to other characters to continue your journey.";
+            finaltext.text = "The gameplay here is quite simple, you have multiple options that you can choose from while in combat, such as: defend, run, item, and attack. If you choose to attack, it will lead to another menu asking what move you want to use. If you choose the item option, it will bring up a menu to select which item to use. Outside of fighting, you can move around the world and talk to other characters to continue your journey. ";
             header.text = "Gameplay";
         }
 
         if (gamelist.value == 2)
         {
             gamelist.value = 2;
-            finaltext.text = "The crime system is a feature that watches and counts your crimes. This includes actions like: killing the innocent, stealing, arson, etc. The more you commit, the more active the military will become, and after you reach a certain threshold and enter a town, you get arrested immediately and must find a way out of prison. ";
+            finaltext.text = "The crime system is a feature that watches and counts your crimes. This includes actions such as: killing the innocent, stealing, arson, etc. The more crimes you commit, the more active the military will become, and after you reach a certain threshold and enter a town, you get arrested immediately and must find a way out of prison. ";
             header.text = "Crime system";
         }
 
         if (gamelist.value == 3)
         {
             gamelist.value = 3;
-            finaltext.text = "The NPCs in this game are simple but will adapt to what you do. At each area you go to you can find NPCs that inform you or give you hints about what to do next. They adapt when you commit more crimes / get arrested, the NPCs will have different lines condemning you and merchants will raise their prices sharply from before. ";
+            finaltext.text = "The NPCs in this game are simple but will adapt to what you do. At each area you go to you can find NPCs that inform you or give you hints about what to do next. They adapt when you commit more crimes / get arrested. For example, the NPCs will have different lines condemning you and merchants will raise their prices sharply from before. ";
             header.text = "NPC";
         }
 
         if (gamelist.value == 4)
         {
             gamelist.value = 4;
-            finaltext.text = "Fights in this game can become more complicated with conditions. By applying different effects to your weapon, it can deal different types of damage or status effects. for example: a fire imbued sword will do fire damage and ice will slow your enemy.";
+            finaltext.text = "Fights in this game can become more complicated with conditions. By applying different effects to your weapon, it can deal different types of damage or status effects. for example: a fire imbued sword will do fire damage and ice will slow your enemy. ";
             header.text = "Conditions";
         }
 
         if (gamelist.value == 5)
         {
             gamelist.value = 5;
-            finaltext.text = "To combat condtions against the player you have the chance to select item in the fight and find the appropiate item to support yourself. An example of a few itmes is potions, fire burn, cure sleep, etc.";
+            finaltext.text = "To combat conditions against the player you have the chance to select an item in the fight and find the appropriate item to support yourself. An example of a few items are potions, fire heal, cure sleep, etc. ";
             header.text = "Support items";
         }
     }
