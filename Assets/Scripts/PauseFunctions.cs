@@ -6,6 +6,10 @@ public class PauseFunctions : MonoBehaviour
 {
     public int foxycount;
     public GameObject foxyhold;
+    public GameObject runes;
+    public GameObject inventory;
+    public GameObject travel;
+    public GameObject journal;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +35,34 @@ public class PauseFunctions : MonoBehaviour
     public void foxygone()
     {
         foxyhold.SetActive(false);
+    }
+
+    public void runescreen()
+    {
+        runes.SetActive(true);
+        inventory.SetActive(false);
+        travel.SetActive(false);
+        journal.SetActive(false);
+    }
+    public void inventoryscreen()
+    {
+        runes.SetActive(false);
+        inventory.SetActive(true);
+        travel.SetActive(false);
+        journal.SetActive(false);
+    }
+    public void travelscreen()
+    {
+        runes.SetActive(false);
+        inventory.SetActive(false);
+        travel.SetActive(true);
+        journal.SetActive(false);
+    }
+    public void journalscreen()
+    {
+        runes.SetActive(false);
+        inventory.SetActive(false);
+        travel.SetActive(false);
+        journal.SetActive(true);
     }
 }
