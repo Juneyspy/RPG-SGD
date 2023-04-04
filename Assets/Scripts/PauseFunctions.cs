@@ -10,6 +10,9 @@ public class PauseFunctions : MonoBehaviour
     public GameObject inventory;
     public GameObject travel;
     public GameObject journal;
+    public GameObject buttongone1;
+    public GameObject buttongone2;
+    public Animator buttonfade;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,5 +67,11 @@ public class PauseFunctions : MonoBehaviour
         inventory.SetActive(false);
         travel.SetActive(false);
         journal.SetActive(true);
+    }
+
+    public void pleasejustplease()
+    {
+        buttongone1.SetActive(false);
+        buttongone2.SetActive(false);
     }
 }

@@ -12,9 +12,16 @@ public class PlayerScript : MonoBehaviour
     public GameObject PauseScreen;
     public bool paused = false;
 
+    GameObject inventory;
+    GameObject runesScreen;
+    GameObject inventoryScreen;
+    GameObject travelScreen;
+    GameObject journalScreen;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component on start
+        PauseScreen.SetActive(false);
     }
 
     void Update()
@@ -39,6 +46,17 @@ public class PlayerScript : MonoBehaviour
         //    paused = false;
         //    PauseScreen.SetActive(false);
         //}
+
+        if(Input.GetKeyDown(KeyCode.E)){ //FIXXXXX
+            runesScreen = GameObject.Find("Runes screen");
+            inventoryScreen = GameObject.Find("Inventory screen");
+            travelScreen = GameObject.Find("Travel Screen");
+            journalScreen = GameObject.Find("Journal screen");
+            inventory = GameObject.Find("Inventory shit");
+
+            inventory.SetActive(true);
+            inventoryScreen.SetActive(true);
+        }
 
     }
 

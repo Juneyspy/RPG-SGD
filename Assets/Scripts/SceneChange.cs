@@ -75,8 +75,8 @@ public class SceneChange : MonoBehaviour
     public void herobrinespawn()
     {
         herobrine.SetBool("enlarge", true);
-        Invoke("handspawn", 2.0f);
-        Invoke("Herobrinedespawn", 2.3f);
+        Invoke("handspawn",1.0f);
+        Invoke("Herobrinedespawn", 1.3f);
     }
 
     public void handspawn()
