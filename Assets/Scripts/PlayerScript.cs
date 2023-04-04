@@ -30,11 +30,15 @@ public class PlayerScript : MonoBehaviour
         }
 
         //Get Keys--------------------------------------------------------------------
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(!paused && Input.GetKeyDown(KeyCode.Escape)){
             print(PauseScreen);
             PauseScreen.SetActive(true);
             paused = true;
         }
+        //if(paused && Input.GetKeyDown(KeyCode.Escape)){
+        //    paused = false;
+        //    PauseScreen.SetActive(false);
+        //}
 
     }
 
