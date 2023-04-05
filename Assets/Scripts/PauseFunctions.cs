@@ -13,6 +13,8 @@ public class PauseFunctions : MonoBehaviour
     public GameObject buttongone1;
     public GameObject buttongone2;
     public Animator buttonfade;
+    public GameObject Areyousure;
+    //public GameObject Alright;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,5 +75,10 @@ public class PauseFunctions : MonoBehaviour
     {
         buttongone1.SetActive(false);
         buttongone2.SetActive(false);
+    }
+
+    public void Doublecheck()
+    {
+
     }
 }
