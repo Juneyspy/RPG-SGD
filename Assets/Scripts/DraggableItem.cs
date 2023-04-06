@@ -8,6 +8,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     public Image image;
     [HideInInspector] public Transform parentAfterDrag;
+    GameObject inv;
+    GameObject trash;
+    GameObject player;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -43,4 +46,19 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         //throw new System.NotImplementedException();
     }
+
+    void Start(){
+        inv = GameObject.Find("quick slots");
+        trash = inv.transform.GetChild(35).gameObject;
+        player = GameObject.Find("OverworldMC");
+    }
+
+    void Update(){
+        if(player.GetComponent<PlayerScript>().invOpened){
+            if (trash.transform.childCount > 0){
+                Destroy(trash.transform.GetChild(0).gameObject);
+            }
+        }
+    }
+
 }
