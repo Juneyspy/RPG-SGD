@@ -30,7 +30,7 @@ public class revealtext : MonoBehaviour
 
             text.text = originalString.Substring(0, numCharsRevealed);
 
-            yield return new WaitForSeconds(0.055f);
+            yield return new WaitForSeconds(0.055f); 
         }
     }
 }
