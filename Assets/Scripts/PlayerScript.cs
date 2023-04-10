@@ -11,16 +11,26 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject PauseScreen;
     public bool paused = false;
+    public bool invOpened = false;
+    public bool canOpenInv = true;
+    public bool canOpenPause = true;
 
-    GameObject inventory;
-    GameObject runesScreen;
-    GameObject inventoryScreen;
-    GameObject travelScreen;
-    GameObject journalScreen;
+    public GameObject newItemsGrid;
+    public GameObject inventory;
+    public GameObject runesScreen;
+    public GameObject inventoryScreen;
+    public GameObject travelScreen;
+    public GameObject journalScreen;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component on start
+        //newItemsGrid = GameObject.Find("newitemarea"); 
+        runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
+        inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
+        travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
+        journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
+        inventory = GameObject.Find("Inventory shit"); inventory.SetActive(false);     
         PauseScreen.SetActive(false);
     }
 
@@ -38,27 +48,34 @@ public class PlayerScript : MonoBehaviour
 
         //Get Keys--------------------------------------------------------------------
         if(!paused && Input.GetKeyDown(KeyCode.Escape)){
-            print(PauseScreen);
             PauseScreen.SetActive(true);
             paused = true;
+            inventoryScreen.SetActive(false);
+            inventory.SetActive(false);  
         }
-        //if(paused && Input.GetKeyDown(KeyCode.Escape)){
-        //    paused = false;
-        //    PauseScreen.SetActive(false);
-        //}
+        else if(paused && Input.GetKeyDown(KeyCode.Escape)){
+            paused = false;
+            PauseScreen.SetActive(false);
+        }
 
-        if(Input.GetKeyDown(KeyCode.E)){ //FIXXXXX
-            runesScreen = GameObject.Find("Runes screen");
-            inventoryScreen = GameObject.Find("Inventory screen");
-            travelScreen = GameObject.Find("Travel Screen");
-            journalScreen = GameObject.Find("Journal screen");
-            inventory = GameObject.Find("Inventory shit");
-
+        if(Input.GetKeyDown(KeyCode.E) && !invOpened){
+            paused = true;
+            invOpened = true;
+            PauseScreen.SetActive(false);
             inventory.SetActive(true);
             inventoryScreen.SetActive(true);
         }
+        else if(Input.GetKeyDown(KeyCode.E) && invOpened){
+            invOpened = false;
+            paused = false;
+            inventoryScreen.SetActive(false);
+            inventory.SetActive(false);
+        }
 
     }
+
+    //fix continuous moving when paused, fix closing menu with esc 
+
 
     void FixedUpdate()
     {
