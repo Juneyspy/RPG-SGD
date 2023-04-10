@@ -1905,6 +1905,7 @@ MonoBehaviour:
   shopUI: {fileID: 356034589}
   shopNPC: {fileID: 1809016528}
   player: {fileID: 2084385466}
+  press: 0
 --- !u!1 &1962900003
 GameObject:
   m_ObjectHideFlags: 0
