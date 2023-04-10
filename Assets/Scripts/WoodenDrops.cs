@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WoodenDrops : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class WoodenDrops : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player" && !opened){
+            player.GetComponent<PlayerScript>().CancelAnimation();
             inInv = true;
             opened = true;
             player.GetComponent<PlayerScript>().invOpened = true;
@@ -55,13 +57,26 @@ public class WoodenDrops : MonoBehaviour
             inventory.SetActive(true);
             inventoryScreen.SetActive(true);
 
-            int amountDropped = Random.Range(1,5);
-            for(int i=1; i < amountDropped+1; i++){
-                newItem = allItems[Random.Range(0,2)];
-                GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
-                temp.GetComponent<Image>().sprite = newItem;
-                itemsToGet.Add(newItem);
-                temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
+            if(SceneManager.GetActiveScene().name != "Ms G Test"){
+
+                int amountDropped = Random.Range(1,5);
+                for(int i=1; i < amountDropped+1; i++){
+                    newItem = allItems[Random.Range(0,2)];
+                    GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
+                    temp.GetComponent<Image>().sprite = newItem;
+                    //itemsToGet.Add(newItem);
+                    temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
+                }
+            }
+            else{
+                int amountDropped = 2;
+                for(int i=1; i < amountDropped+1; i++){
+                    newItem = allItems[i-1];
+                    GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
+                    temp.GetComponent<Image>().sprite = newItem;
+                    //itemsToGet.Add(newItem);
+                    temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
+                }
             }
         }
     }

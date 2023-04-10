@@ -47,7 +47,9 @@ public class PlayerScript : MonoBehaviour
         }
 
         //Get Keys--------------------------------------------------------------------
+                    //pausing
         if(!paused && Input.GetKeyDown(KeyCode.Escape)){
+            CancelAnimation();
             PauseScreen.SetActive(true);
             paused = true;
             inventoryScreen.SetActive(false);
@@ -57,8 +59,9 @@ public class PlayerScript : MonoBehaviour
             paused = false;
             PauseScreen.SetActive(false);
         }
-
+                    //inventory
         if(Input.GetKeyDown(KeyCode.E) && !invOpened){
+            CancelAnimation();
             paused = true;
             invOpened = true;
             PauseScreen.SetActive(false);
@@ -81,5 +84,13 @@ public class PlayerScript : MonoBehaviour
     {
         // Move the player's Rigidbody2D component
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //rb.velocity = movement;
+    }
+
+    public void CancelAnimation(){
+        movement.x = 0;
+        movement.y = 0;
+        animator.SetFloat("Horizontal", 0);
+        animator.SetFloat("Vertical", 0);
+        animator.SetFloat("Speed", 0);
     }
 }
