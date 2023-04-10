@@ -22,14 +22,14 @@ public class textfunctions : MonoBehaviour
 
     public Coroutine sc;
 
+    public Sprite BidenBlast;
+    public Sprite Biden;
+    public Image baseimage;
+    public GameObject ImageHolder;
 
     // Start is called before the first frame update
     void Start()
     {
-        //In here I need to write code that gets the "name" / tag of the character you are interacting with
-        //once the code gets the characters name it will change it on the screen.
-        // in an if statement that looks and compares the characters name, will have a function that gets called which holds a switch case for all the speech.
-        //the picture of the character changes when the name of the character is being collected.
         textcount++;
         textabuse.text = "Hi";
         textabuseplus.text = "Hi";
@@ -39,6 +39,11 @@ public class textfunctions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (textabuse.text == textabuseplus.text)
+        {
+            buttonforreveal.SetActive(false);
+        }
+
         if (Input.GetKey("space"))
         {
             IceSpice.SetActive(false);
@@ -68,8 +73,6 @@ public class textfunctions : MonoBehaviour
                 basetextholder.SetActive(true);
                 Finaltext.SetActive(false);
                 names.text = "joe bi";
-                //textstart = StartCoroutine(textabuse.GetComponent<revealtext>().RevealText());
-                //textabuse.GetComponent<revealtext>().startedCoroutine = textstart;
                 textabuse.text = "shut up shut up shut up nigga, אני אוהב גלידה or whatever... BIDEN BLAST!!!!";
                 textabuseplus.text = "shut up shut up shut up nigga, אני אוהב גלידה or whatever... BIDEN BLAST!!!!";
                 sc = StartCoroutine(textabuse.GetComponent<revealtext>().RevealText());
@@ -85,6 +88,7 @@ public class textfunctions : MonoBehaviour
                 textabuseplus.text = "Huh?";
                 sc = StartCoroutine(textabuse.GetComponent<revealtext>().RevealText());
                 textabuse.GetComponent<revealtext>().startedCoroutine = sc;
+                baseimage.sprite = BidenBlast;
                 textcount++;
                 buttonforreveal.SetActive(true);
                 break;
@@ -96,7 +100,6 @@ public class textfunctions : MonoBehaviour
                 textabuseplus.text = "THIS ISNT EVEN 5 PERCENT OF MY FULL POWER!!!!!!";
                 sc = StartCoroutine(textabuse.GetComponent<revealtext>().RevealText());
                 textabuse.GetComponent<revealtext>().startedCoroutine = sc;
-                //textcount = 0;
                 buttonforreveal.SetActive(true);
                 break;
         }
@@ -108,8 +111,6 @@ public class textfunctions : MonoBehaviour
 
         Finaltext.SetActive(true);
         buttonforreveal.SetActive(false);
-
         StopCoroutine(textabuse.GetComponent<revealtext>().startedCoroutine);
-        //buttonforreveal.SetActive(true);
     }
 }
