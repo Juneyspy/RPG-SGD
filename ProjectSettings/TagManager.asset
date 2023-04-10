@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Boss1
+  - Boss2
+  - Boss3
+  - NPC male
+  - NPC female
+  - Shopkeep
+  - Runesmith
+  - Innkeep
   layers:
   - Default
   - TransparentFX
