@@ -7,6 +7,9 @@ public class FightingFunctions : MonoBehaviour
     public GameObject fighitngscreen;
     public GameObject Battlepass;
     public GameObject Itemstuff;
+    public GameObject StatsHolder;
+    public GameObject SwordRuneHolder;
+    public GameObject ArmorRuneHolder;
 
     // Start is called before the first frame update
     void Start()
@@ -38,5 +41,26 @@ public class FightingFunctions : MonoBehaviour
     {
         Battlepass.SetActive(false);
         Itemstuff.SetActive(false);
+        StatsHolder.SetActive(false);
+        ArmorRuneHolder.SetActive(false);
+        SwordRuneHolder.SetActive(false);
+    }
+    public void StatsScreen()
+    {
+        StatsHolder.SetActive(true);
+        ArmorRuneHolder.SetActive(false);
+        SwordRuneHolder.SetActive(false);
+    }
+    public void ArmorON()
+    {
+        ArmorRuneHolder.SetActive(true);
+        SwordRuneHolder.SetActive(false); 
+        StatsHolder.SetActive(false);
+    }
+    public void SwordON()
+    {
+        SwordRuneHolder.SetActive(true);
+        StatsHolder.SetActive(false);
+        ArmorRuneHolder.SetActive(false);
     }
 }
