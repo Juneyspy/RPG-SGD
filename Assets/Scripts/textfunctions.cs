@@ -39,6 +39,39 @@ public class textfunctions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (NPC.tag == "Boss1")
+        {
+
+        }
+        if (NPC.tag == "Boss2")
+        {
+
+        }
+        if (NPC.tag == "Boss3")
+        {
+
+        }
+        if (NPC.tag == "NPC male")
+        {
+
+        }
+        if (NPC.tag == "NPC female")
+        {
+
+        }
+        if (NPC.tag == "Shopkeep")
+        {
+
+        }
+        if (NPC.tag == "Runesmith")
+        {
+
+        }
+        if (NPC.tag == "Innkeep")
+        {
+
+        }
+
         if (textabuse.text == textabuseplus.text)
         {
             buttonforreveal.SetActive(false);
