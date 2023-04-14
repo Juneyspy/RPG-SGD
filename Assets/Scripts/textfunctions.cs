@@ -27,6 +27,8 @@ public class textfunctions : MonoBehaviour
     public Image baseimage;
     public GameObject ImageHolder;
 
+    public GameObject NPC;
+
     // Start is called before the first frame update
     void Start()
     {
