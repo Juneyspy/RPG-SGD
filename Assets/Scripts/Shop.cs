@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
 
 public class Shop : MonoBehaviour
 {
@@ -9,6 +12,15 @@ public class Shop : MonoBehaviour
     public GameObject player;
     float angle = 88;
     public int press = 0;
+
+    public int MoneySpent;
+    public TMP_Text nameofitem;
+    public GameObject Quantity;
+    public int gold;
+    public int TotalCost = 150;
+    public TMP_InputField quantityvalue;
+    public int multiplycost;
+    public TMP_Text quantitycost;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +44,17 @@ public class Shop : MonoBehaviour
                 press = 0;
             }
         }
+    }
+
+    public void QuantityScreen()
+    {
+        Quantity.SetActive(true);
+        nameofitem.text = "potion";
+        //quantitycost.text = (quantityvalue.value * TotalCost).text;
+    }
+
+    public void PotionCost()
+    {
+        gold--;//put in the amount of whatever the item costs here
     }
 }

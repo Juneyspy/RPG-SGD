@@ -44,6 +44,8 @@ public class SceneChange : MonoBehaviour
     public GameObject handPic;
     public GameObject herobrinepic;
 
+    public string URL;
+
     //private Sprite newGameSprite;
 
     // Start is called before the first frame update
@@ -137,6 +139,11 @@ public class SceneChange : MonoBehaviour
     {
         Help.SetActive(false);
         Controls.SetActive(true);
+    }
+    public void sourceslink()
+    {
+        Application.OpenURL(URL);
+        Debug.Log("worky");
     }
 
     public void HowToPlayScreen()
