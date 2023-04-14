@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class FightingFunctions : MonoBehaviour
 {
@@ -62,5 +63,12 @@ public class FightingFunctions : MonoBehaviour
         SwordRuneHolder.SetActive(true);
         StatsHolder.SetActive(false);
         ArmorRuneHolder.SetActive(false);
+    }
+    public void PrintItemUse()
+    {
+        string ButtonName = EventSystem.current.currentSelectedGameObject.name;
+        GameObject ByeBye = GameObject.Find(ButtonName);
+        // make code here that uses the item and applys its effects.
+        Destroy(ByeBye.gameObject);
     }
 }
