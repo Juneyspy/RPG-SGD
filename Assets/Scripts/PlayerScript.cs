@@ -21,11 +21,13 @@ public class PlayerScript : MonoBehaviour
     public GameObject inventoryScreen;
     public GameObject travelScreen;
     public GameObject journalScreen;
+    //public GameObject fightMenu;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component on start
         //newItemsGrid = GameObject.Find("newitemarea"); 
+        //fightMenu = GameObject.Find("fightscene"); fightMenu.SetActive(false);
         runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
         inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
         travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
