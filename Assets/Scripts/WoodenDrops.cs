@@ -8,6 +8,7 @@ public class WoodenDrops : MonoBehaviour
 {
     public SpriteRenderer spriterenderer;
     public Sprite openChest;
+    public Sprite closedChest;
     public bool opened = false;
     public bool inInv = false;
 
@@ -46,11 +47,11 @@ public class WoodenDrops : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "Player" && !opened){
+        if(other.tag == "Player" && !takenItems){
             player.GetComponent<PlayerScript>().CancelAnimation();
             inInv = true;
-            opened = true;
-            player.GetComponent<PlayerScript>().invOpened = true;
+            //player.GetComponent<PlayerScript>().invOpened = true;
+            closedChest = spriterenderer.sprite;
             spriterenderer.sprite = openChest;
             player.GetComponent<PlayerScript>().paused = true;
 
@@ -68,7 +69,7 @@ public class WoodenDrops : MonoBehaviour
                     temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
                 }
             }
-            else{
+            else if(SceneManager.GetActiveScene().name == "Ms G Test" && !opened){
                 int amountDropped = 2;
                 for(int i=1; i < amountDropped+1; i++){
                     newItem = allItems[i-1];
@@ -78,6 +79,7 @@ public class WoodenDrops : MonoBehaviour
                     temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
                 }
             }
+            opened = true;
         }
     }
 
@@ -87,6 +89,13 @@ public class WoodenDrops : MonoBehaviour
             player.GetComponent<PlayerScript>().invOpened = false;
             inventoryScreen.SetActive(false);
             inventory.SetActive(false);
+        }
+        else{
+            inInv = false;
+            player.GetComponent<PlayerScript>().invOpened = false;
+            inventoryScreen.SetActive(false);
+            inventory.SetActive(false);
+            spriterenderer.sprite = closedChest;
         }
     }
 }
