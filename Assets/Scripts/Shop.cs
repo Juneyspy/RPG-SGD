@@ -21,10 +21,15 @@ public class Shop : MonoBehaviour
     public TMP_InputField quantityvalue;
     public int multiplycost;
     public TMP_Text quantitycost;
+
+
+    public TMP_Text Totalend;
+    public TMP_Text goldhold;
     // Start is called before the first frame update
     void Start()
     {
-        shopUI.SetActive(false);
+        goldhold.text = gold.ToString();
+        //shopUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -55,6 +60,14 @@ public class Shop : MonoBehaviour
 
     public void PotionCost()
     {
-        gold--;//put in the amount of whatever the item costs here
+        //goldhold.text = gold.ToString();
+        gold -= 150;
+        goldhold.text = gold.ToString();
+        Totalend.text = gold.ToString();
+    }
+
+    public void ShopClose()
+    {
+        shopUI.SetActive(false);
     }
 }
