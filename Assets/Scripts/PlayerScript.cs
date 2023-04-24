@@ -70,7 +70,7 @@ public class PlayerScript : MonoBehaviour
             inventory.SetActive(true);
             inventoryScreen.SetActive(true);
         }
-        else if(Input.GetKeyDown(KeyCode.E) && invOpened){
+        else if((Input.GetKeyDown(KeyCode.E) && invOpened) || (Input.GetKeyDown(KeyCode.Escape) && invOpened)){
             invOpened = false;
             paused = false;
             inventoryScreen.SetActive(false);

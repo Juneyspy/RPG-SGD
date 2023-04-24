@@ -2554,7 +2554,7 @@ RectTransform:
   - {fileID: 388279222}
   - {fileID: 1262656299}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5712,7 +5712,7 @@ RectTransform:
   m_Children:
   - {fileID: 395805738}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5885,7 +5885,7 @@ Transform:
   - {fileID: 2052903624}
   - {fileID: 896228739}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220050699
 GameObject:
@@ -18281,7 +18281,7 @@ RectTransform:
   - {fileID: 1620543002}
   - {fileID: 654853170}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -21917,7 +21917,7 @@ RectTransform:
   m_Children:
   - {fileID: 1067002404}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23610,7 +23610,7 @@ Transform:
   - {fileID: 1973746705}
   - {fileID: 1978574081}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753321662
 GameObject:
@@ -55289,6 +55289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriterenderer: {fileID: 1623454852}
   openChest: {fileID: 583928775, guid: cffdc5f085e2d6342a0b3a359f57aabb, type: 3}
+  closedChest: {fileID: 0}
   opened: 0
   inInv: 0
   allItems:
@@ -58412,7 +58413,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698299331
 GameObject:
@@ -124377,7 +124378,7 @@ MonoBehaviour:
   StatsHolder: {fileID: 15565086}
   SwordRuneHolder: {fileID: 546944085}
   ArmorRuneHolder: {fileID: 1698885415}
-  player: {fileID: 0}
+  player: {fileID: 5385109521302120328, guid: c219f84563c139e46b0dd23c65114154, type: 3}
 --- !u!4 &1973746705
 Transform:
   m_ObjectHideFlags: 0
