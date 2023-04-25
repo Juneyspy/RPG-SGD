@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     public bool invOpened = false;
     public bool canOpenInv = true;
     public bool canOpenPause = true;
+    public bool fighting = false;
 
     public GameObject newItemsGrid;
     public GameObject inventory;
@@ -39,7 +40,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         //Movement---------------------------------------------------------------------
-        if(!paused){
+        if(!paused && !fighting){
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 

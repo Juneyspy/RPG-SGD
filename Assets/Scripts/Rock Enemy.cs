@@ -11,6 +11,8 @@ public class RockEnemy : MonoBehaviour
     public GameObject fadingGO;
     public Image fading;
     public Image finalFade;
+    public GameObject rockObj;
+    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,11 @@ public class RockEnemy : MonoBehaviour
         fadingGO = GameObject.Find("Fading");
         fading = fadingGO.GetComponent<Image>(); fading.CrossFadeAlpha(0,0.0f,true);
 
-        fightMenu = GameObject.Find("fighting sex"); fightMenu.SetActive(false);
-        player = GameObject.Find("OverwoldMC");
+        fightMenu = GameObject.Find("fighting"); fightMenu.SetActive(false);
+        player = GameObject.Find("OverworldMC");
         chest = GameObject.Find("Chest - Wooden");
+        rockObj = GameObject.Find("Rock Enemy");
+        cam = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -34,7 +38,7 @@ public class RockEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player"){
-            if(chest.GetComponent<WoodenDrops>().opened){
+            if(chest.GetComponent<WoodenDrops>().takenItems){
                 fading.CrossFadeAlpha(1,.2f,true);
                 Invoke("fadeOut",.2f);
                 Invoke("fadeIn",.4f);
@@ -44,6 +48,10 @@ public class RockEnemy : MonoBehaviour
                 Invoke("fadeOutFinal",1.0f);
                 Invoke("fadeOut",1.0f);
                 print("initiate fight");
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                cam.GetComponent<CameraScript>().following = false;
+                cam.transform.position = cam.GetComponent<CameraScript>().battleLoc;
             }
             else{
                 print("i recommend you open the chest first");
