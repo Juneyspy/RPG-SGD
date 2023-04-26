@@ -19,7 +19,7 @@ public class WoodenDrops : MonoBehaviour
     List<GameObject> screens;
 
     GameObject newItemsGrid;
-    bool takenItems = false;
+    public bool takenItems = false;
     List<Sprite> itemsToGet = new List<Sprite>();
     public List<Sprite> allItems = new List<Sprite>();
     public Sprite newItem;

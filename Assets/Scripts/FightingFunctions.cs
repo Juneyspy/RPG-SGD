@@ -12,7 +12,7 @@ public class FightingFunctions : MonoBehaviour
     public GameObject SwordRuneHolder;
     public GameObject ArmorRuneHolder;
 
-    public GameObject player;
+    public GameObject player; // move to 438,741,0 
 
     // Start is called before the first frame update
     void Start()

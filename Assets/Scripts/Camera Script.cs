@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     GameObject player;
+    public bool following = true;
+    public Vector3 battleLoc = new Vector3(650,700, -12.11325f);
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,8 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        gameObject.transform.position = player.gameObject.transform.position + new Vector3(0,0,-12.11325f);
+        if(following){
+            gameObject.transform.position = player.gameObject.transform.position + new Vector3(0,0,-12.11325f);
+        }
     }
 }
