@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class PlayerScript : MonoBehaviour
     public GameObject travelScreen;
     public GameObject journalScreen;
     //public GameObject fightMenu;
+
+    public GameObject colEnemy;
+    public Vector3 enemyScale;
+    public Vector3 enemyMove;
+    public Vector3 enemyPrevPos;
+    public Collider2D enemyTriggerCol;
 
     void Start()
     {
@@ -79,9 +86,6 @@ public class PlayerScript : MonoBehaviour
         }
 
     }
-
-    //fix continuous moving when paused, fix closing menu with esc 
-
 
     void FixedUpdate()
     {

@@ -7,27 +7,17 @@ public class RockEnemy : MonoBehaviour
 {
     public GameObject player;
     public GameObject chest;
+    public GameObject enemyObj;
     public GameObject fightMenu;
-    public GameObject fadingGO;
-    public Image fading;
-    public Image finalFade;
-    public GameObject rockObj;
-    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
     {
-        //fightMenu = GameObject.Find("fightingcanvas"); fightMenu.SetActive(false);
-        fadingGO = GameObject.Find("FinalFade");
-        finalFade = fadingGO.GetComponent<Image>(); finalFade.CrossFadeAlpha(0,0.0f,true);
-        fadingGO = GameObject.Find("Fading");
-        fading = fadingGO.GetComponent<Image>(); fading.CrossFadeAlpha(0,0.0f,true);
-
-        fightMenu = GameObject.Find("fighting"); fightMenu.SetActive(false);
+        fightMenu = GameObject.Find("fightingscript");
+        //fightMenu = GameObject.Find("fightingcanvas"); fightMenu.SetActive(false)
         player = GameObject.Find("OverworldMC");
         chest = GameObject.Find("Chest - Wooden");
-        rockObj = GameObject.Find("Rock Enemy");
-        cam = GameObject.Find("Main Camera");
+        enemyObj = GameObject.Find("Rock Enemy");
     }
 
     // Update is called once per frame
@@ -39,37 +29,19 @@ public class RockEnemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player"){
             if(chest.GetComponent<WoodenDrops>().takenItems){
-                fading.CrossFadeAlpha(1,.2f,true);
-                Invoke("fadeOut",.2f);
-                Invoke("fadeIn",.4f);
-                Invoke("fadeOut",.6f);
-                Invoke("fadeIn",.8f);
-                Invoke("TurnOnFighting",.8f);
-                Invoke("fadeOutFinal",1.0f);
-                Invoke("fadeOut",1.0f);
-                print("initiate fight");
                 player.GetComponent<PlayerScript>().fighting = true;
                 player.GetComponent<PlayerScript>().CancelAnimation();
-                cam.GetComponent<CameraScript>().following = false;
-                cam.transform.position = cam.GetComponent<CameraScript>().battleLoc;
+                fightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f,1.93f,1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980,-761,0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                //player.GetComponent<PlayerScript>().enemyTriggerCol = GetComponent<Collider>(); //put enmty obj  below rock and set that to be colider in order tot ake trigger collider from rokc
+
             }
             else{
                 print("i recommend you open the chest first");
             }
         }
-    }
-
-    public void fadeOut(){
-        fading.CrossFadeAlpha(0,.2f,true);
-    }
-    public void fadeIn(){
-        fading.CrossFadeAlpha(1,.2f,true);
-    }
-    public void TurnOnFighting(){
-        fightMenu.SetActive(true);
-        finalFade.CrossFadeAlpha(1,0.0f,true);
-    }
-    public void fadeOutFinal(){
-        finalFade.CrossFadeAlpha(0,.2f,true);
     }
 }

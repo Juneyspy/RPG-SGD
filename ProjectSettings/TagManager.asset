@@ -12,6 +12,7 @@ TagManager:
   - Shopkeep
   - Runesmith
   - Innkeep
+  - Enemy
   layers:
   - Default
   - TransparentFX
