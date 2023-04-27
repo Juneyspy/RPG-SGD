@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FightingFunctions : MonoBehaviour
 {
@@ -20,18 +21,26 @@ public class FightingFunctions : MonoBehaviour
     public Image finalFade;
     public GameObject fightMenu;
     public GameObject cam;
+    public GameObject totalInv;
+    public GameObject inv;
 
     // Start is called before the first frame update
     void Start()
     {
-        fadingGO = GameObject.Find("Fading");
-        fading = fadingGO.GetComponent<Image>(); fading.CrossFadeAlpha(0,0.0f,true);
-        fadingGO = GameObject.Find("FinalFade");
-        finalFade = fadingGO.GetComponent<Image>(); finalFade.CrossFadeAlpha(0,0.0f,true);
-        fightMenu = GameObject.Find("fighting");
-        cam = GameObject.Find("Main Camera");
-        fightMenu.SetActive(false);
+        if(SceneManager.GetActiveScene().name != "FrontEnd")
+        {
+            fadingGO = GameObject.Find("Fading");
+            fading = fadingGO.GetComponent<Image>(); fading.CrossFadeAlpha(0, 0.0f, true);
+            fadingGO = GameObject.Find("FinalFade");
+            finalFade = fadingGO.GetComponent<Image>(); finalFade.CrossFadeAlpha(0, 0.0f, true);
+            fightMenu = GameObject.Find("fighting");
+            fightMenu = GameObject.Find("fighting");
+            cam = GameObject.Find("Main Camera");
+            fightMenu.SetActive(false);
+        }
         player = GameObject.Find("OverworldMC");
+        totalInv = GameObject.Find("quick slots");
+        inv = GameObject.Find("inventory holder"); inv.SetActive(false);
     }
 
     // Update is called once per frame
@@ -87,7 +96,24 @@ public class FightingFunctions : MonoBehaviour
     }
     public void itemscreen()
     {
+        inv.SetActive(true);
         Itemstuff.SetActive(true);
+        for (int i = 1; i < 36; i++)
+        {
+            if(totalInv.transform.GetChild(i-1).gameObject.transform.childCount > 0)
+            {
+                if (totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.transform.tag == "Item")
+                {
+                    print("waaaa");
+                }
+            }
+        }
+        inv.SetActive(false);
+        //trash = inv.transform.GetChild(35).gameObject;
+        //if(player.GetComponent<PlayerScript>().invOpened){
+        //    if (trash.transform.childCount > 0){
+        //        Destroy(trash.transform.GetChild(0).gameObject);
+        //    }
     }
     public void backtofightscreen()
     {
