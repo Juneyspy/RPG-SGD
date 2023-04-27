@@ -10,6 +10,9 @@ public class RockEnemy : MonoBehaviour
     public GameObject enemyObj;
     public GameObject fightMenu;
 
+    public int health = 5;
+    public int dmg = 1;
+
     // Start is called before the first frame update
     void Start()
     {

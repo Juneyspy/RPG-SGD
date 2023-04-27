@@ -19,17 +19,26 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject newItemsGrid;
     public GameObject inventory;
+    public GameObject invSlotParent;
     public GameObject runesScreen;
     public GameObject inventoryScreen;
     public GameObject travelScreen;
     public GameObject journalScreen;
     //public GameObject fightMenu;
 
+
+
+//FIGHTING----------------
+        //detecting enemy
     public GameObject colEnemy;
     public Vector3 enemyScale;
     public Vector3 enemyMove;
     public Vector3 enemyPrevPos;
     public Collider2D enemyTriggerCol;
+        //battling
+    public int playerHP = 100;
+    public Sprite activeWeapon;
+
 
     void Start()
     {
@@ -40,7 +49,7 @@ public class PlayerScript : MonoBehaviour
         inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
         travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
         journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
-        inventory = GameObject.Find("Inventory shit"); inventory.SetActive(false);     
+        inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false);     
         PauseScreen.SetActive(false);
     }
 
@@ -91,6 +100,7 @@ public class PlayerScript : MonoBehaviour
     {
         // Move the player's Rigidbody2D component
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); //rb.velocity = movement;
+        //activeWeapon = invSlotParent.transform.GetChild(0).gameObject.transform;
     }
 
     public void CancelAnimation(){

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9082823892802626373}
   - component: {fileID: 9082823892802626370}
   - component: {fileID: 9082823892802626375}
+  - component: {fileID: -4647166462477177689}
   m_Layer: 5
   m_Name: Sword 1
   m_TagString: Untagged
@@ -105,3 +106,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipToShow: Training Sword
+--- !u!114 &-4647166462477177689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082823892802626368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e681ffc21d3065d45b1d6fbb8b4fda0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
