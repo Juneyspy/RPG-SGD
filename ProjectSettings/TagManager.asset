@@ -12,6 +12,11 @@ TagManager:
   - Shopkeep
   - Runesmith
   - Innkeep
+  - Enemy
+  - Item
+  - Weapon
+  - Armor
+  - Rune
   layers:
   - Default
   - TransparentFX
