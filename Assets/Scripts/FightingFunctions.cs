@@ -40,7 +40,7 @@ public class FightingFunctions : MonoBehaviour
         }
         player = GameObject.Find("OverworldMC");
         totalInv = GameObject.Find("quick slots");
-        inv = GameObject.Find("inventory holder"); inv.SetActive(false);
+        //inv = GameObject.Find("inventory holder"); inv.SetActive(false);
     }
 
     // Update is called once per frame
