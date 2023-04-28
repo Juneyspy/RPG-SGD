@@ -20,9 +20,9 @@ public class WoodenDrops : MonoBehaviour
 
     GameObject newItemsGrid;
     public bool takenItems = false;
-    List<Image> itemsToGet = new List<Image>();
+    //List<Image> itemsToGet = new List<Image>();
     public List<Image> allItems = new List<Image>();
-    public Image newItem;
+    public Sprite newItem;
 
     public GameObject template;
 
@@ -58,21 +58,10 @@ public class WoodenDrops : MonoBehaviour
             inventory.SetActive(true);
             inventoryScreen.SetActive(true);
 
-            if(SceneManager.GetActiveScene().name != ".Ms G Test"){
-
+            if(SceneManager.GetActiveScene().name != "Ms G Test"){
                 int amountDropped = Random.Range(1,5);
                 for(int i=1; i < amountDropped+1; i++){
-                    newItem = allItems[Random.Range(0,2)];
-                    GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
-                    temp.GetComponent<Image>().sprite = newItem;
-                    //itemsToGet.Add(newItem);
-                    temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
-                }
-            }
-            else if(SceneManager.GetActiveScene().name == ".Ms G Test" && !opened){
-                int amountDropped = 2;
-                for(int i=1; i < amountDropped+1; i++){
-                    newItem = allItems[i-1];
+                    newItem = allItems[Random.Range(0,2)].sprite;
                     GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
                     temp.GetComponent<Image>().sprite = newItem;
                     //itemsToGet.Add(newItem);
@@ -82,8 +71,9 @@ public class WoodenDrops : MonoBehaviour
             else if(SceneManager.GetActiveScene().name == "Ms G Test" && !opened){
                 int amountDropped = 2;
                 for(int i=1; i < amountDropped+1; i++){
-                    newItem = allItems[i-1];
+                    newItem = allItems[i-1].sprite;
                     GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
+                    temp.GetComponent<Image>().sprite = newItem;
                     //itemsToGet.Add(newItem);
                     temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
                 }
