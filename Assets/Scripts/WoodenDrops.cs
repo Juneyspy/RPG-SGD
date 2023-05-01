@@ -69,6 +69,7 @@ public class WoodenDrops : MonoBehaviour
                 }
             }
             else if(SceneManager.GetActiveScene().name == "Ms G Test" && !opened){
+                print("test");
                 int amountDropped = 2;
                 for(int i=1; i < amountDropped+1; i++){
                     newItem = allItems[i-1].sprite;
