@@ -21,4 +21,7 @@ public class ItemFilter : MonoBehaviour
         //int amountDropped = Random.Range(1, 5);
 
     }
+
+
+
 }
