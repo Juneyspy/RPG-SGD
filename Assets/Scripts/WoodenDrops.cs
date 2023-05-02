@@ -31,6 +31,7 @@ public class WoodenDrops : MonoBehaviour
     {
         player = GameObject.Find("OverworldMC");
         newItemsGrid = player.GetComponent<PlayerScript>().newItemsGrid;
+        print(newItemsGrid);
         runesScreen = player.GetComponent<PlayerScript>().runesScreen;
         inventoryScreen = player.GetComponent<PlayerScript>().inventoryScreen;
         inventory = player.GetComponent<PlayerScript>().inventory;
@@ -72,7 +73,9 @@ public class WoodenDrops : MonoBehaviour
                 print("test");
                 int amountDropped = 2;
                 for(int i=1; i < amountDropped+1; i++){
-                    newItem = allItems[i-1].sprite;
+                    //new item - sprite                 allitems - images
+                    newItem = allItems[i-1].GetComponent<Image>().sprite;
+                    print(newItem);
                     GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
                     temp.GetComponent<Image>().sprite = newItem;
                     //itemsToGet.Add(newItem);

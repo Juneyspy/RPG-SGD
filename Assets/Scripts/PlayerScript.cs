@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class PlayerScript : MonoBehaviour
 {
+//-------------------------------------------MOVEMENT------------------
     public float moveSpeed = 5f; // The speed at which the player moves
     public Rigidbody2D rb; // The player's Rigidbody2D component
     Vector2 movement;
     public Animator animator;
 
+//-------------------------------------------Menu BS-----------------
     public GameObject PauseScreen;
     public bool paused = false;
     public bool invOpened = false;
@@ -17,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     public bool canOpenPause = true;
     public bool fighting = false;
 
+    //getting inventory stuff
     public GameObject newItemsGrid;
     public GameObject inventory;
     public GameObject invSlotParent;
@@ -26,9 +30,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject journalScreen;
     //public GameObject fightMenu;
 
-
-
-//FIGHTING----------------
+//-------------------------------------------FIGHTING----------------
         //detecting enemy
     public GameObject colEnemy;
     public Vector3 enemyScale;
@@ -38,19 +40,26 @@ public class PlayerScript : MonoBehaviour
         //battling
     public int playerHP = 100;
     public Sprite activeWeapon;
+//-------------------------------------------MISC--------------------
+    public TilemapRenderer doorRender;
+    public Tilemap doorMap;
+    bool inHouse = false;
+
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component on start
-        //newItemsGrid = GameObject.Find("newitemarea"); 
+        newItemsGrid = GameObject.Find("quick slots (1)"); 
         //fightMenu = GameObject.Find("fightscene"); fightMenu.SetActive(false);
-        runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
-        inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
-        travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
-        journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
-        inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false);     
-        PauseScreen.SetActive(false);
+        if(SceneManager.GetActiveScene().name == "Ms G Test"){
+            runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
+            inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
+            travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
+            journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
+            inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false);     
+            PauseScreen.SetActive(false);
+        }
     }
 
     void Update()
@@ -121,6 +130,17 @@ public class PlayerScript : MonoBehaviour
         if(other.gameObject.name == "Next Level Trigger")
         {
             SceneManager.LoadScene("Level 1 - Grassland Forest");
+        }
+
+        if(other.gameObject.tag == "DoorTrigger"){
+            if(!inHouse){
+                doorRender.enabled = false;
+                inHouse = true;
+            }
+            else{
+                doorRender.enabled = true;
+                inHouse = false;
+            }
         }
     }
 }
