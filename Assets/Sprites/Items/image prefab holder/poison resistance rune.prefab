@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9184720611949512037}
   m_Layer: 5
   m_Name: poison resistance rune
-  m_TagString: Untagged
+  m_TagString: Rune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -30,8 +30,6 @@ public class FightingFunctions : MonoBehaviour
     public TextMeshProUGUI item3;
     public TextMeshProUGUI item4;
     public TextMeshProUGUI item5;
-    public TextMeshProUGUI item6;
-    public TextMeshProUGUI item7;
     string nameholder;
     public int amountholder;
 
@@ -112,117 +110,175 @@ public class FightingFunctions : MonoBehaviour
     {
         //totalInv = GameObject.Find("quick slots");
         //inv = GameObject.Find("inventory holder");
-        ///inv.SetActive(true);
+        inv.SetActive(true);
         Itemstuff.SetActive(true);
-        /*
+        
         for (int i = 1; i < 36; i++)
         {
+            //print(i);
             if(totalInv.transform.GetChild(i-1).gameObject.transform.childCount > 0)
             {
+                nameholder = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                if (nameholder == "Potion")
+                {
+                    Debug.Log("guy");
+                    int tempInt10;
+                    //Int32.TryParse(item1.text, out tempInt);
+                    tempInt10 = int.Parse(item1.text);
+                    print(tempInt10);
+                    tempInt10++;
+                    item1.text = tempInt10.ToString();
+                }
+
+                if (nameholder == "The Big Fix")
+                {
+                    Debug.Log("guy");
+                    int tempInt7;
+                    //Int32.TryParse(item1.text, out tempInt);
+                    tempInt7 = int.Parse(item4.text);
+                    print(tempInt7);
+                    tempInt7++;
+                    item4.text = tempInt7.ToString();
+                }
+
+                if (nameholder == "Antidote")
+                {
+                    Debug.Log("guy");
+                    int tempInt8;
+                    //Int32.TryParse(item1.text, out tempInt);
+                    tempInt8 = int.Parse(item3.text);
+                    print(tempInt8);
+                    tempInt8++;
+                    item3.text = tempInt8.ToString();
+                }
+
+                if (nameholder == "Bath Salts")
+                {
+                    Debug.Log("guy");
+                    int tempInt6;
+                    //Int32.TryParse(item1.text, out tempInt);
+                    tempInt6 = int.Parse(item5.text);
+                    print(tempInt6);
+                    tempInt6++;
+                    item5.text = tempInt6.ToString();
+                }
+
+                if (nameholder == "Big Potion")
+                {
+                    Debug.Log("guy");
+                    int tempInt9;
+                    //Int32.TryParse(item1.text, out tempInt);
+                    tempInt9 = int.Parse(item2.text);
+                    print(tempInt9);
+                    tempInt9++;
+                    item2.text = tempInt9.ToString();
+                }
+
                 if (totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.transform.tag == "Item")
                 {
+                    /*
+ 
                     nameholder = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                    if(nameholder == "Potion")
+                    {
+                        Debug.Log("cum");
+                    }
+
+                    if(nameholder == "Big Potion")
+                    {
+                        Debug.Log("hot");
+                    }
                     switch (i)
                     {
                         case 0:
                             Debug.Log("uh oh");
                             break;
                         case 1:
-                            Debug.Log(item1.text);
-                            item1.text = nameholder;
-                            if (item1.text == "temp item")
+                            if (nameholder == "Potion")
                             {
                                 Debug.Log("hi 1");
-                                Destroy(totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject);
-                                break;
                             }
+                            Debug.Log("guy");
+                            int tempInt10;
+                            //Int32.TryParse(item1.text, out tempInt);
+                            tempInt10 = int.Parse(item1.text);
+                            print(tempInt10);
+                            tempInt10++;
+                            item1.text = tempInt10.ToString();
                             break;
                         case 2:
-                            Debug.Log(item2.text);
-                            item2.text = nameholder;
-                            if (item2.text == "temp item")
+                            if (nameholder == "Big Potion")
                             {
                                 Debug.Log("hi 2");
-                                PrintItemUse();
-                                break;
                             }
+                            Debug.Log("guy");
+                            int tempInt9;
+                            //Int32.TryParse(item1.text, out tempInt);
+                            tempInt9 = int.Parse(item2.text);
+                            print(tempInt9);
+                            tempInt9++;
+                            item2.text = tempInt9.ToString();
                             break;
                         case 3:
-                            Debug.Log(item3.text);
-                            item3.text = nameholder;
-                            if (item3.text == "temp item")
+                            if (nameholder == "Antidote")
                             {
                                 Debug.Log("hi 3");
-                                Destroy(totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject);
-                                Destroy(item3.gameObject);
-                                PrintItemUse();
-                                break;
                             }
+                            Debug.Log("guy");
+                            int tempInt8;
+                            //Int32.TryParse(item1.text, out tempInt);
+                            tempInt8 = int.Parse(item3.text);
+                            print(tempInt8);
+                            tempInt8++;
+                            item3.text = tempInt8.ToString();
                             break;
                         case 4:
-                            Debug.Log(item4.text);
-                            item4.text = nameholder;
-                            if (item4.text == "temp item")
+                            if (nameholder == "The Big Fix")
                             {
                                 Debug.Log("hi 4");
-                                Destroy(totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject);
-                                Destroy(item4.gameObject);
-                                PrintItemUse();
-                                break;
                             }
+                            Debug.Log("guy");
+                            int tempInt7;
+                            //Int32.TryParse(item1.text, out tempInt);
+                            tempInt7 = int.Parse(item4.text);
+                            print(tempInt7);
+                            tempInt7++;
+                            item4.text = tempInt7.ToString();
                             break;
                         case 5:
-                            Debug.Log(item5.text);
-                            item5.text = nameholder;
-                            if (item5.text == "temp item")
+                            if (nameholder == "Bath Salts")
                             {
                                 Debug.Log("hi 5");
-                                Destroy(totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject);
-                                PrintItemUse();
-                                Destroy(item5.gameObject);
-                                break;
                             }
+                            Debug.Log("guy");
+                            int tempInt6;
+                            //Int32.TryParse(item1.text, out tempInt);
+                            tempInt6 = int.Parse(item5.text);
+                            print(tempInt6);
+                            tempInt6++;
+                            item5.text = tempInt6.ToString();
                             break;
                         case 6:
-                            Debug.Log(item6.text);
-                            item6.text = nameholder;
-                            if (item6.text == "temp item")
-                            {
-                                Debug.Log("hi 6");
-                                Destroy(totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject);
-                                Destroy(item6.gameObject);
-                                PrintItemUse();
-                                break;
-                            }
+                            Debug.Log("wah-wah");
                             break;
-                        case 7:
-                            Debug.Log(item7.text);
-                            item7.text = nameholder;
-                            if (item7.text == "temp item")
-                            {
-                                Debug.Log("hi 7");
-                                Destroy(totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject);
-                                Destroy(item7.gameObject);
-                                PrintItemUse();
-                                break;
-                            }
-                            break;
-                        case 8:
-                            break;
-
                     }
-                    item1.text = nameholder;
-                    print("waaaa");
+                    */
+
+
+                    //item1.text = nameholder;
+                    //print("waaaa");
                 }
             }
         }
-        */
+        
         inv.SetActive(false);
-        //trash = inv.transform.GetChild(35).gameObject;
-        //if(player.GetComponent<PlayerScript>().invOpened){
-        //    if (trash.transform.childCount > 0){
-        //        Destroy(trash.transform.GetChild(0).gameObject);
-        //    }
+        /*
+        GameObject trash = inv.transform.GetChild(35).gameObject;
+        if(player.GetComponent<PlayerScript>().invOpened){
+            if (trash.transform.childCount > 0){
+                Destroy(trash.transform.GetChild(0).gameObject);}
+            }
+        */
     }
     public void backtofightscreen()
     {
@@ -254,18 +310,26 @@ public class FightingFunctions : MonoBehaviour
     {
         string ButtonName = EventSystem.current.currentSelectedGameObject.name;
         GameObject ByeBye = GameObject.Find(ButtonName);
-        if (item1.text == "1")
+
+        if (item1.text == "0")
         {
-            Destroy(ByeBye.gameObject);
+            Debug.Log("cucked");
         }
         else
         {
-            int tempInt;
-            //Int32.TryParse(item1.text, out tempInt);
-            tempInt = int.Parse(item1.text);
-            tempInt--;
-            Debug.Log(tempInt);
-            item1.text = tempInt.ToString();
+
+            if (item1.text == "1")
+            {
+                Destroy(ByeBye.gameObject);
+            }
+            else
+            {
+                int tempInt;
+                //Int32.TryParse(item1.text, out tempInt);
+                tempInt = int.Parse(item1.text);
+                tempInt--;
+                item1.text = tempInt.ToString();
+            }
         }
         // make code here that uses the item and applys its effects.
         //Destroy(ByeBye.gameObject);
@@ -274,19 +338,27 @@ public class FightingFunctions : MonoBehaviour
     {
         string ButtonName = EventSystem.current.currentSelectedGameObject.name;
         GameObject ByeBye = GameObject.Find(ButtonName);
-        if (item2.text == "1")
+
+        if (item2.text == "0")
         {
-            Destroy(ByeBye.gameObject);
+            Debug.Log("cucked");
         }
         else
         {
-            int tempInt1;
-            //Int32.TryParse(item1.text, out tempInt);
-            tempInt1 = int.Parse(item2.text);
-            print(tempInt1);
-            tempInt1--;
-            Debug.Log(tempInt1);
-            item2.text = tempInt1.ToString();
+
+            if (item2.text == "1")
+            {
+                Destroy(ByeBye.gameObject);
+            }
+            else
+            {
+                int tempInt1;
+                //Int32.TryParse(item1.text, out tempInt);
+                tempInt1 = int.Parse(item2.text);
+                print(tempInt1);
+                tempInt1--;
+                item2.text = tempInt1.ToString();
+            }
         }
     }
 
@@ -295,18 +367,26 @@ public class FightingFunctions : MonoBehaviour
 
         string ButtonName = EventSystem.current.currentSelectedGameObject.name;
         GameObject ByeBye = GameObject.Find(ButtonName);
-        if (item3.text == "1")
+
+        if (item3.text == "0")
         {
-            Destroy(ByeBye.gameObject);
+            Debug.Log("cucked");
         }
         else
         {
-            int tempInt2;
-            //Int32.TryParse(item1.text, out tempInt);
-            tempInt2 = int.Parse(item3.text);
-            tempInt2--;
-            Debug.Log(tempInt2);
-            item3.text = tempInt2.ToString();
+
+            if (item3.text == "1")
+            {
+                Destroy(ByeBye.gameObject);
+            }
+            else
+            {
+                int tempInt2;
+                //Int32.TryParse(item1.text, out tempInt);
+                tempInt2 = int.Parse(item3.text);
+                tempInt2--;
+                item3.text = tempInt2.ToString();
+            }
         }
 
     }
@@ -316,18 +396,26 @@ public class FightingFunctions : MonoBehaviour
 
         string ButtonName = EventSystem.current.currentSelectedGameObject.name;
         GameObject ByeBye = GameObject.Find(ButtonName);
-        if (item4.text == "1")
+
+        if (item4.text == "0")
         {
-            Destroy(ByeBye.gameObject);
+            Debug.Log("cucked");
         }
         else
         {
-            int tempInt3;
-            //Int32.TryParse(item1.text, out tempInt);
-            tempInt3 = int.Parse(item4.text);
-            tempInt3--;
-            Debug.Log(tempInt3);
-            item4.text = tempInt3.ToString();
+            if (item4.text == "1")
+            {
+                Destroy(ByeBye.gameObject);
+            }
+            else
+            {
+                int tempInt3;
+                //Int32.TryParse(item1.text, out tempInt);
+                tempInt3 = int.Parse(item4.text);
+                tempInt3--;
+                item4.text = tempInt3.ToString();
+            }
+
         }
 
     }
@@ -337,20 +425,26 @@ public class FightingFunctions : MonoBehaviour
 
         string ButtonName = EventSystem.current.currentSelectedGameObject.name;
         GameObject ByeBye = GameObject.Find(ButtonName);
-        if (item5.text == "1")
+
+        if(item5.text == "0")
         {
-            Destroy(ByeBye.gameObject);
+            Debug.Log("cucked");
         }
         else
         {
-            int tempInt5;
-            //Int32.TryParse(item1.text, out tempInt);
-            tempInt5 = int.Parse(item5.text);
-            tempInt5--;
-            Debug.Log(tempInt5);
-            item5.text = tempInt5.ToString();
+            if (item5.text == "1")
+            {
+                Destroy(ByeBye.gameObject);
+            }
+            else
+            {
+                int tempInt5;
+                //Int32.TryParse(item1.text, out tempInt);
+                tempInt5 = int.Parse(item5.text);
+                tempInt5--;
+                item5.text = tempInt5.ToString();
+            }
         }
-
     }
     
 
