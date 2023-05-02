@@ -16,7 +16,8 @@ public class RockEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fightMenu = GameObject.Find("fighting sex");
+        fightMenu = GameObject.Find("fightingscript");
+        print(fightMenu);
         //fightMenu = GameObject.Find("fightingcanvas"); fightMenu.SetActive(false)
         player = GameObject.Find("OverworldMC");
         chest = GameObject.Find("Chest - Wooden");
@@ -34,7 +35,7 @@ public class RockEnemy : MonoBehaviour
             if(chest.GetComponent<WoodenDrops>().takenItems){
                 player.GetComponent<PlayerScript>().fighting = true;
                 player.GetComponent<PlayerScript>().CancelAnimation();
-                fightMenu.transform.GetChild(0).gameObject.GetComponent<FightingFunctions>().StartFight();
+                fightMenu.GetComponent<FightingFunctions>().StartFight();
                 player.GetComponent<PlayerScript>().colEnemy = enemyObj;
                 player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f,1.93f,1.93f);
                 player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980,-761,0);
