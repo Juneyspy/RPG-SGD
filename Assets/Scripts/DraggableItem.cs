@@ -18,7 +18,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         parentAfterDrag = transform.parent;
 
-        transform.SetParent(transform.root);
+        transform.SetParent(transform.root.GetChild(0));
 
         transform.SetAsLastSibling();
 
