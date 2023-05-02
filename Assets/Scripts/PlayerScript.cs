@@ -55,6 +55,11 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("Level 2 - TBT");
+        }
+
         //Movement---------------------------------------------------------------------
         if(!paused && !fighting){
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -109,5 +114,13 @@ public class PlayerScript : MonoBehaviour
         animator.SetFloat("Horizontal", 0);
         animator.SetFloat("Vertical", 0);
         animator.SetFloat("Speed", 0);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.name == "Next Level Trigger")
+        {
+            SceneManager.LoadScene("Level 1 - Grassland Forest");
+        }
     }
 }

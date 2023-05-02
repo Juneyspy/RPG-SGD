@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene folder/FrontEnd.unity
+    guid: ede7e5d40d1d60b4ca31f1af8d24c80e
+  - enabled: 1
+    path: Assets/Scene folder/Ms G Test.unity
+    guid: 821d2090d9a7e0744b763e01a67cb233
+  - enabled: 1
+    path: Assets/Scene folder/Level 1 - Grassland Forest.unity
+    guid: d3c829abc812c7d4d8a5b2d3349e1d9d
+  - enabled: 1
+    path: Assets/Scene folder/Level 2 - TBT.unity
+    guid: 0e6696ef189b1764fbf95913bd81f564
   m_configObjects: {}

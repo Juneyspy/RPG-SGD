@@ -106,7 +106,8 @@ public class SceneChange : MonoBehaviour
     }
     public void NewGameScreen()
     {
-        SceneManager.LoadScene("Level 1 - Grassland Forest");
+        SceneManager.LoadScene("Ms G Test");
+        //SceneManager.LoadScene("Level 1 - Grassland Forest");
         //startscreen.SetActive(false);
         //NewGame.SetActive(true);
     }
