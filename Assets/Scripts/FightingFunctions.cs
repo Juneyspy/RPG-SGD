@@ -56,8 +56,7 @@ public class FightingFunctions : MonoBehaviour
             fading = fadingGO.GetComponent<Image>(); fading.CrossFadeAlpha(0, 0.0f, true);
             fadingGO = GameObject.Find("FinalFade");
             finalFade = fadingGO.GetComponent<Image>(); finalFade.CrossFadeAlpha(0, 0.0f, true);
-            fightMenu = GameObject.Find("fighting");
-            fightMenu = GameObject.Find("fighting");
+            fightMenu = GameObject.Find("fighting sex");
             cam = GameObject.Find("Main Camera");
             fightMenu.SetActive(false);
         }
