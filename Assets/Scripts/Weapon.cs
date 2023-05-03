@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public GameObject Weapon1;
+    public GameObject Weapon2;
+    public int changecount;
     public int damage;
     //public int speed;???
 
@@ -18,7 +21,12 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
+    }
+
+    public void RuneWipe()
+    {
 
     }
 
@@ -75,6 +83,7 @@ public class Weapon : MonoBehaviour
         GameObject rune1;
         GameObject rune2;
         GameObject rune3;
+        GameObject rune4;
     }
 
 }
