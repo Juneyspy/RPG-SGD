@@ -23,6 +23,13 @@ TagManager:
   - 2 rune
   - 3 rune
   - 4 rune
+  - FastTravel1
+  - FastTravel2
+  - FastTravel3
+  - FastTravel4
+  - FastTravel5
+  - FastTravel6
+  - FastTravel7
   layers:
   - Default
   - TransparentFX
@@ -31,7 +38,7 @@ TagManager:
   - Water
   - UI
   - Minimap
-  - 
+  - FastTravel
   - 
   - 
   - 
