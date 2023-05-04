@@ -30,11 +30,36 @@ public class RuneSmithFunctions : MonoBehaviour
     public GameObject picture3;
     public GameObject picture4;
 
+    public Image setholder;
+    public Image setholder2;
+    public Image setholder3;
+    public Image setholder4;
+    public Sprite blank;
+
+
+
+    public GameObject block1;
+    public GameObject block2;
+    public GameObject block3;
+    public GameObject block4;
+    public GameObject block5;
+    public GameObject block6;
+    public GameObject block7;
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        block1.SetActive(false);
+        block2.SetActive(false);
+        block3.SetActive(false);
+        block4.SetActive(false);
+        block5.SetActive(false);
+        block6.SetActive(false);
+        block7.SetActive(false);
+
         picture1.SetActive(false);
         picture2.SetActive(false);
         picture3.SetActive(false);
@@ -52,7 +77,6 @@ public class RuneSmithFunctions : MonoBehaviour
 
     public void GetFirstWeapon()
     {
-
         Inv.SetActive(true);
         totalInv.SetActive(true);
         for (int i = 1; i < 2; i++)
@@ -151,45 +175,83 @@ public class RuneSmithFunctions : MonoBehaviour
 
                     if (runs == 1)
                     {
-                        runs++;
+                        block1.SetActive(true);
+                        if(fourruneset.activeSelf)
+                        {
+                            block5.SetActive(true);
+                            block1.SetActive(false);
+                        }
+                        if (threeruneset)
+                        {
+
+                        }
+                        if (tworuneset)
+                        {
+                            block2.SetActive(true);
+                            block1.SetActive(false);
+                        }
+
                         Image sourceholder = thatguy.GetComponent<Image>();
-                        Image setholder = picture1.GetComponent<Image>();
+                        setholder = picture1.GetComponent<Image>();
 
                         setholder.sprite = sourceholder.sprite;
+
+                        thatguy = null;
 
                     }
 
                     if (runs == 2)
                     {
-                        runs++;
+                        block1.SetActive(true);
+                        if (tworuneset.activeSelf)
+                        {
+                            //block2.SetActive(true);
+                        }
+
                         Image sourceholder2 = thatguy.GetComponent<Image>();
-                        Image setholder2 = picture2.GetComponent<Image>();
+                        setholder2 = picture2.GetComponent<Image>();
 
                         setholder2.sprite = sourceholder2.sprite;
+
+                        thatguy = null;
                     }
 
                     if (runs == 3)
                     {
-                        runs++;
+                        block3.SetActive(true);
+
+                        if (threeruneset.activeSelf)
+                        {
+                            Debug.Log("cum");
+                        }
+
                         Image sourceholder3 = thatguy.GetComponent<Image>();
-                        Image setholder3 = picture3.GetComponent<Image>();
+                        setholder3 = picture3.GetComponent<Image>();
 
                         setholder3.sprite = sourceholder3.sprite;
+
+                        thatguy = null;
                     }
 
                     if (runs == 4)
                     {
+                        block3.SetActive(true);
+                        block4.SetActive(true);
+                        block7.SetActive(true);
+                        block6.SetActive(true);
 
                         Image sourceholder4 = thatguy.GetComponent<Image>();
-                        Image setholder4 = picture4.GetComponent<Image>();
+                        setholder4 = picture4.GetComponent<Image>();
 
                         setholder4.sprite = sourceholder4.sprite;
+
+                        thatguy = null;
                     }
+                    runs++;
 
                 }
             }
         }
-
     }
 
     public void ClearRunes()
@@ -199,6 +261,36 @@ public class RuneSmithFunctions : MonoBehaviour
 
         for (int i = 1; i < check; i++)
         {
+            if (i == 1)
+            {
+                //picture1.GetComponent<Image>().sprite = blank;
+                //setholder = picture1.GetComponent<Image>();
+                //setholder.sprite = null;
+
+                picture1.GetComponent<Image>().enabled = false;
+            }
+            else if(i == 2)
+            {
+                //setholder2 = picture2.GetComponent<Image>();
+                //setholder2.sprite = blank;
+
+                picture2.GetComponent<Image>().enabled = false;
+            }
+            else if(i == 3)
+            {
+                //setholder3 = picture3.GetComponent<Image>();
+                //setholder3.sprite = blank;
+                //print(setholder3.sprite);
+
+                picture3.GetComponent<Image>().enabled = false;
+            }
+            else if(i == 4)
+            {
+                //setholder4 = picture4.GetComponent<Image>();
+                //setholder4.sprite = null;
+
+                picture4.GetComponent<Image>().enabled = false;
+            }
             if (RuneInventory.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
             {
                 nameholder = RuneInventory.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
