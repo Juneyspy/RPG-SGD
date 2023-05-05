@@ -30,6 +30,10 @@ TagManager:
   - FastTravel5
   - FastTravel6
   - FastTravel7
+  - 1 rune armor
+  - 2 rune armor
+  - 3 rune armor
+  - 4 rune armor
   layers:
   - Default
   - TransparentFX

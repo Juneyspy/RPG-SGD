@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1240255480304129803}
   m_Layer: 5
   m_Name: Armor 1
-  m_TagString: Armor
+  m_TagString: 1 rune armor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
