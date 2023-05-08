@@ -5,6 +5,20 @@ using UnityEngine;
 public class VariableHolder : MonoBehaviour
 {
     public GameObject newItemsGrid;
+    public GameObject inventory;
+    public GameObject invSlotParent;
+    public GameObject runesScreen;
+    public GameObject inventoryScreen;
+    public GameObject travelScreen;
+    public GameObject journalScreen;
+
+    /*
+    runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
+    inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
+    travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
+    journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
+    inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false);
+    */
 
     // Start is called before the first frame update
     void Start()
