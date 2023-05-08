@@ -1,6 +1,11 @@
 ﻿using CI.QuickSave;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
 
 public class ExampleSceneManagerController : MonoBehaviour
 {
@@ -12,8 +17,12 @@ public class ExampleSceneManagerController : MonoBehaviour
     public InputField Input6;
     public InputField Input7;
     public InputField Input8;
+    public Image Input9;
+    public Image Input10;
     public InputField Content;
 
+    public GameObject safehold;
+    public int checknum;
     public Vector2 pos1;
     public Vector2 pos2;
 
@@ -24,6 +33,7 @@ public class ExampleSceneManagerController : MonoBehaviour
                        .Write("Input2", Input2.text)
                        .Write("Input3", Input3.text)
                        .Write("Input4", Input4.text)
+                       .Write("Input9", Input9.sprite)
                        .Commit();
 
         Content.text = QuickSaveRaw.LoadString("Inputs.json");
@@ -35,7 +45,8 @@ public class ExampleSceneManagerController : MonoBehaviour
                        .Read<string>("Input1", (r) => { Input5.text = r; })
                        .Read<string>("Input2", (r) => { Input6.text = r; })
                        .Read<string>("Input3", (r) => { Input7.text = r; })
-                       .Read<string>("Input4", (r) => { Input8.text = r; });
+                       .Read<string>("Input4", (r) => { Input8.text = r; })
+                       .Read<Sprite>("Input9", (r) => { Input10.sprite = r; });
     }
 
     public void QuickSaveRawExample()
