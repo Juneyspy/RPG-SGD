@@ -41,6 +41,8 @@ public class FightingFunctions : MonoBehaviour
     public GameObject Safteynet;
     public int runs;
 
+    public TMP_Text hpText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +58,7 @@ public class FightingFunctions : MonoBehaviour
             fading = fadingGO.GetComponent<Image>(); fading.CrossFadeAlpha(0, 0.0f, true);
             fadingGO = GameObject.Find("FinalFade");
             finalFade = fadingGO.GetComponent<Image>(); finalFade.CrossFadeAlpha(0, 0.0f, true);
-            fightMenu = GameObject.Find("fighting sex");
+            fightMenu = GameObject.Find("fighitng");
             cam = GameObject.Find("Main Camera");
             fightMenu.SetActive(false);
         }
@@ -85,6 +87,7 @@ public class FightingFunctions : MonoBehaviour
         Invoke("TurnOnFighting",.8f);
         Invoke("fadeOutFinal",1.0f);
         Invoke("fadeOut",1.0f);
+        hpText.text = player.GetComponent<PlayerScript>().playerHP.ToString();
         print("initiate fight");
     }
     public void fadeOut(){
@@ -113,7 +116,14 @@ public class FightingFunctions : MonoBehaviour
         player.GetComponent<PlayerScript>().fighting = false;
         player.GetComponent<PlayerScript>().colEnemy.transform.position = player.GetComponent<PlayerScript>().enemyPrevPos;
         player.GetComponent<PlayerScript>().colEnemy.transform.localScale -= player.GetComponent<PlayerScript>().enemyScale;
+        //player.GetComponent<PlayerScript>().colEnemy.transform.GetChild(0).gameObject.GetComponent<>
+        player.GetComponent<PlayerScript>().colEnemy.GetComponent<BoxCollider2D>().enabled = false;
+        Invoke("EnableCollider",4.0f);
     }
+    void EnableCollider(){
+        player.GetComponent<PlayerScript>().colEnemy.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
     public void battlescreen()
     {
         Battlepass.SetActive(true);
@@ -149,14 +159,10 @@ public class FightingFunctions : MonoBehaviour
 
     }
 
-
-
-
-
     public void itemscreen()
     {
-        //totalInv = GameObject.Find("quick slots");
-        //inv = GameObject.Find("inventory holder");
+        totalInv = GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().invSlotParent;;
+        inv = GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().inventory;
         inv.SetActive(true);
         Itemstuff.SetActive(true);
         Safteynet.SetActive(true);

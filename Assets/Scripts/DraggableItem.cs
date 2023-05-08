@@ -54,11 +54,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     }
 
     void Update(){
-        //if(player.GetComponent<PlayerScript>().invOpened){
-        //    if (trash.transform.childCount > 0){
-        //        Destroy(trash.transform.GetChild(0).gameObject);
-        //    }
-        //} UNCHECKMARK
+        if(player.GetComponent<PlayerScript>().invOpened && player.GetComponent<PlayerScript>().inventoryScreen.activeSelf){
+            if (trash.transform.childCount > 0){
+                Destroy(trash.transform.GetChild(0).gameObject);
+            }
+        }
     }
 
 }

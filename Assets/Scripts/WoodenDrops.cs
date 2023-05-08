@@ -46,19 +46,21 @@ public class WoodenDrops : MonoBehaviour
         if(newItemsGrid.transform.GetChild(0).transform.childCount < 1 && newItemsGrid.transform.GetChild(1).transform.childCount < 1 
             && newItemsGrid.transform.GetChild(2).transform.childCount < 1 && newItemsGrid.transform.GetChild(3).transform.childCount < 1 && inInv){
                 takenItems = true;
+                player.GetComponent<PlayerScript>().takenItems = true;
                 player.GetComponent<PlayerScript>().paused = false;
             }
     }
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player" && !takenItems){
+            takenItems = false;
+            player.GetComponent<PlayerScript>().takenItems = false;
             player.GetComponent<PlayerScript>().CancelAnimation();
             inInv = true;
             //player.GetComponent<PlayerScript>().invOpened = true;
             closedChest = spriterenderer.sprite;
             spriterenderer.sprite = openChest;
             player.GetComponent<PlayerScript>().paused = true;
-
             inventory.SetActive(true);
             inventoryScreen.SetActive(true);
 

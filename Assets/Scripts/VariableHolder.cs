@@ -11,6 +11,8 @@ public class VariableHolder : MonoBehaviour
     public GameObject inventoryScreen;
     public GameObject travelScreen;
     public GameObject journalScreen;
+    public GameObject newItemsArea;
+    public GameObject hotBar;
 
     /*
     runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);

@@ -11,13 +11,13 @@ public class RockEnemy : MonoBehaviour
     public GameObject fightMenu;
 
     public int health = 5;
-    public int dmg = 1;
+    public int dmg = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        fightMenu = GameObject.Find("fightingscript");
-        print(fightMenu);
+        //fightMenu = GameObject.Find("fightingscript");
+        //print(fightMenu);
         //fightMenu = GameObject.Find("fightingcanvas"); fightMenu.SetActive(false)
         player = GameObject.Find("OverworldMC");
         chest = GameObject.Find("Chest - Wooden");
