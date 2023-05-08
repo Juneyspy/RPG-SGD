@@ -25979,6 +25979,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newItemsGrid: {fileID: 2108416878}
+  inventory: {fileID: 1941866774}
+  invSlotParent: {fileID: 1404838894}
+  runesScreen: {fileID: 1172361587}
+  inventoryScreen: {fileID: 2038723721}
+  travelScreen: {fileID: 2010752409}
+  journalScreen: {fileID: 1563915767}
 --- !u!4 &743721467
 Transform:
   m_ObjectHideFlags: 0
