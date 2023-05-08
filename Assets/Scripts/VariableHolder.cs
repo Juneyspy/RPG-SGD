@@ -13,6 +13,7 @@ public class VariableHolder : MonoBehaviour
     public GameObject journalScreen;
     public GameObject newItemsArea;
     public GameObject hotBar;
+    public GameObject effectsTextHolder;
 
     /*
     runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);

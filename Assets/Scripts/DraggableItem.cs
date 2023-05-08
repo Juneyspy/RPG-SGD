@@ -11,6 +11,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     GameObject inv;
     GameObject trash;
     GameObject player;
+    public bool isSword;
+    public bool isArmor;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -40,6 +42,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         //Debug.Log("end drag");
 
+
+
         transform.SetParent(parentAfterDrag);
 
         image.raycastTarget = true;
@@ -51,10 +55,21 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         inv = GameObject.Find("quick slots");
         trash = inv.transform.GetChild(35).gameObject;
         player = GameObject.Find("OverworldMC");
+
+        if(gameObject.name.Contains("Sword")){
+            isSword = true;
+        }
+        else if(gameObject.name.Contains("Armor")){
+            isArmor = true;
+        }
+        else{
+            isArmor = false;
+            isSword = false;
+        }
     }
 
     void Update(){
-        if(player.GetComponent<PlayerScript>().invOpened && player.GetComponent<PlayerScript>().inventoryScreen.activeSelf){
+        if(player.GetComponent<PlayerScript>().invOpened && player.GetComponent<PlayerScript>().inventoryScreen.activeSelf){//&& player.GetComponent<PlayerScript>().inventoryScreen.activeSelf
             if (trash.transform.childCount > 0){
                 Destroy(trash.transform.GetChild(0).gameObject);
             }

@@ -33,7 +33,8 @@ public class WoodenDrops : MonoBehaviour
         player = GameObject.Find("OverworldMC");
         //newItemsGrid = player.GetComponent<PlayerScript>().newItemsGrid;
         //newItemsGrid = GameObject.Find("newitemsgrid");
-        newItemsGrid = GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().newItemsGrid;
+        varsObj = GameObject.Find("ThisIsToGetVariables");
+        newItemsGrid = varsObj.GetComponent<VariableHolder>().newItemsGrid;
         //print(newItemsGrid);
         runesScreen = player.GetComponent<PlayerScript>().runesScreen;
         inventoryScreen = player.GetComponent<PlayerScript>().inventoryScreen;
@@ -63,6 +64,18 @@ public class WoodenDrops : MonoBehaviour
             player.GetComponent<PlayerScript>().paused = true;
             inventory.SetActive(true);
             inventoryScreen.SetActive(true);
+            varsObj.GetComponent<VariableHolder>().effectsTextHolder.SetActive(false);
+            varsObj.GetComponent<VariableHolder>().newItemsArea.SetActive(true);
+
+            /*bool destroyed = false;
+            if(!destroyed){
+                for(int i =1; i<4; i++){
+                    if(GET TEH AMOUNT OF CHIDREN GERE)
+                    Destroy(newItemsGrid.transform.GetChild(i-1).gameObject);
+                }
+            }
+            destroyed = true;*/ //destory all previous objcets
+
 
             if(SceneManager.GetActiveScene().name != "Ms G Test"){
                 int amountDropped = Random.Range(1,5);
