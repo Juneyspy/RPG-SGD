@@ -44,20 +44,24 @@ public class PlayerScript : MonoBehaviour
     public TilemapRenderer doorRender;
     public Tilemap doorMap;
     bool inHouse = false;
+    GameObject varsObj;
+    public bool takenItems;
 
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component on start
-        newItemsGrid = GameObject.Find("quick slots (1)"); 
+        varsObj = GameObject.Find("ThisIsToGetVariables");
+
+        //newItemsGrid = GameObject.Find("quick slots (1)"); 
         //fightMenu = GameObject.Find("fightscene"); fightMenu.SetActive(false);
         if(SceneManager.GetActiveScene().name == "Ms G Test"){
-            runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
-            inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
-            travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
-            journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
-            inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false); //put all of this stuff in the variable script thing
+            runesScreen = varsObj.GetComponent<VariableHolder>().runesScreen; runesScreen.SetActive(false);
+            inventoryScreen = varsObj.GetComponent<VariableHolder>().inventoryScreen; inventoryScreen.SetActive(false);
+            travelScreen = varsObj.GetComponent<VariableHolder>().travelScreen; travelScreen.SetActive(false);
+            journalScreen = varsObj.GetComponent<VariableHolder>().journalScreen; journalScreen.SetActive(false);
+            inventory = varsObj.GetComponent<VariableHolder>().inventory; invSlotParent = varsObj.GetComponent<VariableHolder>().invSlotParent; inventory.SetActive(false); 
             PauseScreen.SetActive(false);
         }
     }
@@ -81,33 +85,34 @@ public class PlayerScript : MonoBehaviour
 
         //Get Keys--------------------------------------------------------------------
                     //pausing
-        if(!paused && Input.GetKeyDown(KeyCode.Escape)){
-            CancelAnimation();
-            PauseScreen.SetActive(true);
-            paused = true;
-            inventoryScreen.SetActive(false);
-            inventory.SetActive(false);  
-        }
-        else if(paused && Input.GetKeyDown(KeyCode.Escape)){
-            paused = false;
-            PauseScreen.SetActive(false);
-        }
+        if(!takenItems){
+            if(!paused && Input.GetKeyDown(KeyCode.Escape)){
+                CancelAnimation();
+                PauseScreen.SetActive(true);
+                paused = true;
+                inventoryScreen.SetActive(false);
+                inventory.SetActive(false);  
+            }
+            else if(paused && Input.GetKeyDown(KeyCode.Escape)){
+                paused = false;
+                PauseScreen.SetActive(false);
+            }
                     //inventory
-        if(Input.GetKeyDown(KeyCode.E) && !invOpened){
-            CancelAnimation();
-            paused = true;
-            invOpened = true;
-            PauseScreen.SetActive(false);
-            inventory.SetActive(true);
-            inventoryScreen.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E) && !invOpened){
+                CancelAnimation();
+                paused = true;
+                invOpened = true;
+                PauseScreen.SetActive(false);
+                inventory.SetActive(true);
+                inventoryScreen.SetActive(true);
+            }
+            else if((Input.GetKeyDown(KeyCode.E) && invOpened) || (Input.GetKeyDown(KeyCode.Escape) && invOpened)){
+                invOpened = false;
+                paused = false;
+                inventoryScreen.SetActive(false);
+                inventory.SetActive(false);
+            }
         }
-        else if((Input.GetKeyDown(KeyCode.E) && invOpened) || (Input.GetKeyDown(KeyCode.Escape) && invOpened)){
-            invOpened = false;
-            paused = false;
-            inventoryScreen.SetActive(false);
-            inventory.SetActive(false);
-        }
-
     }
 
     void FixedUpdate()
