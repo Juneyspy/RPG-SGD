@@ -25,12 +25,15 @@ public class WoodenDrops : MonoBehaviour
     public Sprite newItem;
 
     public GameObject template;
+    public GameObject varsObj;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("OverworldMC");
-        newItemsGrid = player.GetComponent<PlayerScript>().newItemsGrid;
+        //newItemsGrid = player.GetComponent<PlayerScript>().newItemsGrid;
+        //newItemsGrid = GameObject.Find("newitemsgrid");
+        newItemsGrid = GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().newItemsGrid;
         //print(newItemsGrid);
         runesScreen = player.GetComponent<PlayerScript>().runesScreen;
         inventoryScreen = player.GetComponent<PlayerScript>().inventoryScreen;

@@ -57,7 +57,7 @@ public class PlayerScript : MonoBehaviour
             inventoryScreen = GameObject.Find("Inventory screen"); inventoryScreen.SetActive(false);
             travelScreen = GameObject.Find("Travel Screen"); travelScreen.SetActive(false);
             journalScreen = GameObject.Find("Journal screen"); journalScreen.SetActive(false);
-            inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false);     
+            inventory = GameObject.Find("Inventory shit"); invSlotParent = GameObject.Find("quick slots"); inventory.SetActive(false); //put all of this stuff in the variable scrip[t thiogn]
             PauseScreen.SetActive(false);
         }
     }
