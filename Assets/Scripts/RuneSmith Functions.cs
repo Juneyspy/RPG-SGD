@@ -9,34 +9,53 @@ public class RuneSmithFunctions : MonoBehaviour
 {
     public GameObject Weapon1;
     public GameObject Weapon2;
+
     public GameObject confirmscreen;
     public int changecount;
+
     public GameObject RuneInventory;
+    public GameObject RuneInventory2;
     public GameObject totalInv;
     public GameObject Inv;
     public GameObject holdingWeapon;
+
     public GameObject oneruneset;
     public GameObject tworuneset;
     public GameObject threeruneset;
     public GameObject fourruneset;
+    public GameObject onerunesetarmor;
+    public GameObject tworunesetarmor;
+    public GameObject threerunesetarmor;
+    public GameObject fourrunesetarmor;
+
     public int check;
     string nameholder;
     string nameholder2;
+
     private GameObject thatguy;
     private GameObject thatguy2;
+
     public GameObject FullScreen;
+
     public GameObject picture1;
     public GameObject picture2;
     public GameObject picture3;
     public GameObject picture4;
+    public GameObject picture5;
+    public GameObject picture6;
+    public GameObject picture7;
+    public GameObject picture8;
 
     public Image setholder;
     public Image setholder2;
     public Image setholder3;
     public Image setholder4;
+    public Image setholder5;
+    public Image setholder6;
+    public Image setholder7;
+    public Image setholder8;
+
     public Sprite blank;
-
-
 
     public GameObject block1;
     public GameObject block2;
@@ -64,6 +83,10 @@ public class RuneSmithFunctions : MonoBehaviour
         picture2.SetActive(false);
         picture3.SetActive(false);
         picture4.SetActive(false);
+        picture5.SetActive(false);
+        picture6.SetActive(false);
+        picture7.SetActive(false);
+        picture8.SetActive(false);
 
         oneruneset.SetActive(false);
         tworuneset.SetActive(false);
@@ -79,11 +102,24 @@ public class RuneSmithFunctions : MonoBehaviour
     {
         Inv.SetActive(true);
         totalInv.SetActive(true);
-        for (int i = 1; i < 2; i++)
+        if (Weapon1.activeSelf)
         {
-            if (totalInv.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+            for (int i = 1; i < 2; i++)
             {
-                holdingWeapon = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject;
+                if (totalInv.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                {
+                    holdingWeapon = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject;
+                }
+            }
+        }
+        if (Weapon2.activeSelf)
+        {
+            for (int i = 1; i < 3; i++)
+            {
+                if (totalInv.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                {
+                    holdingWeapon = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject;
+                }
             }
         }
         //holdingWeapon.tag = "1 rune";
@@ -104,7 +140,6 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(false);
             picture4.SetActive(false);
         }
-
         if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "2 rune")
         {
             check = 3;
@@ -120,7 +155,6 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(false);
             picture4.SetActive(false);
         }
-
         if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "3 rune")
         {
             check = 4;
@@ -136,7 +170,6 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(true);
             picture4.SetActive(false);
         }
-
         if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "4 rune")
         {
             check = 5;
@@ -152,6 +185,76 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(true);
             picture4.SetActive(true);
         }
+
+        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "1 rune armor")
+        {
+            check = 2;
+            onerunesetarmor.SetActive(true);
+            tworunesetarmor.SetActive(false);
+            threerunesetarmor.SetActive(false);
+            fourrunesetarmor.SetActive(false);
+            RuneInventory2 = onerunesetarmor;
+
+            picture5.SetActive(true);
+            picture6.SetActive(false);
+            picture7.SetActive(false);
+            picture8.SetActive(false);
+        }
+        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "2 rune armor")
+        {
+            check = 3;
+            onerunesetarmor.SetActive(false);
+            tworunesetarmor.SetActive(true);
+            threerunesetarmor.SetActive(false);
+            fourrunesetarmor.SetActive(false);
+            RuneInventory2 = tworunesetarmor;
+
+            picture5.SetActive(true);
+            picture6.SetActive(true);
+            picture7.SetActive(false);
+            picture8.SetActive(false);
+
+        }
+        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "3 rune armor")
+        {
+            check = 4;
+            onerunesetarmor.SetActive(false);
+            tworunesetarmor.SetActive(false);
+            threerunesetarmor.SetActive(true);
+            fourrunesetarmor.SetActive(false);
+            RuneInventory2 = threerunesetarmor;
+
+            picture5.SetActive(true);
+            picture6.SetActive(true);
+            picture7.SetActive(true);
+            picture8.SetActive(false);
+
+        }
+        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "4 rune armor")
+        {
+            check = 5;
+            onerunesetarmor.SetActive(false);
+            tworunesetarmor.SetActive(false);
+            threerunesetarmor.SetActive(false);
+            fourrunesetarmor.SetActive(true);
+            RuneInventory2 = fourrunesetarmor;
+
+            picture5.SetActive(true);
+            picture6.SetActive(true);
+            picture7.SetActive(true);
+            picture8.SetActive(true);
+
+        }
+    }
+
+    public void blockrunes()
+    {
+        block7.SetActive(true);
+    }
+
+    public void CloseScreen()
+    {
+        FullScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -161,94 +264,133 @@ public class RuneSmithFunctions : MonoBehaviour
         if (FullScreen.activeSelf)
         {
             int runs = 1;
-
-            for (int i = 1; i < check; i++)
+            if (Weapon1.activeSelf)
             {
-                if (RuneInventory.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                for (int i = 1; i < check; i++)
                 {
-
-                    //this shit here needs to be able to change the image on the sword to what ever is currently in the slots but no worky :(
-
-
-                    nameholder2 = RuneInventory.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
-                    thatguy = GameObject.Find(nameholder2);
-
-                    if (runs == 1)
+                    if (RuneInventory.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
                     {
-                        block1.SetActive(true);
-                        if(fourruneset.activeSelf)
+
+                        nameholder2 = RuneInventory.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                        thatguy = GameObject.Find(nameholder2);
+
+                        if (runs == 1)
                         {
-                            block5.SetActive(true);
-                            block1.SetActive(false);
+                            picture1.GetComponent<Image>().enabled = true;
+
+                            Image sourceholder = thatguy.GetComponent<Image>();
+                            setholder = picture1.GetComponent<Image>();
+
+                            setholder.sprite = sourceholder.sprite;
+
+                            thatguy = null;
+
                         }
-                        if (threeruneset)
+
+                        if (runs == 2)
                         {
+                            picture2.GetComponent<Image>().enabled = true;
 
+                            Image sourceholder2 = thatguy.GetComponent<Image>();
+                            setholder2 = picture2.GetComponent<Image>();
+
+                            setholder2.sprite = sourceholder2.sprite;
+
+                            thatguy = null;
                         }
-                        if (tworuneset)
+
+                        if (runs == 3)
                         {
-                            block2.SetActive(true);
-                            block1.SetActive(false);
+                            picture3.GetComponent<Image>().enabled = true;
+
+                            Image sourceholder3 = thatguy.GetComponent<Image>();
+                            setholder3 = picture3.GetComponent<Image>();
+
+                            setholder3.sprite = sourceholder3.sprite;
+
+                            thatguy = null;
                         }
 
-                        Image sourceholder = thatguy.GetComponent<Image>();
-                        setholder = picture1.GetComponent<Image>();
+                        if (runs == 4)
+                        {
+                            picture4.GetComponent<Image>().enabled = true;
 
-                        setholder.sprite = sourceholder.sprite;
+                            Image sourceholder4 = thatguy.GetComponent<Image>();
+                            setholder4 = picture4.GetComponent<Image>();
 
-                        thatguy = null;
+                            setholder4.sprite = sourceholder4.sprite;
+
+                            thatguy = null;
+                        }
+                        runs++;
 
                     }
 
-                    if (runs == 2)
+                }
+
+            }
+
+            if (Weapon2.activeSelf)
+            {
+                for (int i = 1; i < check; i++)
+                {
+                    if (RuneInventory2.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
                     {
-                        block1.SetActive(true);
-                        if (tworuneset.activeSelf)
+                        nameholder2 = RuneInventory2.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                        thatguy = GameObject.Find(nameholder2);
+
+                        if (runs == 1)
                         {
-                            //block2.SetActive(true);
+
+                            picture5.GetComponent<Image>().enabled = true;
+
+                            Image sourceholder5 = thatguy.GetComponent<Image>();
+                            setholder5 = picture5.GetComponent<Image>();
+
+                            setholder5.sprite = sourceholder5.sprite;
+
+                            thatguy = null;
+
                         }
 
-                        Image sourceholder2 = thatguy.GetComponent<Image>();
-                        setholder2 = picture2.GetComponent<Image>();
-
-                        setholder2.sprite = sourceholder2.sprite;
-
-                        thatguy = null;
-                    }
-
-                    if (runs == 3)
-                    {
-                        block3.SetActive(true);
-
-                        if (threeruneset.activeSelf)
+                        if (runs == 2)
                         {
-                            Debug.Log("cum");
+                            picture6.GetComponent<Image>().enabled = true;
+
+                            Image sourceholder6 = thatguy.GetComponent<Image>();
+                            setholder6 = picture6.GetComponent<Image>();
+
+                            setholder6.sprite = sourceholder6.sprite;
+
+                            thatguy = null;
                         }
 
-                        Image sourceholder3 = thatguy.GetComponent<Image>();
-                        setholder3 = picture3.GetComponent<Image>();
+                        if (runs == 3)
+                        {
+                            picture7.GetComponent<Image>().enabled = true;
 
-                        setholder3.sprite = sourceholder3.sprite;
+                            Image sourceholder7 = thatguy.GetComponent<Image>();
+                            setholder7 = picture7.GetComponent<Image>();
 
-                        thatguy = null;
+                            setholder7.sprite = sourceholder7.sprite;
+
+                            thatguy = null;
+                        }
+
+                        if (runs == 4)
+                        {
+                            picture8.GetComponent<Image>().enabled = true;
+
+                            Image sourceholder8 = thatguy.GetComponent<Image>();
+                            setholder8 = picture8.GetComponent<Image>();
+
+                            setholder8.sprite = sourceholder8.sprite;
+
+                            thatguy = null;
+                        }
+                        runs++;
+
                     }
-
-                    if (runs == 4)
-                    {
-                        block3.SetActive(true);
-                        block4.SetActive(true);
-                        block7.SetActive(true);
-                        block6.SetActive(true);
-
-                        Image sourceholder4 = thatguy.GetComponent<Image>();
-                        setholder4 = picture4.GetComponent<Image>();
-
-                        setholder4.sprite = sourceholder4.sprite;
-
-                        thatguy = null;
-                    }
-                    runs++;
-
                 }
             }
         }
@@ -268,6 +410,8 @@ public class RuneSmithFunctions : MonoBehaviour
                 //setholder.sprite = null;
 
                 picture1.GetComponent<Image>().enabled = false;
+                picture5.GetComponent<Image>().enabled = false;
+
             }
             else if(i == 2)
             {
@@ -275,6 +419,8 @@ public class RuneSmithFunctions : MonoBehaviour
                 //setholder2.sprite = blank;
 
                 picture2.GetComponent<Image>().enabled = false;
+                picture6.GetComponent<Image>().enabled = false;
+
             }
             else if(i == 3)
             {
@@ -283,6 +429,7 @@ public class RuneSmithFunctions : MonoBehaviour
                 //print(setholder3.sprite);
 
                 picture3.GetComponent<Image>().enabled = false;
+                picture7.GetComponent<Image>().enabled = false;
             }
             else if(i == 4)
             {
@@ -290,12 +437,26 @@ public class RuneSmithFunctions : MonoBehaviour
                 //setholder4.sprite = null;
 
                 picture4.GetComponent<Image>().enabled = false;
+                picture8.GetComponent<Image>().enabled = false;
+
             }
-            if (RuneInventory.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+            if (Weapon1.activeSelf)
             {
-                nameholder = RuneInventory.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
-                thatguy = GameObject.Find(nameholder);
-                Destroy(thatguy);
+                if (RuneInventory.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                {
+                    nameholder = RuneInventory.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                    thatguy = GameObject.Find(nameholder);
+                    Destroy(thatguy);
+                }
+            }
+            if (Weapon2.activeSelf)
+            {
+                if (RuneInventory2.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                {
+                    nameholder = RuneInventory2.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                    thatguy = GameObject.Find(nameholder);
+                    Destroy(thatguy);
+                }
             }
         }
 
@@ -318,12 +479,14 @@ public class RuneSmithFunctions : MonoBehaviour
             changecount++;
             Weapon1.SetActive(false);
             Weapon2.SetActive(true);
+            GetFirstWeapon();
         }
         else
         {
             changecount++;
             Weapon1.SetActive(true);
             Weapon2.SetActive(false);
+            GetFirstWeapon();
         }
 
     }
