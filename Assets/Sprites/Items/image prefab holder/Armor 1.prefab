@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1240255480304129801}
   - component: {fileID: 1240255480304129806}
   - component: {fileID: 1240255480304129803}
+  - component: {fileID: 4569591739901143222}
   m_Layer: 5
   m_Name: Armor 1
   m_TagString: 1 rune armor
@@ -92,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1240255480304129801}
   parentAfterDrag: {fileID: 0}
+  isSword: 0
+  isArmor: 0
 --- !u!114 &1240255480304129803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,3 +108,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipToShow: Training Armor
+--- !u!114 &4569591739901143222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240255480304129804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e2d84ead905d84084a7a3681136bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armor: 10

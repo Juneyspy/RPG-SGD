@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DontDestroyScript : MonoBehaviour
 {
+    public List<GameObject> itemPrefabs = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {

@@ -96,6 +96,7 @@ public class WoodenDrops : MonoBehaviour
                     //print(newItem);
                     GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
                     temp.GetComponent<Image>().sprite = newItem;
+                    temp.name = allItems[i-1].name;
                     //itemsToGet.Add(newItem);
                     temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
                 }

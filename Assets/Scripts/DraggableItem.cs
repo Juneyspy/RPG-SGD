@@ -13,6 +13,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     GameObject player;
     public bool isSword;
     public bool isArmor;
+    public int damage;
+    public int armor;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
