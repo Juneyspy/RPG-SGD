@@ -25,9 +25,12 @@ namespace QuantumTek.EncryptedSave
         public GameObject player;
 
         public GameObject inv;
-        public GameObject TotalInv;
+        public GameObject QuickSlots;
 
+        public float xPos;
+        public float yPos;
 
+        List<GameObject> inventory = new List<GameObject>();
 
 
 
@@ -36,6 +39,27 @@ namespace QuantumTek.EncryptedSave
             Health = player.GetComponent<PlayerScript>().playerHP;
             healthhodl.text = Health.ToString();
             SceneName = SceneManager.GetActiveScene().name;
+        }
+        void Update()
+        {
+            xPos = player.transform.position.x;
+            yPos = player.transform.position.y;
+        }
+
+        public void inventorysave()
+        {
+            /*
+            for (int i = 1; i < 36; i++)
+            {
+                if (QuickSlots.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                {
+                    //set inventory active and set the quick slots active to get the items
+                    inventory.Add(GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject));
+                    //set both quick slots and inventory inactive
+
+                }
+            }
+            */
         }
 
         public void healthup()
@@ -72,6 +96,14 @@ namespace QuantumTek.EncryptedSave
             ES_Save.Save(knobY.value, "test y");
             //ES_Save.Save(Health.int, "test int");
             ES_Save.Save(Health, "test num");
+
+            //ES_Save.Save(inventory, "inventory hold");
+
+            Debug.Log(yPos);
+            Debug.Log(xPos);
+            ES_Save.Save(xPos, "xpositionh");
+            ES_Save.Save(yPos, "ypositionh");
+
         }
 
         public void Load()
@@ -87,6 +119,12 @@ namespace QuantumTek.EncryptedSave
             knobY.value = ES_Save.Load<float>("test y");
             //Health.int = ES_Save.Load<float>("test int");
             Health = ES_Save.Load<int>("test num");
+
+            //inventory = ES_Save.Load<GameObject>("inventory hold");
+
+            xPos = ES_Save.Load<float>("xpositionh");
+            yPos = ES_Save.Load<float>("ypositionh");
+            player.transform.position = new Vector3(xPos, yPos, transform.position.z);
         }
     }
 }
