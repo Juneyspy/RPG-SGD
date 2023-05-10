@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242037484400432042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.417503, y: -1.559233, z: -0.010984862}
+  m_LocalPosition: {x: -2.417503, y: -1.559233, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50,6 +50,29 @@ MonoBehaviour:
   moveSpeed: 6
   rb: {fileID: 0}
   animator: {fileID: 3926007615127701487}
+  PauseScreen: {fileID: 0}
+  paused: 0
+  invOpened: 0
+  canOpenInv: 1
+  canOpenPause: 1
+  fighting: 0
+  newItemsGrid: {fileID: 0}
+  inventory: {fileID: 0}
+  invSlotParent: {fileID: 0}
+  runesScreen: {fileID: 0}
+  inventoryScreen: {fileID: 0}
+  travelScreen: {fileID: 0}
+  journalScreen: {fileID: 0}
+  colEnemy: {fileID: 0}
+  enemyScale: {x: 0, y: 0, z: 0}
+  enemyMove: {x: 0, y: 0, z: 0}
+  enemyPrevPos: {x: 0, y: 0, z: 0}
+  enemyTriggerCol: {fileID: 0}
+  playerHP: 100
+  activeWeapon: {fileID: 0}
+  doorRender: {fileID: 0}
+  doorMap: {fileID: 0}
+  takenItems: 0
 --- !u!212 &5960805619609920688
 SpriteRenderer:
   m_ObjectHideFlags: 0
