@@ -15,9 +15,6 @@ namespace QuantumTek.EncryptedSave
         public Slider knobY;
         public RectTransform knob;
 
-        //variables below this line are place holders, thhey should be put into the dont destory as public variables which will...
-        //...get called in the save function for saving 
-
         public string bosses;
         public TextMeshProUGUI healthhodl;
         public int Health;
@@ -30,7 +27,44 @@ namespace QuantumTek.EncryptedSave
         public float xPos;
         public float yPos;
 
-        List<GameObject> inventory = new List<GameObject>();
+        //List<string> inventory = new List<string>();
+
+        public string item1;
+        public string item2;
+        public string item3;
+        public string item4;
+        public string item5;
+        public string item6;
+        public string item7;
+        public string item8;
+        public string item9;
+        public string item10;
+        public string item11;
+        public string item12;
+        public string item13;
+        public string item14;
+        public string item15;
+        public string item16;
+        public string item17;
+        public string item18;
+        public string item19;
+        public string item20;
+        public string item21;
+        public string item22;
+        public string item23;
+        public string item24;
+        public string item25;
+        public string item26;
+        public string item27;
+        public string item28;
+        public string item29;
+        public string item30;
+        public string item31;
+        public string item32;
+        public string item33;
+        public string item34;
+        public string item35;
+        public string item36;
 
 
 
@@ -48,18 +82,135 @@ namespace QuantumTek.EncryptedSave
 
         public void inventorysave()
         {
-            /*
+            
             for (int i = 1; i < 36; i++)
             {
+                inv.SetActive(true);
+                QuickSlots.SetActive(true);
+
                 if (QuickSlots.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
                 {
-                    //set inventory active and set the quick slots active to get the items
-                    inventory.Add(GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject));
-                    //set both quick slots and inventory inactive
+                    //inventory.Add(GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString()));
 
+                    switch (i) 
+                    {
+                        case 0:
+                            Debug.Log("hi :3");
+                            break;
+                        case 1:
+                            item1 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 2:
+                            item2 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 3:
+                            item3 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 4:
+                            item4 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 5:
+                            item5 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 6:
+                            item6 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 7:
+                            item7 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 8:
+                            item8 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 9:
+                            item9 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 10:
+                            item10 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 11:
+                            item11 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 12:
+                            item12 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 13:
+                            item13 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 14:
+                            item14 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 15:
+                            item15 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 16:
+                            item16 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 17:
+                            item17 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 18:
+                            item18 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 19:
+                            item19 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 20:
+                            item20 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 21:
+                            item21 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 22:
+                            item22 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 23:
+                            item23 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 24:
+                            item24 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 25:
+                            item25 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 26:
+                            item26 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 27:
+                            item27 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 28:
+                            item28 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 29:
+                            item29 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 30:
+                            item30 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 31:
+                            item31 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 32:
+                            item32 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 33:
+                            item33 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 34:
+                            item34 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 35:
+                            item35 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                        case 36:
+                            item36 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            break;
+                    }
                 }
+                QuickSlots.SetActive(false);
+                inv.SetActive(false);
             }
-            */
+            
         }
 
         public void healthup()
@@ -84,6 +235,408 @@ namespace QuantumTek.EncryptedSave
             knob.anchoredPosition = new Vector2(knobX.value, knobY.value);
         }
 
+
+
+        public void Item1check()
+        {
+            if (item1.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item1, "item1 a");
+            }
+        }
+        public void Item2check()
+        {
+            if (item2.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item2, "item2 a");
+            }
+        }
+        public void Item3check()
+        {
+            if (item3.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item3, "item3 a");
+            }
+        }
+        public void Item4check()
+        {
+            if (item1.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item4, "item4 a");
+            }
+        }
+        public void Item5check()
+        {
+            if (item5.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item5, "item5 a");
+            }
+        }
+        public void Item6check()
+        {
+            if (item6.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item6, "item6 a");
+            }
+        }
+        public void Item7check()
+        {
+            if (item7.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item7, "item7 a");
+            }
+        }
+        public void Item8check()
+        {
+            if (item8.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item8, "item8 a");
+            }
+        }
+        public void Item9check()
+        {
+            if (item9.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item9, "item9 a");
+            }
+        }
+        public void Item10check()
+        {
+            if (item10.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item10, "item10 a");
+            }
+        }
+        public void Item11check()
+        {
+            if (item11.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item11, "item11 a");
+            }
+        }
+        public void Item12check()
+        {
+            if (item12.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item12, "item12 a");
+            }
+        }
+        public void Item13check()
+        {
+            if (item13.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item13, "item13 a");
+            }
+        }
+        public void Item14check()
+        {
+            if (item14.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item14, "item14 a");
+            }
+        }
+        public void Item15check()
+        {
+            if (item15.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item15, "item15 a");
+            }
+        }
+        public void Item16check()
+        {
+            if (item16.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item16, "item16 a");
+            }
+        }
+        public void Item17check()
+        {
+            if (item17.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item17, "item17 a");
+            }
+        }
+        public void Item18check()
+        {
+            if (item18.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item18, "item18 a");
+            }
+        }
+        public void Item19check()
+        {
+            if (item19.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item19, "item19 a");
+            }
+        }
+        public void Item20check()
+        {
+            if (item20.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item20, "item20 a");
+            }
+        }
+        public void Item21check()
+        {
+            if (item21.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item21, "item21 a");
+            }
+        }
+        public void Item22check()
+        {
+            if (item22.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item22, "item22 a");
+            }
+        }
+        public void Item23check()
+        {
+            if (item23.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item23, "item23 a");
+            }
+        }
+        public void Item24check()
+        {
+            if (item24.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item24, "item24 a");
+            }
+        }
+        public void Item25check()
+        {
+            if (item25.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item25, "item25 a");
+            }
+        }
+        public void Item26check()
+        {
+            if (item26.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item26, "item26 a");
+            }
+        }
+        public void Item27check()
+        {
+            if (item27.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item27, "item27 a");
+            }
+        }
+        public void Item28check()
+        {
+            if (item28.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item28, "item28 a");
+            }
+        }
+        public void Item29check()
+        {
+            if (item29.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item29, "item29 a");
+            }
+        }
+        public void Item30check()
+        {
+            if (item30.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item30, "item30 a");
+            }
+        }
+        public void Item31check()
+        {
+            if (item31.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item31, "item31 a");
+            }
+        }
+        public void Item32check()
+        {
+            if (item32.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item32, "item32 a");
+            }
+        }
+        public void Item33check()
+        {
+            if (item33.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item33, "item33 a");
+            }
+        }
+        public void Item34check()
+        {
+            if (item34.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item34, "item34 a");
+            }
+        }
+        public void Item35check()
+        {
+            if (item35.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item35, "item35 a");
+            }
+        }
+        public void Item36check()
+        {
+            if (item36.text == null)
+            {
+                Debug.Log("uh oh");
+            }
+            else
+            {
+                ES_Save.Save(item36, "item36 a");
+            }
+        }
+
+
+
+
         public void Save()
         {
             if (!text || !knob) return;
@@ -97,12 +650,17 @@ namespace QuantumTek.EncryptedSave
             //ES_Save.Save(Health.int, "test int");
             ES_Save.Save(Health, "test num");
 
-            //ES_Save.Save(inventory, "inventory hold");
-
             Debug.Log(yPos);
             Debug.Log(xPos);
             ES_Save.Save(xPos, "xpositionh");
             ES_Save.Save(yPos, "ypositionh");
+
+
+
+            Item1check();
+
+
+
 
         }
 
@@ -119,12 +677,10 @@ namespace QuantumTek.EncryptedSave
             knobY.value = ES_Save.Load<float>("test y");
             //Health.int = ES_Save.Load<float>("test int");
             Health = ES_Save.Load<int>("test num");
-
-            //inventory = ES_Save.Load<GameObject>("inventory hold");
-
             xPos = ES_Save.Load<float>("xpositionh");
             yPos = ES_Save.Load<float>("ypositionh");
             player.transform.position = new Vector3(xPos, yPos, transform.position.z);
+
         }
     }
 }
