@@ -55,6 +55,7 @@ public class WoodenDrops : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player" && !takenItems){
             takenItems = false;
+            player.GetComponent<PlayerScript>().inChest = true;
             player.GetComponent<PlayerScript>().takenItems = false;
             player.GetComponent<PlayerScript>().CancelAnimation();
             inInv = true;
@@ -66,16 +67,18 @@ public class WoodenDrops : MonoBehaviour
             inventoryScreen.SetActive(true);
             varsObj.GetComponent<VariableHolder>().effectsTextHolder.SetActive(false);
             varsObj.GetComponent<VariableHolder>().newItemsArea.SetActive(true);
-
-            /*bool destroyed = false;
-            if(!destroyed){
-                for(int i =1; i<4; i++){
-                    if(GET TEH AMOUNT OF CHIDREN GERE)
-                    Destroy(newItemsGrid.transform.GetChild(i-1).gameObject);
+            
+            if(SceneManager.GetActiveScene().name != "Ms G Test"){
+                bool destroyed = false;
+                if(!destroyed){
+                    for(int i = 1; i<4; i++){
+                        if(newItemsGrid.transform.GetChild(i-1).transform.childCount > 0){
+                            Destroy(newItemsGrid.transform.GetChild(i-1).transform.GetChild(0).gameObject);
+                        }
+                    }
                 }
+                destroyed = true;
             }
-            destroyed = true;*/ //destory all previous objcets
-
 
             if(SceneManager.GetActiveScene().name != "Ms G Test"){
                 int amountDropped = Random.Range(1,5);
@@ -108,12 +111,14 @@ public class WoodenDrops : MonoBehaviour
     void OnTriggerExit2D(Collider2D other){
         if(other.tag == "Player" && takenItems){
             inInv = false;
+            player.GetComponent<PlayerScript>().inChest = inInv;
             player.GetComponent<PlayerScript>().invOpened = false;
             inventoryScreen.SetActive(false);
             inventory.SetActive(false);
         }
         else{
             inInv = false;
+            player.GetComponent<PlayerScript>().inChest = inInv;
             player.GetComponent<PlayerScript>().invOpened = false;
             inventoryScreen.SetActive(false);
             inventory.SetActive(false);
