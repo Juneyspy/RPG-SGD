@@ -42,10 +42,6 @@ public class FightingFunctions : MonoBehaviour
     public int runs;
 
     public TMP_Text hpText;
-    public TMP_Text swordWarning;
-    public TMP_Text enemyHPText;
-
-    public PlayerScript playerScript;
 
 
     // Start is called before the first frame update
@@ -91,12 +87,8 @@ public class FightingFunctions : MonoBehaviour
         Invoke("TurnOnFighting",.8f);
         Invoke("fadeOutFinal",1.0f);
         Invoke("fadeOut",1.0f);
-        hpText.text = (player.GetComponent<PlayerScript>().playerHP + player.GetComponent<PlayerScript>().playerShield).ToString();
+        hpText.text = player.GetComponent<PlayerScript>().playerHP.ToString();
         print("initiate fight");
-        //enemyHPText.text = player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP.ToString(); //FIX
-        if(player.GetComponent<PlayerScript>().playerDmg == 0){
-            swordWarning.text = "Make sure to equip your sword... (E)";
-        }
     }
     public void fadeOut(){
         fading.CrossFadeAlpha(0,.2f,true);
@@ -114,19 +106,6 @@ public class FightingFunctions : MonoBehaviour
         cam.transform.position = cam.GetComponent<CameraScript>().battleLoc;
         player.GetComponent<PlayerScript>().colEnemy.transform.localScale += player.GetComponent<PlayerScript>().enemyScale;
         player.GetComponent<PlayerScript>().colEnemy.transform.position = player.GetComponent<PlayerScript>().enemyMove;
-    }
-
-    //THIS IS WHERE HELL HAPPENS RAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    public void LightAttack(){
-
-    }
-
-    public void HeavyAttack(){
-
-    }
-
-    public void Defend(){
-
     }
 
 

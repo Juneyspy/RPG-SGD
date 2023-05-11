@@ -4,33 +4,23 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject obj;
-    public GameObject[] pathPoints;
-    public int numberOfPoints;
+    public Transform[] target;
     public float speed;
-
-    private Vector3 actualPosition;
-    private int x;
+    private int current;
     // Start is called before the first frame update
     void Start()
     {
-        x = 0;
-        obj.GetComponent<Animator>().SetBool("Run", true); ;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        actualPosition = obj.transform.position;
-        obj.transform.position = Vector3.MoveTowards(actualPosition, pathPoints[x].transform.position, speed * Time.deltaTime);
-
-        if(actualPosition == pathPoints[x].transform.position && x != numberOfPoints)
+        if (transform.position != target[current].position)
         {
-            x++;
+            Vector3 pos = Vector3.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
+            GetComponent<Rigidbody>().MovePosition(pos);
         }
-        if (x == numberOfPoints)
-        {
-            x = 0;
-        }
+        else current = (current + 1) % target.Length;
     }
 }

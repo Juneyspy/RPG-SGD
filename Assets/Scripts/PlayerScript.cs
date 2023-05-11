@@ -19,7 +19,6 @@ public class PlayerScript : MonoBehaviour
     public bool canOpenInv = true;
     public bool canOpenPause = true;
     public bool fighting = false;
-    public bool inChest = false;
 
     //getting inventory stuff
     public GameObject newItemsGrid;
@@ -40,8 +39,6 @@ public class PlayerScript : MonoBehaviour
     public Collider2D enemyTriggerCol;
         //battling
     public int playerHP = 100;
-    public int playerShield = 0;
-    public int playerDmg = 0;
     public Sprite activeWeapon;
 //-------------------------------------------MISC--------------------
     public TilemapRenderer doorRender;
@@ -88,7 +85,7 @@ public class PlayerScript : MonoBehaviour
 
         //Get Keys--------------------------------------------------------------------
                     //pausing
-        //if(!takenItems){
+        if(!takenItems){
             if(!paused && Input.GetKeyDown(KeyCode.Escape)){
                 CancelAnimation();
                 PauseScreen.SetActive(true);
@@ -102,27 +99,12 @@ public class PlayerScript : MonoBehaviour
             }
                     //inventory
             if(Input.GetKeyDown(KeyCode.E) && !invOpened){
-                if(fighting){
-                    GameObject.Find("fightingscript").GetComponent<FightingFunctions>().swordWarning.text = " ";
-                }
-                if(inChest){
-                    invOpened = false;
-                    paused = false;
-                    inventoryScreen.SetActive(false);
-                    inventory.SetActive(false);
-                }
-                else{
-                    CancelAnimation();
-                    paused = true;
-                    invOpened = true;
-                    PauseScreen.SetActive(false);
-                    inventory.SetActive(true);
-                    inventoryScreen.SetActive(true);
-                    if(!inChest){
-                        GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().newItemsArea.SetActive(false);
-                        GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().effectsTextHolder.SetActive(true);
-                    }
-                }
+                CancelAnimation();
+                paused = true;
+                invOpened = true;
+                PauseScreen.SetActive(false);
+                inventory.SetActive(true);
+                inventoryScreen.SetActive(true);
             }
             else if((Input.GetKeyDown(KeyCode.E) && invOpened) || (Input.GetKeyDown(KeyCode.Escape) && invOpened)){
                 invOpened = false;
@@ -130,7 +112,7 @@ public class PlayerScript : MonoBehaviour
                 inventoryScreen.SetActive(false);
                 inventory.SetActive(false);
             }
-       // }
+        }
     }
 
     void FixedUpdate()
