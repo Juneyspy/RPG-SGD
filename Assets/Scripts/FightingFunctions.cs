@@ -44,6 +44,9 @@ public class FightingFunctions : MonoBehaviour
     public TMP_Text hpText;
     public TMP_Text swordWarning;
     public TMP_Text enemyHPText;
+    public int enemyHP;
+    public Image enemyAttOverlay;
+    public bool canAttack = true;
 
     public PlayerScript playerScript;
 
@@ -65,6 +68,7 @@ public class FightingFunctions : MonoBehaviour
             fightMenu = GameObject.Find("fighitng");
             cam = GameObject.Find("Main Camera");
             fightMenu.SetActive(false);
+            enemyAttOverlay.CrossFadeAlpha(0,0.0f,true);
         }
         player = GameObject.Find("OverworldMC");
         //totalInv = GameObject.Find("quick slots");
@@ -93,7 +97,11 @@ public class FightingFunctions : MonoBehaviour
         Invoke("fadeOut",1.0f);
         hpText.text = (player.GetComponent<PlayerScript>().playerHP + player.GetComponent<PlayerScript>().playerShield).ToString();
         print("initiate fight");
-        //enemyHPText.text = player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP.ToString(); //FIX
+        if(SceneManager.GetActiveScene().name == "Ms G Test"){
+            enemyHPText.text = "Enemy HP: " + player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP.ToString();
+            enemyHP = player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP;
+        }        //PUT IN ELSE{GET COMPONENT BASICENEMYSCRIPT HP AND ANOTHER FOR BOSS HP SCRIPTS}
+
         if(player.GetComponent<PlayerScript>().playerDmg == 0){
             swordWarning.text = "Make sure to equip your sword... (E)";
         }
@@ -118,11 +126,80 @@ public class FightingFunctions : MonoBehaviour
 
     //THIS IS WHERE HELL HAPPENS RAAAAAAAAAAAAAAAAAAAAAAAAAAA
     public void LightAttack(){
-
+        Battlepass.SetActive(false);
+        if(canAttack){
+            canAttack = false;
+            int dmgToDo = player.GetComponent<PlayerScript>().playerDmg;
+            enemyHP -= dmgToDo;
+            enemyHPText.text = "Enemy HP: " + enemyHP.ToString();
+            if(enemyHP > 0){
+                Invoke("EnemyAttack", 1.4f);
+            }
+            Invoke("ReenableAttack",2.4f);
+            GameOverCheck(enemyHP);
+        }
     }
 
     public void HeavyAttack(){
+        Battlepass.SetActive(false);
+        if(canAttack){
+            canAttack = false;
+            int dmgToDo = player.GetComponent<PlayerScript>().playerDmg * 2;
+            enemyHP -= dmgToDo;
+            enemyHPText.text = "Enemy HP: " + enemyHP.ToString();
+            if(enemyHP > 0){
+                Invoke("EnemyAttack", 1.4f);
+            }
+            Invoke("ReenableAttack",2.4f);
+            GameOverCheck(enemyHP);
+        }
+    }
 
+    void ReenableAttack(){
+        canAttack = true;
+    }
+
+    void HidingRed(){
+        enemyAttOverlay.CrossFadeAlpha(0,0.6f,true);
+    }
+    public void EnemyAttack(){
+        enemyAttOverlay.CrossFadeAlpha(1,0.3f,true);
+        Invoke("HidingRed",0.3f);
+        if(SceneManager.GetActiveScene().name == "Ms G Test"){
+            if(player.GetComponent<PlayerScript>().playerShield > 1){
+                player.GetComponent<PlayerScript>().playerShield -= player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockDmg;
+                if(player.GetComponent<PlayerScript>().playerShield < 0){
+                    player.GetComponent<PlayerScript>().playerHP -= player.GetComponent<PlayerScript>().playerShield * -1;
+                    player.GetComponent<PlayerScript>().playerShield = 0;
+                }
+            }
+            else{
+                player.GetComponent<PlayerScript>().playerHP -= player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockDmg;
+            }
+        }
+
+        hpText.text = (player.GetComponent<PlayerScript>().playerHP + player.GetComponent<PlayerScript>().playerShield).ToString();
+    }
+
+    public void GameOverCheck(int opHealth){
+        if(opHealth <= 0){
+            cam.GetComponent<CameraScript>().following = true;
+
+            int goldToGive = Random.Range(1,4);
+            player.GetComponent<PlayerScript>().goldBal += goldToGive;
+
+            Destroy(player.GetComponent<PlayerScript>().colEnemy);
+            player.GetComponent<PlayerScript>().fighting = false;
+        }
+
+        if(player.GetComponent<PlayerScript>().playerHP <= 0){
+            print("dead");
+            //MAKE AN ACTUALLY DYING THING
+        }
+
+        if(opHealth <= 0 || player.GetComponent<PlayerScript>().playerHP <= 0){
+            enemyHPText.enabled = false;
+        }
     }
 
     public void Defend(){
