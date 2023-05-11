@@ -98,112 +98,112 @@ namespace QuantumTek.EncryptedSave
                             Debug.Log("hi :3");
                             break;
                         case 1:
-                            item1 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item1 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 2:
-                            item2 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item2 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 3:
-                            item3 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item3 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 4:
-                            item4 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item4 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 5:
-                            item5 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item5 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 6:
-                            item6 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item6 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 7:
-                            item7 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item7 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 8:
-                            item8 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item8 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 9:
-                            item9 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item9 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 10:
-                            item10 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item10 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 11:
-                            item11 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item11 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 12:
-                            item12 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item12 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 13:
-                            item13 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item13 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 14:
-                            item14 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item14 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 15:
-                            item15 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item15 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 16:
-                            item16 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item16 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 17:
-                            item17 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item17 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 18:
-                            item18 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item18 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 19:
-                            item19 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item19 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 20:
-                            item20 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item20 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 21:
-                            item21 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item21 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 22:
-                            item22 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item22 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 23:
-                            item23 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item23 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 24:
-                            item24 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item24 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 25:
-                            item25 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item25 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 26:
-                            item26 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item26 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 27:
-                            item27 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item27 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 28:
-                            item28 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item28 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 29:
-                            item29 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item29 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 30:
-                            item30 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item30 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 31:
-                            item31 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item31 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 32:
-                            item32 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item32 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 33:
-                            item33 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item33 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 34:
-                            item34 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item34 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 35:
-                            item35 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item35 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                         case 36:
-                            item36 = GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
+                            item36 = QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString();
                             break;
                     }
                 }
@@ -212,7 +212,6 @@ namespace QuantumTek.EncryptedSave
             }
             
         }
-
         public void healthup()
         {
             Health++;
@@ -235,11 +234,11 @@ namespace QuantumTek.EncryptedSave
             knob.anchoredPosition = new Vector2(knobX.value, knobY.value);
         }
 
-
+        
 
         public void Item1check()
         {
-            if (item1.text == null)
+            if (item1 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -250,7 +249,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item2check()
         {
-            if (item2.text == null)
+            if (item2 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -261,7 +260,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item3check()
         {
-            if (item3.text == null)
+            if (item3 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -272,7 +271,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item4check()
         {
-            if (item1.text == null)
+            if (item1 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -283,7 +282,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item5check()
         {
-            if (item5.text == null)
+            if (item5 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -294,7 +293,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item6check()
         {
-            if (item6.text == null)
+            if (item6 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -305,7 +304,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item7check()
         {
-            if (item7.text == null)
+            if (item7 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -316,7 +315,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item8check()
         {
-            if (item8.text == null)
+            if (item8 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -327,7 +326,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item9check()
         {
-            if (item9.text == null)
+            if (item9 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -338,7 +337,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item10check()
         {
-            if (item10.text == null)
+            if (item10 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -349,7 +348,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item11check()
         {
-            if (item11.text == null)
+            if (item11 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -360,7 +359,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item12check()
         {
-            if (item12.text == null)
+            if (item12 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -371,7 +370,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item13check()
         {
-            if (item13.text == null)
+            if (item13 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -382,7 +381,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item14check()
         {
-            if (item14.text == null)
+            if (item14 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -393,7 +392,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item15check()
         {
-            if (item15.text == null)
+            if (item15 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -404,7 +403,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item16check()
         {
-            if (item16.text == null)
+            if (item16 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -415,7 +414,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item17check()
         {
-            if (item17.text == null)
+            if (item17 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -426,7 +425,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item18check()
         {
-            if (item18.text == null)
+            if (item18 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -437,7 +436,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item19check()
         {
-            if (item19.text == null)
+            if (item19 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -448,7 +447,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item20check()
         {
-            if (item20.text == null)
+            if (item20 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -459,7 +458,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item21check()
         {
-            if (item21.text == null)
+            if (item21 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -470,7 +469,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item22check()
         {
-            if (item22.text == null)
+            if (item22 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -481,7 +480,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item23check()
         {
-            if (item23.text == null)
+            if (item23 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -492,7 +491,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item24check()
         {
-            if (item24.text == null)
+            if (item24 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -503,7 +502,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item25check()
         {
-            if (item25.text == null)
+            if (item25 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -514,7 +513,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item26check()
         {
-            if (item26.text == null)
+            if (item26 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -525,7 +524,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item27check()
         {
-            if (item27.text == null)
+            if (item27 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -536,7 +535,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item28check()
         {
-            if (item28.text == null)
+            if (item28 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -547,7 +546,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item29check()
         {
-            if (item29.text == null)
+            if (item29 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -558,7 +557,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item30check()
         {
-            if (item30.text == null)
+            if (item30 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -569,7 +568,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item31check()
         {
-            if (item31.text == null)
+            if (item31 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -580,7 +579,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item32check()
         {
-            if (item32.text == null)
+            if (item32 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -591,7 +590,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item33check()
         {
-            if (item33.text == null)
+            if (item33 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -602,7 +601,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item34check()
         {
-            if (item34.text == null)
+            if (item34 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -613,7 +612,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item35check()
         {
-            if (item35.text == null)
+            if (item35 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -624,7 +623,7 @@ namespace QuantumTek.EncryptedSave
         }
         public void Item36check()
         {
-            if (item36.text == null)
+            if (item36 == null)
             {
                 Debug.Log("uh oh");
             }
@@ -634,7 +633,7 @@ namespace QuantumTek.EncryptedSave
             }
         }
 
-
+        
 
 
         public void Save()
@@ -657,7 +656,7 @@ namespace QuantumTek.EncryptedSave
 
 
 
-            Item1check();
+            //Item1check();
 
 
 
