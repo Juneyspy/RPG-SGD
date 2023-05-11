@@ -44,6 +44,7 @@ public class WoodenDrops : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(newItemsGrid);
         if(newItemsGrid.transform.GetChild(0).transform.childCount < 1 && newItemsGrid.transform.GetChild(1).transform.childCount < 1 
             && newItemsGrid.transform.GetChild(2).transform.childCount < 1 && newItemsGrid.transform.GetChild(3).transform.childCount < 1 && inInv){
                 takenItems = true;
