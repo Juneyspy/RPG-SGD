@@ -27,7 +27,6 @@ namespace QuantumTek.EncryptedSave
         public float xPos;
         public float yPos;
 
-        //List<string> inventory = new List<string>();
 
         public string item1;
         public string item2;
@@ -68,12 +67,18 @@ namespace QuantumTek.EncryptedSave
 
 
 
+
+        public GameObject item1hold;
+
+
+
         void Start()
         {
             Health = player.GetComponent<PlayerScript>().playerHP;
             healthhodl.text = Health.ToString();
             SceneName = SceneManager.GetActiveScene().name;
         }
+
         void Update()
         {
             xPos = player.transform.position.x;
@@ -90,7 +95,6 @@ namespace QuantumTek.EncryptedSave
 
                 if (QuickSlots.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
                 {
-                    //inventory.Add(GameObject.Find(QuickSlots.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject.name.ToString()));
 
                     switch (i) 
                     {
@@ -655,9 +659,42 @@ namespace QuantumTek.EncryptedSave
             ES_Save.Save(yPos, "ypositionh");
 
 
-
-            //Item1check();
-
+            Item1check();
+            Item2check();
+            Item3check();
+            Item4check();
+            Item5check();
+            Item6check();
+            Item7check();
+            Item8check();
+            Item9check();
+            Item10check();
+            Item11check();
+            Item12check();
+            Item13check();
+            Item14check();
+            Item15check();
+            Item16check();
+            Item17check();
+            Item18check();
+            Item19check();
+            Item20check();
+            Item21check();
+            Item22check();
+            Item23check();
+            Item24check();
+            Item25check();
+            Item26check();
+            Item27check();
+            Item28check();
+            Item29check();
+            Item30check();
+            Item31check();
+            Item32check();
+            Item33check();
+            Item34check();
+            Item35check();
+            Item36check();
 
 
 
@@ -680,6 +717,252 @@ namespace QuantumTek.EncryptedSave
             yPos = ES_Save.Load<float>("ypositionh");
             player.transform.position = new Vector3(xPos, yPos, transform.position.z);
 
+            for (int i = 1; i < 36; i++)
+            {
+
+                switch (i)
+                {
+                    case 0:
+                        Debug.Log("hi :3");
+                        break;
+                    case 1:
+                        if (item1 != null)
+                        {
+                            item1 = ES_Save.Load<string>("item1 a");
+
+                            //GameObject item1actual = Instantiate(GameObject.Find(item1), transform.position, Quaternion.identity);
+
+                            //GameObject item1actual = Instantiate("Sword 7");
+
+                            //GameObject item1actual = Resources.Load<GameObject>(item1);
+
+                            //GameObject item1spawn = Instantiate(item1actual);
+
+                            //item1actual.transform.parent = item1hold.transform;
+
+                            //item1spawn.transform.parent = item1hold.transform;
+
+                            //item1actual.tranform.localPosition = Vector3.zero;
+
+                            //item1actual.tranform.localRotation = Quaternion.identity;
+                        }
+                        break;
+                    case 2:
+                        if (item2 != null)
+                        {
+                            item2 = ES_Save.Load<string>("item2 a");
+                        }
+                        break;
+                    case 3:
+                        if (item3 != null)
+                        {
+                            item3 = ES_Save.Load<string>("item3 a");
+                        }
+                        break;
+                    case 4:
+                        if (item4 != null)
+                        {
+                            item4 = ES_Save.Load<string>("item4 a");
+                        }
+                        break;
+                    case 5:
+                        if (item5 != null)
+                        {
+                            item5 = ES_Save.Load<string>("item5 a");
+                        }
+                        break;
+                    case 6:
+                        if (item6 != null)
+                        {
+                            item6 = ES_Save.Load<string>("item6 a");
+                        }
+                        break;
+                    case 7:
+                        if (item7 != null)
+                        {
+                            item7 = ES_Save.Load<string>("item7 a");
+                        }
+                        break;
+                    case 8:
+                        if (item8 != null)
+                        {
+                            item8 = ES_Save.Load<string>("item8 a");
+                        }
+                        break;
+                    case 9:
+                        if (item9 != null)
+                        {
+                            item9 = ES_Save.Load<string>("item9 a");
+                        }
+                        break;
+                    case 10:
+                        if (item10 != null)
+                        {
+                            item10 = ES_Save.Load<string>("item10 a");
+                        }
+                        break;
+                    case 11:
+                        if (item11 != null)
+                        {
+                            item11 = ES_Save.Load<string>("item11 a");
+                        }
+                        break;
+                    case 12:
+                        if (item12 != null)
+                        {
+                            item12 = ES_Save.Load<string>("item12 a");
+                        }
+                        break;
+                    case 13:
+                        if (item13 != null)
+                        {
+                            item13 = ES_Save.Load<string>("item13 a");
+                        }
+                        break;
+                    case 14:
+                        if (item14 != null)
+                        {
+                            item14 = ES_Save.Load<string>("item14 a");
+                        }
+                        break;
+                    case 15:
+                        if (item15 != null)
+                        {
+                            item15 = ES_Save.Load<string>("item15 a");
+                        }
+                        break;
+                    case 16:
+                        if (item16 != null)
+                        {
+                            item16 = ES_Save.Load<string>("item16 a");
+                        }
+                        break;
+                    case 17:
+                        if (item17 != null)
+                        {
+                            item17 = ES_Save.Load<string>("item17 a");
+                        }
+                        break;
+                    case 18:
+                        if (item18 != null)
+                        {
+                            item18 = ES_Save.Load<string>("item18 a");
+                        }
+                        break;
+                    case 19:
+                        if (item19 != null)
+                        {
+                            item19 = ES_Save.Load<string>("item19 a");
+                        }
+                        break;
+                    case 20:
+                        if (item20 != null)
+                        {
+                            item20 = ES_Save.Load<string>("item20 a");
+                        }
+                        break;
+                    case 21:
+                        if (item21 != null)
+                        {
+                            item21 = ES_Save.Load<string>("item21 a");
+                        }
+                        break;
+                    case 22:
+                        if (item22 != null)
+                        {
+                            item22 = ES_Save.Load<string>("item22 a");
+                        }
+                        break;
+                    case 23:
+                        if (item23 != null)
+                        {
+                            item23 = ES_Save.Load<string>("item23 a");
+                        }
+                        break;
+                    case 24:
+                        if (item24 != null)
+                        {
+                            item24 = ES_Save.Load<string>("item24 a");
+                        }
+                        break;
+                    case 25:
+                        if (item25 != null)
+                        {
+                            item25 = ES_Save.Load<string>("item25 a");
+                        }
+                        break;
+                    case 26:
+                        if (item26 != null)
+                        {
+                            item26 = ES_Save.Load<string>("item26 a");
+                        }
+                        break;
+                    case 27:
+                        if (item27 != null)
+                        {
+                            item27 = ES_Save.Load<string>("item27 a");
+                        }
+                        break;
+                    case 28:
+                        if (item28 != null)
+                        {
+                            item28 = ES_Save.Load<string>("item28 a");
+                        }
+                        break;
+                    case 29:
+                        if (item29 != null)
+                        {
+                            item29 = ES_Save.Load<string>("item29 a");
+                        }
+                        break;
+                    case 30:
+                        if (item30 != null)
+                        {
+                            item30 = ES_Save.Load<string>("item30 a");
+                        }
+                        break;
+                    case 31:
+                        if (item31 != null)
+                        {
+                            item31 = ES_Save.Load<string>("item31 a");
+                        }
+                        break;
+                    case 32:
+
+                        if (item32 != null)
+                        {
+                            item32 = ES_Save.Load<string>("item32 a");
+                        }
+                        break;
+                    case 33:
+                        if (item33 != null)
+                        {
+                            item33 = ES_Save.Load<string>("item33 a");
+                        }
+                        break;
+                    case 34:
+                        if (item34 != null)
+                        {
+                            item34 = ES_Save.Load<string>("item34 a");
+                        }
+                        break;
+                    case 35:
+                        if (item35 != null)
+                        {
+                            item35 = ES_Save.Load<string>("item35 a");
+                        }
+                        break;
+                    case 36:
+                        if (item36 != null)
+                        {
+                            item36 = ES_Save.Load<string>("item36 a");
+                        }
+                        break;
+
+                }
+            }
+
+            
         }
     }
 }
