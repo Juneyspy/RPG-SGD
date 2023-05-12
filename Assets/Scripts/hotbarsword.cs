@@ -43,6 +43,7 @@ public class hotbarsword : MonoBehaviour, IDropHandler
                 if(GameObject.Find("SwordSlot").transform.childCount > 0){
                     if(varsObj.GetComponent<DontDestroyScript>().itemPrefabs[i-1].name == activeSword.name){
                         swordPrefab = varsObj.GetComponent<DontDestroyScript>().itemPrefabs[i-1];
+                        player.GetComponent<PlayerScript>().selectedSword = swordPrefab;
                         strength.text = swordPrefab.GetComponent<Weapon>().damage.ToString();
                         player.GetComponent<PlayerScript>().playerDmg = swordPrefab.GetComponent<Weapon>().damage;
                     }

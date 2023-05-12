@@ -15,6 +15,7 @@ public class RuneSmithFunctions : MonoBehaviour
 
     public GameObject RuneInventory;
     public GameObject RuneInventory2;
+    //public GameObject totalInv;
     public GameObject totalInv;
     public GameObject Inv;
     public GameObject holdingWeapon;
@@ -104,28 +105,32 @@ public class RuneSmithFunctions : MonoBehaviour
         totalInv.SetActive(true);
         if (Weapon1.activeSelf)
         {
-            for (int i = 1; i < 2; i++)
+            print("weapong 1 active");
+            if (totalInv.transform.GetChild(0).gameObject.transform.childCount > 0)
             {
-                if (totalInv.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
-                {
-                    holdingWeapon = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject;
-                }
+                print("did child");
+                holdingWeapon = totalInv.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+                print(holdingWeapon);
+            }
+            else{
+                print("womp womp");
             }
         }
         if (Weapon2.activeSelf)
         {
             for (int i = 1; i < 3; i++)
             {
-                if (totalInv.transform.GetChild(i - 1).gameObject.transform.childCount > 0)
+                if (totalInv.transform.GetChild(1).gameObject.transform.childCount > 0)
                 {
-                    holdingWeapon = totalInv.transform.GetChild(i - 1).gameObject.transform.GetChild(0).gameObject;
+                    holdingWeapon = totalInv.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+                    print("wepaon 2");
                 }
             }
         }
         //holdingWeapon.tag = "1 rune";
-        totalInv.SetActive(false);
+        //totalInv.SetActive(false);
         Inv.SetActive(false);
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "1 rune")
+        if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "1 rune")
         {
             check = 2;
             oneruneset.SetActive(true);
@@ -140,7 +145,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(false);
             picture4.SetActive(false);
         }
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "2 rune")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "2 rune")
         {
             check = 3;
             tworuneset.SetActive(true);
@@ -155,7 +160,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(false);
             picture4.SetActive(false);
         }
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "3 rune")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "3 rune")
         {
             check = 4;
             threeruneset.SetActive(true);
@@ -170,7 +175,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture3.SetActive(true);
             picture4.SetActive(false);
         }
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "4 rune")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "4 rune")
         {
             check = 5;
             fourruneset.SetActive(true);
@@ -186,7 +191,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture4.SetActive(true);
         }
 
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "1 rune armor")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "1 rune armor")
         {
             check = 2;
             onerunesetarmor.SetActive(true);
@@ -200,7 +205,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture7.SetActive(false);
             picture8.SetActive(false);
         }
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "2 rune armor")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "2 rune armor")
         {
             check = 3;
             onerunesetarmor.SetActive(false);
@@ -215,7 +220,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture8.SetActive(false);
 
         }
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "3 rune armor")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "3 rune armor")
         {
             check = 4;
             onerunesetarmor.SetActive(false);
@@ -230,7 +235,7 @@ public class RuneSmithFunctions : MonoBehaviour
             picture8.SetActive(false);
 
         }
-        if (holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "4 rune armor")
+        else if ((totalInv.transform.GetChild(0).gameObject.transform.childCount > 0 || totalInv.transform.GetChild(1).gameObject.transform.childCount > 0) && holdingWeapon.tag != null && holdingWeapon.tag.ToString() == "4 rune armor")
         {
             check = 5;
             onerunesetarmor.SetActive(false);
@@ -244,6 +249,9 @@ public class RuneSmithFunctions : MonoBehaviour
             picture7.SetActive(true);
             picture8.SetActive(true);
 
+        }
+        else{
+            print("nothing here");
         }
     }
 

@@ -48,7 +48,8 @@ public class FightingFunctions : MonoBehaviour
     public Image enemyAttOverlay;
     public bool canAttack = true;
 
-    public PlayerScript playerScript;
+    //public PlayerScript playerScript;
+    public List<GameObject> potionsList = new List<GameObject>();
 
 
     // Start is called before the first frame update
@@ -496,6 +497,16 @@ public class FightingFunctions : MonoBehaviour
             tempInt--;
             item1.text = tempInt.ToString();
         }
+
+        for(int l = 1; l < potionsList.Count-1; l++){
+            if(potionsList[l-1].name == ButtonName){
+                player.GetComponent<PlayerScript>().playerHP += potionsList[l-1].GetComponent<PotionStuff>().hpToGive;
+                if(player.GetComponent<PlayerScript>().playerHP > 100){
+                    player.GetComponent<PlayerScript>().playerHP = 100;
+                }
+            }
+        }
+
         // make code here that uses the item and applys its effects.
         //Destroy(ByeBye.gameObject);
     }

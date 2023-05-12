@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5926241368291011004}
   - component: {fileID: 5926241368291011003}
   - component: {fileID: 5926241368291011002}
+  - component: {fileID: 6418999549989929448}
   m_Layer: 5
   m_Name: Health rune 1
   m_TagString: Rune
@@ -92,6 +93,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 5926241368291011004}
   parentAfterDrag: {fileID: 0}
+  isSword: 0
+  isArmor: 0
+  damage: 0
+  armor: 0
 --- !u!114 &5926241368291011002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,3 +110,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipToShow: Health Rune Level 1
+--- !u!114 &6418999549989929448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5926241368291011000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263cf63a8ac308c439ed56a65439b07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpIncrease: 20
+  dmgIncrease: 0

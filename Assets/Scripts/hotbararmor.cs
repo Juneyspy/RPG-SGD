@@ -42,8 +42,11 @@ public class hotbararmor : MonoBehaviour, IDropHandler
             for(int i = 1; i < varsObj.GetComponent<DontDestroyScript>().itemPrefabs.Count + 1; i ++){
                 if(GameObject.Find("ArmorSlot").transform.childCount > 0){
                     if(varsObj.GetComponent<DontDestroyScript>().itemPrefabs[i-1].name == activeArmor.name){
-                        armorPrefab = varsObj.GetComponent<DontDestroyScript>().itemPrefabs[1-1];
+                        armorPrefab = varsObj.GetComponent<DontDestroyScript>().itemPrefabs[i-1];
+                        player.GetComponent<PlayerScript>().selectedArmor = armorPrefab;
                         defence.text = (GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP + armorPrefab.GetComponent<Armor>().armor).ToString();
+                        print(armorPrefab.GetComponent<Armor>().armor.ToString());
+                        print(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP.ToString());
                         player.GetComponent<PlayerScript>().playerShield = armorPrefab.GetComponent<Armor>().armor;
                         if(player.GetComponent<PlayerScript>().fighting){
                             GameObject.Find("fightingscript").GetComponent<FightingFunctions>().hpText.text = (player.GetComponent<PlayerScript>().playerHP + player.GetComponent<PlayerScript>().playerShield).ToString();

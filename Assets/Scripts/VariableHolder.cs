@@ -14,6 +14,8 @@ public class VariableHolder : MonoBehaviour
     public GameObject newItemsArea;
     public GameObject hotBar;
     public GameObject effectsTextHolder;
+    public GameObject runeSmithScreen;
+    public List<GameObject> anyItem = new List<GameObject>();
 
     /*
     runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);

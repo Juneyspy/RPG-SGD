@@ -44,12 +44,16 @@ public class PlayerScript : MonoBehaviour
     public int playerDmg = 0;
     public int goldBal = 0;
     public Sprite activeWeapon;
+    public GameObject selectedSword;
+    public GameObject selectedArmor;
 //-------------------------------------------MISC--------------------
     public TilemapRenderer doorRender;
     public Tilemap doorMap;
     bool inHouse = false;
     GameObject varsObj;
     public bool takenItems;
+    bool tpedLv2 = false;
+    bool tpedLv3 = false;
 
 
 
@@ -72,9 +76,17 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "Level 1 - Grassland Forest" && !tpedLv2){
+            gameObject.transform.position = new Vector3(-5.487f, -140.4f,0);
+            tpedLv2 = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             SceneManager.LoadScene("Level 2 - TBT");
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+            varsObj.GetComponent<VariableHolder>().runeSmithScreen.SetActive(true);
         }
 
         //Movement---------------------------------------------------------------------
@@ -154,7 +166,6 @@ public class PlayerScript : MonoBehaviour
         if(other.gameObject.name == "Next Level Trigger")
         {
             SceneManager.LoadScene("Level 1 - Grassland Forest");
-            //gameObject.transform.position = new Vector3(-5.487f,-140.427f,0);
         }
 
         if(other.gameObject.tag == "DoorTrigger"){

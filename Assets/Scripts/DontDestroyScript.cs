@@ -10,7 +10,7 @@ public class DontDestroyScript : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        if(gameObject.name == "inventory holder"){
+        if(gameObject.name == "inventory holder" || gameObject.name == "RuneSmith Screen"){
             gameObject.SetActive(false);
         }
     }
