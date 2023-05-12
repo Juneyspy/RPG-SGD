@@ -184,6 +184,11 @@ public class SceneChange : MonoBehaviour
         Help.SetActive(true);
     }
 
+    public void GoToHome()
+    {
+        SceneManager.LoadScene("FrontEnd");
+    }
+
     public void HandleInputData(int val)
     {
         textchange.GetComponent<revealtext>().clicked = false;
