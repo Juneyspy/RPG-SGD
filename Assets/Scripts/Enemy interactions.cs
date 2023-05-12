@@ -31,6 +31,7 @@ public class Enemyinteractions : MonoBehaviour
             if(enemytype == "fireworm")
             {
                 enemyObj = this.gameObject;
+                Debug.Log(enemytype);
                 /*
                 player.GetComponent<PlayerScript>().colEnemy = enemyObj;
                 player.GetComponent<PlayerScript>().fighting = true;
@@ -45,53 +46,153 @@ public class Enemyinteractions : MonoBehaviour
             }
             if(enemytype == "monk")
             {
-                Debug.Log("hi >;3");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "icegiant")
+            if (enemytype == "icegiant")
             {
-                Debug.Log("hi >;)");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "joebid")
+            if (enemytype == "joebid")
             {
-                Debug.Log("hi ;(");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "joeyen")
+            if (enemytype == "joeyen")
             {
-                Debug.Log("hi >:(");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "gungleguy")
+            if (enemytype == "gungleguy")
             {
-                Debug.Log("hi :(");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "fabian")
+            if (enemytype == "fabian")
             {
-                Debug.Log("hi >:3");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "jakoblaghoul")
+            if (enemytype == "jakoblaghoul")
             {
-                Debug.Log("hi :3");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "kasei")
+            if (enemytype == "kasei")
             {
-                Debug.Log("hi :0");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "marshall")
+            if (enemytype == "marshall")
             {
-                Debug.Log("hi ;0");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
-            if(enemytype == "thomas")
+            if (enemytype == "thomas")
             {
-                Debug.Log("hi >;0");
-                //FightMenu.SetActive(true);
+                enemyObj = this.gameObject;
+                Debug.Log(enemytype);
+                /*
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
+                player.GetComponent<PlayerScript>().fighting = true;
+                player.GetComponent<PlayerScript>().CancelAnimation();
+                FightMenu.GetComponent<FightingFunctions>().StartFight();
+                player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f, 1.93f, 1.93f);
+                player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980, -761, 0);
+                player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                Debug.Log("hi ;3");
+                */
             }
         }
     }
