@@ -42,6 +42,7 @@ public class PlayerScript : MonoBehaviour
     public int playerHP = 100;
     public int playerShield = 0;
     public int playerDmg = 0;
+    public int goldBal = 0;
     public Sprite activeWeapon;
 //-------------------------------------------MISC--------------------
     public TilemapRenderer doorRender;

@@ -21,7 +21,7 @@ public class RockEnemy : MonoBehaviour
         //fightMenu = GameObject.Find("fightingcanvas"); fightMenu.SetActive(false)
         player = GameObject.Find("OverworldMC");
         chest = GameObject.Find("Chest - Wooden");
-        enemyObj = GameObject.Find("Rock Enemy");
+        enemyObj = this.gameObject;
     }
 
     // Update is called once per frame
@@ -33,10 +33,10 @@ public class RockEnemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player"){
             if(chest.GetComponent<WoodenDrops>().takenItems){
+                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
                 player.GetComponent<PlayerScript>().fighting = true;
                 player.GetComponent<PlayerScript>().CancelAnimation();
                 fightMenu.GetComponent<FightingFunctions>().StartFight();
-                player.GetComponent<PlayerScript>().colEnemy = enemyObj;
                 player.GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f,1.93f,1.93f);
                 player.GetComponent<PlayerScript>().enemyMove = new Vector3(-1980,-761,0);
                 player.GetComponent<PlayerScript>().enemyPrevPos = transform.position;

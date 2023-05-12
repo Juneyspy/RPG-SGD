@@ -6024,6 +6024,7 @@ GameObject:
   - component: {fileID: 5043810931447799126}
   - component: {fileID: 7517956826351960406}
   - component: {fileID: 5969094080334747264}
+  - component: {fileID: 7517956826351960407}
   m_Layer: 5
   m_Name: ArmorSlot
   m_TagString: Untagged
@@ -42042,7 +42043,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3923529812394391191}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f22e190d0c0afad41afc68fcad89e0ca, type: 3}
   m_Name: 
@@ -53325,6 +53326,7 @@ MonoBehaviour:
   hpText: {fileID: 0}
   swordWarning: {fileID: 0}
   enemyHPText: {fileID: 0}
+  enemyHP: 0
   playerScript: {fileID: 0}
 --- !u!1 &5969094080801769762
 GameObject:
@@ -58742,12 +58744,12 @@ RectTransform:
   - {fileID: 5969094080594542126}
   - {fileID: 5969094079807739843}
   - {fileID: 5969094080909597006}
+  - {fileID: 5969094080547484333}
   - {fileID: 5969094081093228835}
   - {fileID: 5969094080849018032}
   - {fileID: 5969094080611331488}
   - {fileID: 5969094081309539778}
   - {fileID: 5969094080806377535}
-  - {fileID: 5969094080547484333}
   - {fileID: 5969094080208207745}
   - {fileID: 5969094080051616268}
   m_Father: {fileID: 5969094080680853792}
@@ -73491,6 +73493,21 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &7517956826351960407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923529812394391191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a858a1bf91eda554b87b5a1c573137e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  varsObj: {fileID: 0}
+  activeArmor: {fileID: 0}
+  defence: {fileID: 5969094080051616269}
 --- !u!114 &7517956826377398700
 MonoBehaviour:
   m_ObjectHideFlags: 0
