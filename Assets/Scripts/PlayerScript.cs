@@ -154,6 +154,7 @@ public class PlayerScript : MonoBehaviour
         if(other.gameObject.name == "Next Level Trigger")
         {
             SceneManager.LoadScene("Level 1 - Grassland Forest");
+            //gameObject.transform.position = new Vector3(-5.487f,-140.427f,0);
         }
 
         if(other.gameObject.tag == "DoorTrigger"){
