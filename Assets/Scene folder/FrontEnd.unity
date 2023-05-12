@@ -16781,6 +16781,7 @@ GameObject:
   - component: {fileID: 5969094079411405249}
   - component: {fileID: 5969094079411405248}
   - component: {fileID: 5969094079411405251}
+  - component: {fileID: 5969094079411405252}
   m_Layer: 0
   m_Name: ThisIsToGetVariables
   m_TagString: Untagged
@@ -16813,6 +16814,94 @@ MonoBehaviour:
   - {fileID: 641000079402309635, guid: 68c341c359bc7224eb263e8104d75d90, type: 3}
   - {fileID: 4651653281523855672, guid: 7add681d3d9106643bff8059b8212975, type: 3}
   - {fileID: 7576826021137035337, guid: b4f5a2c98da0b184aa0dd57f2f15c204, type: 3}
+--- !u!114 &5969094079411405252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5969094079411405250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8038aa3b15940a5aa5a5e3195a050b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  knobX: {fileID: 0}
+  knobY: {fileID: 0}
+  knob: {fileID: 0}
+  bosses: 
+  healthhodl: {fileID: 0}
+  Health: 0
+  Strength: 0
+  gold: 0
+  SceneName: 
+  player: {fileID: 242037484400432042, guid: 857aaf40a5d583f49aa6994a690e2dd8, type: 3}
+  inv: {fileID: 0}
+  QuickSlots: {fileID: 0}
+  xPos: 0
+  yPos: 0
+  item1: 
+  item2: 
+  item3: 
+  item4: 
+  item5: 
+  item6: 
+  item7: 
+  item8: 
+  item9: 
+  item10: 
+  item11: 
+  item12: 
+  item13: 
+  item14: 
+  item15: 
+  item16: 
+  item17: 
+  item18: 
+  item19: 
+  item20: 
+  item21: 
+  item22: 
+  item23: 
+  item24: 
+  item25: 
+  item26: 
+  item27: 
+  item28: 
+  item29: 
+  item30: 
+  item31: 
+  item32: 
+  item33: 
+  item34: 
+  item35: 
+  item36: 
+  template: {fileID: 0}
+  item1hold: {fileID: 0}
+  everyItem:
+  - {fileID: 1240255480304129804, guid: d9a2e30e2b9d4824a9d4bb43a2a838bc, type: 3}
+  - {fileID: 505352274889839665, guid: d8dcfda8ded416a45b9ce587e7c5f533, type: 3}
+  - {fileID: 1286153385720092845, guid: d936b40d0a0ed08449b3229ece3d90cd, type: 3}
+  - {fileID: 7583863568777479673, guid: d29d8536459e83149b3094f3aedc7fa2, type: 3}
+  - {fileID: 561472563086609521, guid: 9ad0b7c03e9601c49b740216d78c61b9, type: 3}
+  - {fileID: 5727386748107500283, guid: 4241f21c15cde8b45a7409c4ea49b49d, type: 3}
+  - {fileID: 617613657443587252, guid: c033e12744edd6944879f4e716304ea7, type: 3}
+  - {fileID: 9195651385409431446, guid: f9d23feead4e78e49a71a9f677d74e18, type: 3}
+  - {fileID: 956214996239188728, guid: 6b0bc585b73e6564ea8b7e5494656439, type: 3}
+  - {fileID: 5926241368291011000, guid: a9a8ec5ff2d889049a8305086488b5ca, type: 3}
+  - {fileID: 3664305352775757838, guid: 5374225cb3e116c41b30395dbbfeee6f, type: 3}
+  - {fileID: 3524649191247551753, guid: e060576ea3351d34fbee8111499ae153, type: 3}
+  - {fileID: 2983398579072379999, guid: 74c70720d534cc444b015f8d214a2cf9, type: 3}
+  - {fileID: 9082823892802626368, guid: b967544d8842e004ba93a224e667fc07, type: 3}
+  - {fileID: 5289718645013465359, guid: f271425b8d701634a843ec7397830f7d, type: 3}
+  - {fileID: 6483978239007593567, guid: 53396e0db27bbcf48a0d2a3405d8312d, type: 3}
+  - {fileID: 1359919007455073083, guid: 30905e03a78ae6641891eddfb7d3c1dd, type: 3}
+  - {fileID: 5951798737638573321, guid: 4597b5bf95d577649a966b2de1a5e060, type: 3}
+  - {fileID: 641000079402309635, guid: 68c341c359bc7224eb263e8104d75d90, type: 3}
+  - {fileID: 4651653281523855672, guid: 7add681d3d9106643bff8059b8212975, type: 3}
+  - {fileID: 7576826021137035337, guid: b4f5a2c98da0b184aa0dd57f2f15c204, type: 3}
+  - {fileID: 7232635680999785448, guid: 2095e7b2d731b604e81291da6a43c8f5, type: 3}
 --- !u!1 &5969094079416484345
 GameObject:
   m_ObjectHideFlags: 0
@@ -53327,6 +53416,8 @@ MonoBehaviour:
   swordWarning: {fileID: 0}
   enemyHPText: {fileID: 0}
   enemyHP: 0
+  enemyAttOverlay: {fileID: 0}
+  canAttack: 1
   playerScript: {fileID: 0}
 --- !u!1 &5969094080801769762
 GameObject:

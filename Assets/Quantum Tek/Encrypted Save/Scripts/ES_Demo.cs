@@ -18,6 +18,8 @@ namespace QuantumTek.EncryptedSave
         public string bosses;
         public TextMeshProUGUI healthhodl;
         public int Health;
+        public int Strength;
+        public int gold;
         public string SceneName;
         public GameObject player;
 
@@ -65,12 +67,12 @@ namespace QuantumTek.EncryptedSave
         public string item35;
         public string item36;
 
-
+        public GameObject template;
 
 
         public GameObject item1hold;
 
-
+        public List<GameObject> everyItem = new List<GameObject>();
 
         void Start()
         {
@@ -230,7 +232,7 @@ namespace QuantumTek.EncryptedSave
 
         }
 
-
+        
         public void SetKnobPos()
         {
             if (!knob || !knobX || !knobY) return;
@@ -642,6 +644,7 @@ namespace QuantumTek.EncryptedSave
 
         public void Save()
         {
+            
             if (!text || !knob) return;
             // Saves the value of the text component.
             ES_Save.Save(SceneName, "Scene name");
@@ -650,6 +653,7 @@ namespace QuantumTek.EncryptedSave
             ES_Save.SaveRectTransform(knob, "test rect transform");
             ES_Save.Save(knobX.value, "test x");
             ES_Save.Save(knobY.value, "test y");
+            
             //ES_Save.Save(Health.int, "test int");
             ES_Save.Save(Health, "test num");
 
@@ -702,6 +706,7 @@ namespace QuantumTek.EncryptedSave
 
         public void Load()
         {
+            
             if (!text || !knob || !knobX || !knobY) return;
             // Loads the saved value of the text component.
             text.text = ES_Save.Load<string>("test string");
@@ -711,6 +716,7 @@ namespace QuantumTek.EncryptedSave
             ES_Save.LoadRectTransform(knob, "test rect transform");
             knobX.value = ES_Save.Load<float>("test x");
             knobY.value = ES_Save.Load<float>("test y");
+            
             //Health.int = ES_Save.Load<float>("test int");
             Health = ES_Save.Load<int>("test num");
             xPos = ES_Save.Load<float>("xpositionh");
@@ -745,6 +751,26 @@ namespace QuantumTek.EncryptedSave
                             //item1actual.tranform.localPosition = Vector3.zero;
 
                             //item1actual.tranform.localRotation = Quaternion.identity;
+
+                            for (int j = 1; j < everyItem.Count + 1; j++)
+                            {
+                                if (everyItem[j - 1].name == item1)
+                                {
+                                    GameObject tempGameObj;
+                                    Sprite newSprite;
+                                    
+                                    tempGameObj = everyItem[j - 1];
+                                    GameObject.Find("inventory holder").SetActive(true);
+                                    GameObject.Find("Inventory screen").SetActive(true);
+                                    newSprite = tempGameObj.GetComponent<Image>().sprite;
+                                    GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
+                                    temp.GetComponent<Image>().sprite = newSprite;
+                                    temp.name = everyItem[j - 1].name;
+                                    temp.transform.SetParent(GameObject.Find("quick slots").transform.GetChild(i - i).gameObject.transform);
+                                    GameObject.Find("inventory holder").SetActive(false);
+                                    GameObject.Find("Inventory screen").SetActive(false);
+                                }
+                            }
                         }
                         break;
                     case 2:
