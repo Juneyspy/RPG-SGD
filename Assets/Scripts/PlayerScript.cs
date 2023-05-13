@@ -64,14 +64,24 @@ public class PlayerScript : MonoBehaviour
 
         //newItemsGrid = GameObject.Find("quick slots (1)"); 
         //fightMenu = GameObject.Find("fightscene"); fightMenu.SetActive(false);
-        if(SceneManager.GetActiveScene().name == "Ms G Test"){
+        /*if(SceneManager.GetActiveScene().name == "Ms G Test"){
             runesScreen = varsObj.GetComponent<VariableHolder>().runesScreen; runesScreen.SetActive(false);
             inventoryScreen = varsObj.GetComponent<VariableHolder>().inventoryScreen; inventoryScreen.SetActive(false);
             travelScreen = varsObj.GetComponent<VariableHolder>().travelScreen; travelScreen.SetActive(false);
             journalScreen = varsObj.GetComponent<VariableHolder>().journalScreen; journalScreen.SetActive(false);
             inventory = varsObj.GetComponent<VariableHolder>().inventory; invSlotParent = varsObj.GetComponent<VariableHolder>().invSlotParent; inventory.SetActive(false); 
             PauseScreen.SetActive(false);
+        }*/
+        runesScreen = varsObj.GetComponent<VariableHolder>().runesScreen; runesScreen.SetActive(false);
+        inventoryScreen = varsObj.GetComponent<VariableHolder>().inventoryScreen; inventoryScreen.SetActive(false);
+        travelScreen = varsObj.GetComponent<VariableHolder>().travelScreen; travelScreen.SetActive(false);
+        journalScreen = varsObj.GetComponent<VariableHolder>().journalScreen; journalScreen.SetActive(false);
+        inventory = varsObj.GetComponent<VariableHolder>().inventory; invSlotParent = varsObj.GetComponent<VariableHolder>().invSlotParent; inventory.SetActive(false);
+        if(SceneManager.GetActiveScene().name != "Ms G Test"){
+            //PauseScreen = varsObj.GetComponent<VariableHolder>().pauseMenu;
+            PauseScreen = GameObject.Find("Pause setup");
         }
+        PauseScreen.SetActive(false);
     }
 
     void Update()
@@ -131,6 +141,7 @@ public class PlayerScript : MonoBehaviour
                     PauseScreen.SetActive(false);
                     inventory.SetActive(true);
                     inventoryScreen.SetActive(true);
+                    varsObj.GetComponent<VariableHolder>().goldText.text = goldBal.ToString();
                     if(!inChest){
                         GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().newItemsArea.SetActive(false);
                         GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().effectsTextHolder.SetActive(true);

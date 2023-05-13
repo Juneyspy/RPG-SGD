@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class VariableHolder : MonoBehaviour
 {
@@ -15,6 +17,9 @@ public class VariableHolder : MonoBehaviour
     public GameObject hotBar;
     public GameObject effectsTextHolder;
     public GameObject runeSmithScreen;
+    public TMP_Text goldText;
+    public GameObject pauseMenu;
+    int gottenPausel = 0;
     public List<GameObject> anyItem = new List<GameObject>();
 
     /*
@@ -28,12 +33,17 @@ public class VariableHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(SceneManager.GetActiveScene().name == "Ms G Test"){
+            if(gottenPausel == 0){
+                pauseMenu = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().PauseScreen;
+                gottenPausel = 1;
+            }
+        }
     }
 }

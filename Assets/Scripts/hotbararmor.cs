@@ -57,7 +57,7 @@ public class hotbararmor : MonoBehaviour, IDropHandler
         }
         else{
             defence.text = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP.ToString();
-            player.GetComponent<PlayerScript>().playerShield = 0; 
+            GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield = 0; 
         }
     }
 }

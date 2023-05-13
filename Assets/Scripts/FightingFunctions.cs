@@ -149,9 +149,9 @@ public class FightingFunctions : MonoBehaviour
             enemyHP -= dmgToDo;
             enemyHPText.text = "Enemy HP: " + enemyHP.ToString();
             if(enemyHP > 0){
-                Invoke("EnemyAttack", 1.4f);
+                Invoke("EnemyAttack", 1.0f);
             }
-            Invoke("ReenableAttack",2.4f);
+            Invoke("ReenableAttack",1.5f);
             GameOverCheck(enemyHP);
         }
     }
@@ -191,6 +191,7 @@ public class FightingFunctions : MonoBehaviour
 
             Destroy(player.GetComponent<PlayerScript>().colEnemy);
             player.GetComponent<PlayerScript>().fighting = false;
+            fightMenu.SetActive(false);
         }
 
         if(player.GetComponent<PlayerScript>().playerHP <= 0){
