@@ -27,6 +27,8 @@ public class WoodenDrops : MonoBehaviour
     public GameObject template;
     public GameObject varsObj;
 
+    public bool ogOpen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +39,17 @@ public class WoodenDrops : MonoBehaviour
         newItemsGrid = varsObj.GetComponent<VariableHolder>().newItemsGrid;
         //print(newItemsGrid);
         runesScreen = player.GetComponent<PlayerScript>().runesScreen;
-        inventoryScreen = player.GetComponent<PlayerScript>().inventoryScreen;
-        inventory = player.GetComponent<PlayerScript>().inventory;
+        //inventoryScreen = player.GetComponent<PlayerScript>().inventoryScreen;
+        inventoryScreen = varsObj.GetComponent<VariableHolder>().inventoryScreen;
+        //inventory = player.GetComponent<PlayerScript>().inventory;
+        inventory  = varsObj.GetComponent<VariableHolder>().inventory;
+        //print(inventory);
+        ogOpen = GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().openedStartingChest;
+        if(ogOpen){
+            spriterenderer.sprite = openChest;
+            takenItems = true;
+            opened = true;
+        }
     }
 
     // Update is called once per frame
@@ -47,13 +58,14 @@ public class WoodenDrops : MonoBehaviour
         if(newItemsGrid.transform.GetChild(0).transform.childCount < 1 && newItemsGrid.transform.GetChild(1).transform.childCount < 1 
             && newItemsGrid.transform.GetChild(2).transform.childCount < 1 && newItemsGrid.transform.GetChild(3).transform.childCount < 1 && inInv){
                 takenItems = true;
+                GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().openedStartingChest = true;
                 player.GetComponent<PlayerScript>().takenItems = true;
                 player.GetComponent<PlayerScript>().paused = false;
             }
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "Player" && !takenItems){
+        if(other.tag == "Player" && !takenItems && !ogOpen){
             takenItems = false;
             player.GetComponent<PlayerScript>().inChest = true;
             player.GetComponent<PlayerScript>().takenItems = false;
@@ -110,20 +122,22 @@ public class WoodenDrops : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D other){
-        if(other.tag == "Player" && takenItems){
-            inInv = false;
-            player.GetComponent<PlayerScript>().inChest = inInv;
-            player.GetComponent<PlayerScript>().invOpened = false;
-            inventoryScreen.SetActive(false);
-            inventory.SetActive(false);
-        }
-        else{
-            inInv = false;
-            player.GetComponent<PlayerScript>().inChest = inInv;
-            player.GetComponent<PlayerScript>().invOpened = false;
-            inventoryScreen.SetActive(false);
-            inventory.SetActive(false);
-            spriterenderer.sprite = closedChest;
+        if(!ogOpen){
+            if(other.tag == "Player" && takenItems){
+                inInv = false;
+                player.GetComponent<PlayerScript>().inChest = inInv;
+                player.GetComponent<PlayerScript>().invOpened = false;
+                inventoryScreen.SetActive(false);
+                inventory.SetActive(false);
+            }
+            else{
+                inInv = false;
+                player.GetComponent<PlayerScript>().inChest = inInv;
+                player.GetComponent<PlayerScript>().invOpened = false;
+                inventoryScreen.SetActive(false);
+                inventory.SetActive(false);
+                spriterenderer.sprite = closedChest;
+            }
         }
     }
 }

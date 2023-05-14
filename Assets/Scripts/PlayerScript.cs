@@ -90,6 +90,10 @@ public class PlayerScript : MonoBehaviour
             gameObject.transform.position = new Vector3(-5.487f, -140.4f,0);
             tpedLv2 = true;
         }
+        else if(SceneManager.GetActiveScene().name == "Level 2 - TBD" && !tpedLv3){
+            gameObject.transform.position = new Vector3(-27.15f, -123.75f,-0.01098486f);
+            tpedLv3 = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {

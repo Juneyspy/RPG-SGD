@@ -21,6 +21,12 @@ public class VariableHolder : MonoBehaviour
     public GameObject pauseMenu;
     int gottenPausel = 0;
     public List<GameObject> anyItem = new List<GameObject>();
+    public GameObject loseScreen;
+    public GameObject winScreen;
+    public bool openedStartingChest = false;
+    public bool hasDied = false;
+    public string lastDeathSceneName;
+    public GameObject fightingScriptGO;
 
     /*
     runesScreen = GameObject.Find("Runes screen"); runesScreen.SetActive(false);
@@ -42,8 +48,13 @@ public class VariableHolder : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Ms G Test"){
             if(gottenPausel == 0){
                 pauseMenu = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().PauseScreen;
+                fightingScriptGO = GameObject.Find("Rock Enemy").GetComponent<RockEnemy>().fightMenu;
                 gottenPausel = 1;
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.J)){
+            print(inventoryScreen);
         }
     }
 }

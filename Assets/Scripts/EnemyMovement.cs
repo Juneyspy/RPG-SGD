@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector3 actualPosition;
     private int x;
+
+    public bool stopMoving = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +23,18 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        actualPosition = obj.transform.position;
-        obj.transform.position = Vector3.MoveTowards(actualPosition, pathPoints[x].transform.position, speed * Time.deltaTime);
+        if(!stopMoving){
+            actualPosition = obj.transform.position;
+            obj.transform.position = Vector3.MoveTowards(actualPosition, pathPoints[x].transform.position, speed * Time.deltaTime);
 
-        if(actualPosition == pathPoints[x].transform.position && x != numberOfPoints)
-        {
-            x++;
-        }
-        if (x == numberOfPoints)
-        {
-            x = 0;
+            if(actualPosition == pathPoints[x].transform.position && x != numberOfPoints)
+            {
+                x++;
+            }
+            if (x == numberOfPoints)
+            {
+                x = 0;
+            }
         }
     }
 }

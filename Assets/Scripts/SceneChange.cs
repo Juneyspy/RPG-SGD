@@ -106,7 +106,12 @@ public class SceneChange : MonoBehaviour
     }
     public void NewGameScreen()
     {
-        SceneManager.LoadScene("Ms G Test");
+        if(!GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().hasDied){
+            SceneManager.LoadScene("Ms G Test");
+        }
+        else{
+            SceneManager.LoadScene(GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().lastDeathSceneName);
+        }
         //SceneManager.LoadScene("Level 1 - Grassland Forest");
         //startscreen.SetActive(false);
         //NewGame.SetActive(true);

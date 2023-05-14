@@ -71,7 +71,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     }
 
     void Update(){
-        if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().invOpened && GameObject.Find("OverworldMC").GetComponent<PlayerScript>().inventoryScreen.activeSelf){//&& player.GetComponent<PlayerScript>().inventoryScreen.activeSelf
+        if(/*GameObject.Find("OverworldMC").GetComponent<PlayerScript>().invOpened && */GameObject.Find("OverworldMC").GetComponent<PlayerScript>().inventoryScreen.activeSelf){//&& player.GetComponent<PlayerScript>().inventoryScreen.activeSelf
             if (trash.transform.childCount > 0){
                 Destroy(trash.transform.GetChild(0).gameObject);
             }

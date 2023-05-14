@@ -48,6 +48,9 @@ public class FightingFunctions : MonoBehaviour
     public Image enemyAttOverlay;
     public bool canAttack = true;
 
+    public bool defendNextRound = false;
+    public Image defenceFlash;
+
     //public PlayerScript playerScript;
     public List<GameObject> potionsList = new List<GameObject>();
 
@@ -70,6 +73,7 @@ public class FightingFunctions : MonoBehaviour
             cam = GameObject.Find("Main Camera");
             fightMenu.SetActive(false);
             enemyAttOverlay.CrossFadeAlpha(0,0.0f,true);
+            defenceFlash.CrossFadeAlpha(0,0.0f,true);
         }
         player = GameObject.Find("OverworldMC");
         //totalInv = GameObject.Find("quick slots");
@@ -88,7 +92,10 @@ public class FightingFunctions : MonoBehaviour
     }
 
     public void StartFight(){
+        fading.CrossFadeAlpha(0,0,true);
+        finalFade.CrossFadeAlpha(0,0,true);
         fading.CrossFadeAlpha(1,.2f,true);
+        defenceFlash.CrossFadeAlpha(0,0,true);
         Invoke("fadeOut",.2f);
         Invoke("fadeIn",.4f);
         Invoke("fadeOut",.6f);
@@ -96,14 +103,14 @@ public class FightingFunctions : MonoBehaviour
         Invoke("TurnOnFighting",.8f);
         Invoke("fadeOutFinal",1.0f);
         Invoke("fadeOut",1.0f);
-        hpText.text = (player.GetComponent<PlayerScript>().playerHP + player.GetComponent<PlayerScript>().playerShield).ToString();
+        hpText.text = (GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP + GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield).ToString();
         print("initiate fight");
         if(SceneManager.GetActiveScene().name == "Ms G Test"){
-            enemyHPText.text = "Enemy HP: " + player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP.ToString();
-            enemyHP = player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP;
+            enemyHPText.text = "Enemy HP: " + GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP.ToString();
+            enemyHP = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockHP;
         }        //PUT IN ELSE{GET COMPONENT BASICENEMYSCRIPT HP AND ANOTHER FOR BOSS HP SCRIPTS}
 
-        if(player.GetComponent<PlayerScript>().playerDmg == 0){
+        if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerDmg == 0){
             swordWarning.text = "Make sure to equip your sword... (E)";
         }
     }
@@ -115,14 +122,17 @@ public class FightingFunctions : MonoBehaviour
     }
     public void TurnOnFighting(){
         fightMenu.SetActive(true);
+        enemyAttOverlay.CrossFadeAlpha(0,0,true);
         finalFade.CrossFadeAlpha(1,0.0f,true);
     }
     public void fadeOutFinal(){
         finalFade.CrossFadeAlpha(0,.2f,true);
-        cam.GetComponent<CameraScript>().following = false;
-        cam.transform.position = cam.GetComponent<CameraScript>().battleLoc;
-        player.GetComponent<PlayerScript>().colEnemy.transform.localScale += player.GetComponent<PlayerScript>().enemyScale;
-        player.GetComponent<PlayerScript>().colEnemy.transform.position = player.GetComponent<PlayerScript>().enemyMove;
+        GameObject.Find("Main Camera").GetComponent<CameraScript>().following = false;
+        GameObject.Find("Main Camera").transform.position = GameObject.Find("Main Camera").GetComponent<CameraScript>().battleLoc;
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.transform.localScale += GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyScale;
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.transform.position = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyMove;
+        print(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyScale);
+        print(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyMove);
     }
 
     //THIS IS WHERE HELL HAPPENS RAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -130,7 +140,7 @@ public class FightingFunctions : MonoBehaviour
         Battlepass.SetActive(false);
         if(canAttack){
             canAttack = false;
-            int dmgToDo = player.GetComponent<PlayerScript>().playerDmg;
+            int dmgToDo = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerDmg;
             enemyHP -= dmgToDo;
             enemyHPText.text = "Enemy HP: " + enemyHP.ToString();
             if(enemyHP > 0){
@@ -145,7 +155,7 @@ public class FightingFunctions : MonoBehaviour
         Battlepass.SetActive(false);
         if(canAttack){
             canAttack = false;
-            int dmgToDo = player.GetComponent<PlayerScript>().playerDmg * 2;
+            int dmgToDo = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerDmg * 2;
             enemyHP -= dmgToDo;
             enemyHPText.text = "Enemy HP: " + enemyHP.ToString();
             if(enemyHP > 0){
@@ -163,65 +173,81 @@ public class FightingFunctions : MonoBehaviour
     void HidingRed(){
         enemyAttOverlay.CrossFadeAlpha(0,0.6f,true);
     }
-    public void EnemyAttack(){
-        enemyAttOverlay.CrossFadeAlpha(1,0.3f,true);
-        Invoke("HidingRed",0.3f);
-        if(SceneManager.GetActiveScene().name == "Ms G Test"){
-            if(player.GetComponent<PlayerScript>().playerShield > 1){
-                player.GetComponent<PlayerScript>().playerShield -= player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockDmg;
-                if(player.GetComponent<PlayerScript>().playerShield < 0){
-                    player.GetComponent<PlayerScript>().playerHP -= player.GetComponent<PlayerScript>().playerShield * -1;
-                    player.GetComponent<PlayerScript>().playerShield = 0;
+    void HidingFlash(){
+        defenceFlash.CrossFadeAlpha(0,0.6f,true);
+    }
+    public void EnemyAttack(){ 
+        if(!defendNextRound){
+            enemyAttOverlay.CrossFadeAlpha(1,0.3f,true);
+            Invoke("HidingRed",0.3f);
+            if(SceneManager.GetActiveScene().name == "Ms G Test"){
+                if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield > 1){
+                    GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield -= GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockDmg;
+                    if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield < 0){
+                        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP -= GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield * -1;
+                        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield = 0;
+                    }
+                }
+                else{
+                    GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP -= GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockDmg;
                 }
             }
-            else{
-                player.GetComponent<PlayerScript>().playerHP -= player.GetComponent<PlayerScript>().colEnemy.GetComponent<RockEnemy>().rockDmg;
-            }
         }
-
-        hpText.text = (player.GetComponent<PlayerScript>().playerHP + player.GetComponent<PlayerScript>().playerShield).ToString();
+        else{
+            print("else happened");
+            defenceFlash.CrossFadeAlpha(1,0.3f,true);
+            Invoke("HidingFlash",0.3f);
+            defendNextRound = false;
+        }
+        GameOverCheck(enemyHP);
+        hpText.text = (GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP + GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerShield).ToString();
     }
 
     public void GameOverCheck(int opHealth){
         if(opHealth <= 0){
-            cam.GetComponent<CameraScript>().following = true;
+            GameObject.Find("Main Camera").GetComponent<CameraScript>().following = true;
 
             int goldToGive = Random.Range(1,4);
-            player.GetComponent<PlayerScript>().goldBal += goldToGive;
+            GameObject.Find("OverworldMC").GetComponent<PlayerScript>().goldBal += goldToGive;
 
-            Destroy(player.GetComponent<PlayerScript>().colEnemy);
-            player.GetComponent<PlayerScript>().fighting = false;
+            Destroy(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy);
+            GameObject.Find("OverworldMC").GetComponent<PlayerScript>().fighting = false;
             fightMenu.SetActive(false);
         }
 
-        if(player.GetComponent<PlayerScript>().playerHP <= 0){
+        if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP <= 0){
             print("dead");
-            //MAKE AN ACTUALLY DYING THING
+            GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().loseScreen.SetActive(true);
+            GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().lastDeathSceneName = SceneManager.GetActiveScene().name;
         }
 
-        if(opHealth <= 0 || player.GetComponent<PlayerScript>().playerHP <= 0){
+        if(opHealth <= 0 || GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP <= 0){
             enemyHPText.enabled = false;
         }
     }
 
     public void Defend(){
-
+        canAttack = false;
+        Invoke("EnemyAttack", 1.0f);
+        Invoke("ReenableAttack",1.5f);
+        GameOverCheck(enemyHP);
+        defendNextRound = true;
     }
 
 
     public void runaway()
     {
         fighitngscreen.SetActive(false);
-        cam.GetComponent<CameraScript>().following = true;
-        player.GetComponent<PlayerScript>().fighting = false;
-        player.GetComponent<PlayerScript>().colEnemy.transform.position = player.GetComponent<PlayerScript>().enemyPrevPos;
-        player.GetComponent<PlayerScript>().colEnemy.transform.localScale -= player.GetComponent<PlayerScript>().enemyScale;
-        //player.GetComponent<PlayerScript>().colEnemy.transform.GetChild(0).gameObject.GetComponent<>
-        player.GetComponent<PlayerScript>().colEnemy.GetComponent<BoxCollider2D>().enabled = false;
+        GameObject.Find("Main Camera").GetComponent<CameraScript>().following = true;
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().fighting = false;
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.transform.position = GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyPrevPos;
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.transform.localScale -= GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyScale;
+        //GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.transform.GetChild(0).gameObject.GetComponent<>
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.GetComponent<BoxCollider2D>().enabled = false;
         Invoke("EnableCollider",4.0f);
     }
     void EnableCollider(){
-        player.GetComponent<PlayerScript>().colEnemy.GetComponent<BoxCollider2D>().enabled = true;
+        GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     public void battlescreen()
@@ -448,7 +474,7 @@ public class FightingFunctions : MonoBehaviour
         inv.SetActive(false);
         /*
         GameObject trash = inv.transform.GetChild(35).gameObject;
-        if(player.GetComponent<PlayerScript>().invOpened){
+        if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().invOpened){
             if (trash.transform.childCount > 0){
                 Destroy(trash.transform.GetChild(0).gameObject);}
             }
@@ -501,9 +527,9 @@ public class FightingFunctions : MonoBehaviour
 
         for(int l = 1; l < potionsList.Count-1; l++){
             if(potionsList[l-1].name == ButtonName){
-                player.GetComponent<PlayerScript>().playerHP += potionsList[l-1].GetComponent<PotionStuff>().hpToGive;
-                if(player.GetComponent<PlayerScript>().playerHP > 100){
-                    player.GetComponent<PlayerScript>().playerHP = 100;
+                GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP += potionsList[l-1].GetComponent<PotionStuff>().hpToGive;
+                if(GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP > 100){
+                    GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerHP = 100;
                 }
             }
         }

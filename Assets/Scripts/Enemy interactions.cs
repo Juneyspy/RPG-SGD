@@ -23,6 +23,10 @@ public class Enemyinteractions : MonoBehaviour
 
     }
 
+    public void FightStartCall(){
+        GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().fightingScriptGO.GetComponent<FightingFunctions>().StartFight();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -31,7 +35,17 @@ public class Enemyinteractions : MonoBehaviour
             if(enemytype == "fireworm")
             {
                 enemyObj = this.gameObject;
+                this.gameObject.GetComponent<EnemyMovement>().speed = 0;
+                this.gameObject.GetComponent<EnemyMovement>().stopMoving = true;
+                GameObject.Find("OverworldMC").GetComponent<PlayerScript>().colEnemy = enemyObj;
+                GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyPrevPos = transform.position;
+                GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyScale = new Vector3(1.93f,1.93f,1.93f);
+                GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyMove = new Vector3(654,842,0);
+                //GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyMove = new Vector3(666,741,0);
+                GameObject.Find("OverworldMC").GetComponent<PlayerScript>().enemyMove = new Vector3(654,700,0);
                 Debug.Log(enemytype);
+                FightStartCall();
+
                 /*
                 player.GetComponent<PlayerScript>().colEnemy = enemyObj;
                 player.GetComponent<PlayerScript>().fighting = true;

@@ -52,7 +52,7 @@ public class hotbarsword : MonoBehaviour, IDropHandler
         }
         else{
             strength.text = "0";
-            player.GetComponent<PlayerScript>().playerDmg = 0;
+            GameObject.Find("OverworldMC").GetComponent<PlayerScript>().playerDmg = 0;
         }
     }
 }
