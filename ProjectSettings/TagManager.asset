@@ -35,6 +35,8 @@ TagManager:
   - 3 rune armor
   - 4 rune armor
   - fireworm
+  - toLevel3
+  - endgame
   layers:
   - Default
   - TransparentFX

@@ -53,8 +53,19 @@ public class VariableHolder : MonoBehaviour
             }
         }
 
+        
+
+
+    }
+
+    void Update(){
         if(Input.GetKeyDown(KeyCode.J)){
-            print(inventoryScreen);
+            GameObject.Find("OverworldMC").GetComponent<PlayerScript>().killedLevel2Boss = true;
+            GameObject.Find("OverworldMC").transform.position = new Vector3(143.24f,93.06f,0);
+        }
+        else if(Input.GetKeyDown(KeyCode.K)){
+            GameObject.Find("OverworldMC").GetComponent<PlayerScript>().killedLevel3Boss = true;
+            GameObject.Find("OverworldMC").transform.position = new Vector3(100.44f,62.2f,0);
         }
     }
 }

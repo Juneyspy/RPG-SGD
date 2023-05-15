@@ -5,6 +5,7 @@ using UnityEngine;
 public class Armor : MonoBehaviour
 {
     public int armor;
+    public bool addedArmor = false;
 
     // Start is called before the first frame update
     void Start()

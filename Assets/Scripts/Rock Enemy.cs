@@ -10,8 +10,8 @@ public class RockEnemy : MonoBehaviour
     public GameObject enemyObj;
     public GameObject fightMenu;
 
-    public int rockHP = 5;
-    public int rockDmg = 5;
+    public int rockHP = 4;
+    public int rockDmg = 1;
 
     // Start is called before the first frame update
     void Start()

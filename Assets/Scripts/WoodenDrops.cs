@@ -45,7 +45,7 @@ public class WoodenDrops : MonoBehaviour
         inventory  = varsObj.GetComponent<VariableHolder>().inventory;
         //print(inventory);
         ogOpen = GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().openedStartingChest;
-        if(ogOpen){
+        if(ogOpen && SceneManager.GetActiveScene().name == "Ms G Test"){
             spriterenderer.sprite = openChest;
             takenItems = true;
             opened = true;
@@ -65,7 +65,7 @@ public class WoodenDrops : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "Player" && !takenItems && !ogOpen){
+        if(other.tag == "Player" && !takenItems && (!ogOpen || SceneManager.GetActiveScene().name != "Ms G Test")){
             takenItems = false;
             player.GetComponent<PlayerScript>().inChest = true;
             player.GetComponent<PlayerScript>().takenItems = false;
@@ -94,11 +94,14 @@ public class WoodenDrops : MonoBehaviour
 
             if(SceneManager.GetActiveScene().name != "Ms G Test"){
                 int amountDropped = Random.Range(1,5);
+                print(amountDropped);
                 for(int i=1; i < amountDropped+1; i++){
-                    newItem = varsObj.GetComponent<VariableHolder>().anyItem[Random.Range(0,21)].GetComponent<Image>().sprite;
+                    int itemRNG = Random.Range(0,16);
+                    newItem = varsObj.GetComponent<VariableHolder>().anyItem[itemRNG].GetComponent<Image>().sprite;
                     
                     GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
                     temp.GetComponent<Image>().sprite = newItem;
+                    temp.name = varsObj.GetComponent<VariableHolder>().anyItem[itemRNG].name; temp.tag = varsObj.GetComponent<VariableHolder>().anyItem[itemRNG].tag; temp.GetComponent<HoverTip>().tipToShow = varsObj.GetComponent<VariableHolder>().anyItem[itemRNG].GetComponent<HoverTip>().tipToShow;
                     //itemsToGet.Add(newItem);
                     temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
                 }
@@ -112,17 +115,20 @@ public class WoodenDrops : MonoBehaviour
                     //print(newItem);
                     GameObject temp = Instantiate(template, new Vector3(0, 0, 0), Quaternion.identity);
                     temp.GetComponent<Image>().sprite = newItem;
-                    temp.name = allItems[i-1].name; temp.tag = allItems[i - 1].tag;
+                    temp.name = allItems[i-1].name; temp.tag = allItems[i - 1].tag; temp.GetComponent<HoverTip>().tipToShow = allItems[i - 1].GetComponent<HoverTip>().tipToShow;
                     //itemsToGet.Add(newItem);
                     temp.transform.SetParent(newItemsGrid.transform.GetChild(i-1).gameObject.transform);
                 }
             }
             opened = true;
         }
+        else{
+            print("loser");
+        }
     }
 
     void OnTriggerExit2D(Collider2D other){
-        if(!ogOpen){
+        if(!ogOpen || SceneManager.GetActiveScene().name != "Ms G Test"){
             if(other.tag == "Player" && takenItems){
                 inInv = false;
                 player.GetComponent<PlayerScript>().inChest = inInv;

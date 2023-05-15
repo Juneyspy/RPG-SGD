@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -46,6 +47,11 @@ public class PlayerScript : MonoBehaviour
     public Sprite activeWeapon;
     public GameObject selectedSword;
     public GameObject selectedArmor;
+    //public TMP_Text level2EnemyHP;
+    //public TMP_Text level3EnemyHP;
+    public GameObject level2EnemyHP;
+    public GameObject level3EnemyHP;
+
 //-------------------------------------------MISC--------------------
     public TilemapRenderer doorRender;
     public Tilemap doorMap;
@@ -54,6 +60,8 @@ public class PlayerScript : MonoBehaviour
     public bool takenItems;
     bool tpedLv2 = false;
     bool tpedLv3 = false;
+    public bool killedLevel2Boss = false;
+    public bool killedLevel3Boss = false;
 
 
 
@@ -81,17 +89,22 @@ public class PlayerScript : MonoBehaviour
             //PauseScreen = varsObj.GetComponent<VariableHolder>().pauseMenu;
             PauseScreen = GameObject.Find("Pause setup");
         }
-        PauseScreen.SetActive(false);
+        //PauseScreen.SetActive(false);
     }
 
     void Update()
     {
         if(SceneManager.GetActiveScene().name == "Level 1 - Grassland Forest" && !tpedLv2){
-            gameObject.transform.position = new Vector3(-5.487f, -140.4f,0);
+            gameObject.transform.position = new Vector3(-5.487f, -140.4f,0);//- by the wooden house
+            //gameObject.transform.position = new Vector3(111.62f, 81.54f,0);//- by the boss
+            //gameObject.transform.position = new Vector3(63.82f, -190.3f,0);//- by the bottom cave
+            level2EnemyHP = GameObject.Find("EnemyHPLevel2");
+            //doorMap = GameObject.Find("Roof layer").GetComponent<Tilemap>();
             tpedLv2 = true;
         }
-        else if(SceneManager.GetActiveScene().name == "Level 2 - TBD" && !tpedLv3){
+        else if(SceneManager.GetActiveScene().name == "Level 2 - TBT" && !tpedLv3){
             gameObject.transform.position = new Vector3(-27.15f, -123.75f,-0.01098486f);
+            level3EnemyHP = GameObject.Find("EnemyHPLevel3");
             tpedLv3 = true;
         }
 
@@ -99,10 +112,7 @@ public class PlayerScript : MonoBehaviour
         {
             SceneManager.LoadScene("Level 2 - TBT");
         }
-        if(Input.GetKeyDown(KeyCode.L)){
-            varsObj.GetComponent<VariableHolder>().runeSmithScreen.SetActive(true);
-        }
-
+       
         //Movement---------------------------------------------------------------------
         if(!paused && !fighting){
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -145,6 +155,14 @@ public class PlayerScript : MonoBehaviour
                     PauseScreen.SetActive(false);
                     inventory.SetActive(true);
                     inventoryScreen.SetActive(true);
+                    GameObject.Find("ArmorSlot").transform.GetChild(0).gameObject.GetComponent<Armor>().armor = playerShield;
+
+                    string[] temp = GameObject.Find("ArmorSlot").transform.GetChild(0).gameObject.GetComponent<HoverTip>().tipToShow.Split("("); // ArmorName , xx)
+                    string[] tempShieldNum = temp[1].Split(")"); //xx
+                    GameObject.Find("ArmorSlot").transform.GetChild(0).gameObject.GetComponent<HoverTip>().tipToShow = temp[0] + "(" + playerShield.ToString() + ")";
+                    //GameObject.Find("ArmorSlot").transform.GetChild(0).gameObject.GetComponent<HoverTip>().tipToShow = GameObject.Find("ArmorSlot").transform.GetChild(0).gameObject.GetComponent<HoverTip>().tipToShow.Split()
+                    
+                    GameObject.Find("def (1)").GetComponent<TextMeshProUGUI>().text = (playerHP + playerShield).ToString();
                     varsObj.GetComponent<VariableHolder>().goldText.text = goldBal.ToString();
                     if(!inChest){
                         GameObject.Find("ThisIsToGetVariables").GetComponent<VariableHolder>().newItemsArea.SetActive(false);
@@ -183,8 +201,9 @@ public class PlayerScript : MonoBehaviour
             SceneManager.LoadScene("Level 1 - Grassland Forest");
         }
 
-        if(other.gameObject.tag == "DoorTrigger"){
+        /*else if(other.gameObject.tag == "DoorTrigger"){
             if(!inHouse){
+                doorRender = GameObject.Find("Roof layer").GetComponent<TilemapRenderer>();
                 doorRender.enabled = false;
                 inHouse = true;
             }
@@ -192,6 +211,33 @@ public class PlayerScript : MonoBehaviour
                 doorRender.enabled = true;
                 inHouse = false;
             }
+        }*/
+
+        else if(other.gameObject.tag == "toLevel3"){
+            if(killedLevel2Boss){
+                SceneManager.LoadScene("Level 2 - TBT");
+            }
+        }
+        else if(other.gameObject.tag == "endgame" && killedLevel3Boss){
+            paused = true;
+            varsObj.GetComponent<VariableHolder>().winScreen.SetActive(true);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other){
+        if(other.gameObject.tag == "DoorTrigger"){
+          //if(!inHouse){
+                doorRender = GameObject.Find("Roof layer").GetComponent<TilemapRenderer>();
+                doorRender.enabled = false;
+              //  inHouse = true;
+            //}
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other){
+        if(other.gameObject.tag == "DoorTrigger"){
+            doorRender.enabled = true;
+           // inHouse = false;
         }
     }
 }
