@@ -95,9 +95,9 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if(SceneManager.GetActiveScene().name == "Level 1 - Grassland Forest" && !tpedLv2){
-            gameObject.transform.position = new Vector3(-5.487f, -140.4f,0);//- by the wooden house
+            //gameObject.transform.position = new Vector3(-5.487f, -140.4f,0);//- by the wooden house
             //gameObject.transform.position = new Vector3(111.62f, 81.54f,0);//- by the boss
-            //gameObject.transform.position = new Vector3(63.82f, -190.3f,0);//- by the bottom cave
+            gameObject.transform.position = new Vector3(63.82f, -190.3f,0);//- by the bottom cave
             level2EnemyHP = GameObject.Find("EnemyHPLevel2");
             //doorMap = GameObject.Find("Roof layer").GetComponent<Tilemap>();
             tpedLv2 = true;
